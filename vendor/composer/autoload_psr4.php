@@ -16,8 +16,6 @@ return array(
     'frontend\\tests\\' => array($baseDir . '/frontend/tests', $baseDir . '/frontend/tests/_support'),
     'dosamigos\\tinymce\\' => array($vendorDir . '/2amigos/yii2-tinymce-widget/src'),
     'common\\tests\\' => array($baseDir . '/common/tests', $baseDir . '/common/tests/_support'),
-    'codemix\\localeurls\\' => array($vendorDir . '/codemix/yii2-localeurls'),
-    'cinghie\\multilanguage\\' => array($vendorDir . '/cinghie/yii2-multilanguage'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'backend\\tests\\' => array($baseDir . '/backend/tests', $baseDir . '/backend/tests/_support'),
     'Symfony\\Polyfill\\Php72\\' => array($vendorDir . '/symfony/polyfill-php72'),

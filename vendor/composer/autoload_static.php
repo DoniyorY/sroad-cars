@@ -47,8 +47,6 @@ class ComposerStaticInit1e63a7066ad2c275f2874f30053ab36b
         'c' => 
         array (
             'common\\tests\\' => 13,
-            'codemix\\localeurls\\' => 19,
-            'cinghie\\multilanguage\\' => 22,
             'cebe\\markdown\\' => 14,
         ),
         'b' => 
@@ -157,14 +155,6 @@ class ComposerStaticInit1e63a7066ad2c275f2874f30053ab36b
         array (
             0 => __DIR__ . '/../..' . '/common/tests',
             1 => __DIR__ . '/../..' . '/common/tests/_support',
-        ),
-        'codemix\\localeurls\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/codemix/yii2-localeurls',
-        ),
-        'cinghie\\multilanguage\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/cinghie/yii2-multilanguage',
         ),
         'cebe\\markdown\\' => 
         array (

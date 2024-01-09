@@ -58,22 +58,4 @@ return array (
       '@dosamigos/tinymce' => $vendorDir . '/2amigos/yii2-tinymce-widget/src',
     ),
   ),
-  'codemix/yii2-localeurls' => 
-  array (
-    'name' => 'codemix/yii2-localeurls',
-    'version' => '1.8.1.0',
-    'alias' => 
-    array (
-      '@codemix/localeurls' => $vendorDir . '/codemix/yii2-localeurls',
-    ),
-  ),
-  'cinghie/yii2-multilanguage' => 
-  array (
-    'name' => 'cinghie/yii2-multilanguage',
-    'version' => '2.0.2.0',
-    'alias' => 
-    array (
-      '@cinghie/multilanguage' => $vendorDir . '/cinghie/yii2-multilanguage',
-    ),
-  ),
 );

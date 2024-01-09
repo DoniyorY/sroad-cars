@@ -21,7 +21,7 @@ class SiteController extends Controller
     {
         return [
             'access' => [
-                'class' => AccessControl::class,
+                'class' => AccessControl::class, //123
                 'rules' => [
                     [
                         'actions' => ['login', 'error'],

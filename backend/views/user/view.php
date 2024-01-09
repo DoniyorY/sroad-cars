@@ -1,6 +1,8 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\widgets\ActiveForm;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
@@ -44,6 +46,10 @@ $this->title = $model->fullname;
         <?php endif; ?>
         <div class="col-md-12 text-end mb-2">
             <div class="btn-group">
+                <!-- Default Modals -->
+                <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#updateUser">
+                    Редактировать
+                </button>
                 <?php
                 echo Html::a('Сбросить пароль', ['reset-pass', 'id' => $model->id], [
                     'class' => 'btn btn-info',
@@ -73,7 +79,27 @@ $this->title = $model->fullname;
             </div>
         </div>
     </div>
-
+    <div id="updateUser" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true"
+         style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Редактировать: <?= $model->fullname ?></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <?php $form = ActiveForm::begin(['action' => Url::to(['update', 'id' => $model->id])]) ?>
+                <div class="modal-body">
+                    <?= $form->field($model, 'phone')->textInput(['type' => 'number', 'value' => $model->phone]) ?>
+                    <?= $form->field($model, 'role_id')->dropDownList(Yii::$app->params['user_role'], ['value' => $model->role_id]) ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary ">Сохранить</button>
+                </div>
+                <?php ActiveForm::end(); ?>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
 
     <?= DetailView::widget([
         'model' => $model,

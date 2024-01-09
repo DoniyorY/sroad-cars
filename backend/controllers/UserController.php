@@ -81,14 +81,27 @@ class UserController extends Controller
         ]);
     }
 
+
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+        if ($model->load(\Yii::$app->request->post())) {
+            $model->updated_at = time();
+            $model->update(false);
+            \Yii::$app->session->setFlash('success', 'Обновление успешно применено');
+            return $this->redirect(\Yii::$app->request->referrer);
+        }
+
+    }
+
     public function actionResetPass($id)
     {
         $model = $this->findModel($id);
         $model->setPassword('123456');
         $model->updated_at = time();
-        if ($model->update()){
+        if ($model->update()) {
             \Yii::$app->session->setFlash('success', 'Пароль успешно сброшен!!!');
-        }else{
+        } else {
             \Yii::$app->session->setFlash('danger', 'Ошибка при изменении пароля!!!');
         }
         return $this->redirect(\Yii::$app->request->referrer);

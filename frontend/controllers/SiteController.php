@@ -75,6 +75,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $comment = 'У КОЛИ СТАЛЬНЫЕ ЯЙЦА';
         return $this->render('index');
     }
 

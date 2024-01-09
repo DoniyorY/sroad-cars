@@ -15,7 +15,7 @@
     "minimum-stability": "stable",
     "require": {
         "2amigos/yii2-tinymce-widget": "~1.1",
-        "cinghie/yii2-multilanguage": "*",
+
         "php": ">=7.4.0",
         "yiisoft/yii2": "~2.0.45",
         "yiisoft/yii2-bootstrap5": "~2.0.2",

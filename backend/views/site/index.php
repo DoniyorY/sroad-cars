@@ -1,8 +1,8 @@
 <?php
 
 /** @var yii\web\View $this */
-
-$this->title = 'My Yii Application';
+$baseUrl = Yii::$app->request->baseUrl;
+$this->title = 'CARS CRM';
 ?>
 <div class="container-fluid">
 
@@ -255,7 +255,7 @@ $this->title = 'My Yii Application';
                             <tr>
                                 <td>Absternet LLC</td>
                                 <td>Sep 20, 2021</td>
-                                <td><img src="assets/images/users/avatar-1.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-1.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Donald
                                         Risher</a>
@@ -269,7 +269,7 @@ $this->title = 'My Yii Application';
                             <tr>
                                 <td>Raitech Soft</td>
                                 <td>Sep 23, 2021</td>
-                                <td><img src="assets/images/users/avatar-2.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-2.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Sofia
                                         Cunha</a>
@@ -283,7 +283,7 @@ $this->title = 'My Yii Application';
                             <tr>
                                 <td>William PVT</td>
                                 <td>Sep 27, 2021</td>
-                                <td><img src="assets/images/users/avatar-3.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-3.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Luis
                                         Rocha</a>
@@ -296,7 +296,7 @@ $this->title = 'My Yii Application';
                             <tr>
                                 <td>Loiusee LLP</td>
                                 <td>Sep 30, 2021</td>
-                                <td><img src="assets/images/users/avatar-4.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-4.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Vitoria
                                         Rodrigues</a>
@@ -310,7 +310,7 @@ $this->title = 'My Yii Application';
                             <tr>
                                 <td>Apple Inc.</td>
                                 <td>Sep 30, 2021</td>
-                                <td><img src="assets/images/users/avatar-6.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-6.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Vitoria
                                         Rodrigues</a>
@@ -498,7 +498,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Stine Nielsen">
-                                                <img src="assets/images/users/avatar-1.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-1.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -506,7 +506,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Jansh Brown">
-                                                <img src="assets/images/users/avatar-2.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-2.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -514,7 +514,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Dan Gibson">
-                                                <img src="assets/images/users/avatar-3.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-3.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -553,7 +553,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Frida Bang">
-                                                <img src="assets/images/users/avatar-4.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-4.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -561,7 +561,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Malou Silva">
-                                                <img src="assets/images/users/avatar-5.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-5.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -569,7 +569,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Simon Schmidt">
-                                                <img src="assets/images/users/avatar-6.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-6.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -577,7 +577,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Tosh Jessen">
-                                                <img src="assets/images/users/avatar-7.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-7.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -616,7 +616,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Nina Schmidt">
-                                                <img src="assets/images/users/avatar-8.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-8.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -624,7 +624,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Stine Nielsen">
-                                                <img src="assets/images/users/avatar-1.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-1.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -632,7 +632,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Jansh Brown">
-                                                <img src="assets/images/users/avatar-2.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-2.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -671,7 +671,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Stine Nielsen">
-                                                <img src="assets/images/users/avatar-1.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-1.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -679,7 +679,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Jansh Brown">
-                                                <img src="assets/images/users/avatar-5.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-5.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -687,7 +687,7 @@ $this->title = 'My Yii Application';
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                data-bs-original-title="Dan Gibson">
-                                                <img src="assets/images/users/avatar-2.jpg" alt=""
+                                                <img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-2.jpg" alt=""
                                                      class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -765,7 +765,7 @@ $this->title = 'My Yii Application';
                             <tbody>
                             <tr>
                                 <td>Acme Inc Install</td>
-                                <td><img src="assets/images/users/avatar-1.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-1.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Donald
                                         Risher</a>
@@ -775,7 +775,7 @@ $this->title = 'My Yii Application';
                             </tr>
                             <tr>
                                 <td>Save lots Stores</td>
-                                <td><img src="assets/images/users/avatar-2.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-2.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Jansh
                                         Brown</a>
@@ -785,7 +785,7 @@ $this->title = 'My Yii Application';
                             </tr>
                             <tr>
                                 <td>William PVT</td>
-                                <td><img src="assets/images/users/avatar-7.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-7.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Ayaan
                                         Hudda</a>
@@ -795,7 +795,7 @@ $this->title = 'My Yii Application';
                             </tr>
                             <tr>
                                 <td>Raitech Soft</td>
-                                <td><img src="assets/images/users/avatar-4.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-4.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Julia
                                         William</a>
@@ -805,7 +805,7 @@ $this->title = 'My Yii Application';
                             </tr>
                             <tr>
                                 <td>Absternet LLC</td>
-                                <td><img src="assets/images/users/avatar-4.jpg" alt=""
+                                <td><img src="<?= $baseUrl . '/assets/' ?>images/users/avatar-4.jpg" alt=""
                                          class="avatar-xs rounded-circle me-2">
                                     <a href="#javascript: void(0);" class="text-body fw-medium">Vitoria
                                         Rodrigues</a>

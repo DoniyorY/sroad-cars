@@ -86,12 +86,13 @@ class UserController extends Controller
         $model = $this->findModel($id);
         $model->setPassword('123456');
         $model->updated_at = time();
-        if ($model->update()) {
+        if ($model->update()){
             \Yii::$app->session->setFlash('success', 'Пароль успешно сброшен!!!');
-        } else {
+        }else{
             \Yii::$app->session->setFlash('danger', 'Ошибка при изменении пароля!!!');
         }
         return $this->redirect(\Yii::$app->request->referrer);
+
     }
 
     public function actionStatus($id, $status)

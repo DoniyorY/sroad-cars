@@ -8,14 +8,13 @@ use backend\assets\AppAsset;
 use yii\bootstrap5\Html;
 use yii\helpers\Url;
 
-$baseUrl = Yii::$app->request->baseUrl;
 AppAsset::register($this);
 $baseUrl = Yii::$app->request->baseUrl;
 $new_contact = \common\models\Contact::find()->where(['status' => 0]);
 $new_booking = \common\models\Booking::find()->where(['status' => 0]);
 $contact_count = $new_contact->count();
 $total_news_count = $contact_count + $new_booking->count();
-
+Yii::$app->setHomeUrl(Yii::$app->getRequest()->getBaseUrl());
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -501,7 +500,6 @@ $total_news_count = $contact_count + $new_booking->count();
                 </footer>
             </div>
         </div>
-
     </div>
 
     <!--preloader-->

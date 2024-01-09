@@ -58,12 +58,6 @@ class AddressController extends Controller
      * @return string
      */
 
-    public function actionTestContent()
-    {
-        $model = Address::findOne();
-        return;
-    }
-
     public function actionIndex()
     {
         $searchModel = new AddressSearch();

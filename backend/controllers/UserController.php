@@ -96,7 +96,6 @@ class UserController extends Controller
 
     public function actionStatus($id, $status)
     {
-        $changed_code = 'changed_code';
         $model = $this->findModel($id);
         $model->status = $status;
         $model->updated_a = time();

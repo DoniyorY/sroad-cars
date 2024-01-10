@@ -6,8 +6,6 @@ yii_test.bat
 # phpstorm project files
 .idea
 
-/backend/config/main.php
-
 # netbeans project files
 nbproject
 

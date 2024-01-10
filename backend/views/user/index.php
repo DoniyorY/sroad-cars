@@ -79,7 +79,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'username',
             'fullname',
             'phone',
-            'role_id',
+            [
+                'attribute' => 'role_id',
+                'value' => function ($data) {
+                    return Yii::$app->params['user_role'][$data->role_id];
+                }
+            ],
             //'auth_key',
             //'password_hash',
             //'password_reset_token',
@@ -120,7 +125,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'urlCreator' => function ($action, User $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                 },
-                'template'=>'{view}'
+                'template' => '{view}'
             ],
         ],
     ]); ?>

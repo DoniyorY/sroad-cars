@@ -89,9 +89,8 @@ class UserController extends Controller
             $model->updated_at = time();
             $model->update(false);
             \Yii::$app->session->setFlash('success', 'Обновление успешно применено');
-            return $this->redirect(\Yii::$app->request->referrer);
         }
-
+        return $this->redirect(\Yii::$app->request->referrer);
     }
 
     public function actionResetPass($id)
@@ -105,14 +104,13 @@ class UserController extends Controller
             \Yii::$app->session->setFlash('danger', 'Ошибка при изменении пароля!!!');
         }
         return $this->redirect(\Yii::$app->request->referrer);
-
     }
 
     public function actionStatus($id, $status)
     {
         $model = $this->findModel($id);
         $model->status = $status;
-        $model->updated_a = time();
+        $model->updated_at = time();
         $model->update(false);
         \Yii::$app->session->setFlash('success', 'Статус успешно изменен');
         return $this->redirect(\Yii::$app->request->referrer);

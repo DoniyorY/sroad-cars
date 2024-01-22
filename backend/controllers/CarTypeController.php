@@ -41,6 +41,7 @@ class CarTypeController extends Controller
                                 'view',
                                 'update',
                                 'delete',
+                                'create'
                             ],
                             'allow' => true,
                             'roles' => ['@'],

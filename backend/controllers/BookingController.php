@@ -41,7 +41,8 @@ class BookingController extends Controller
                                 'index',
                                 'view',
                                 'status',
-                                'delete'
+                                'delete',
+                                'create-test',
                             ],
                             'allow' => true,
                             'roles' => ['@'],
@@ -50,6 +51,23 @@ class BookingController extends Controller
                 ],
             ]
         );
+    }
+
+    public function actionCreateTest()
+    {
+        $model = new Booking();
+        $model->created = time();
+        $model->fullname = 'test';
+        $model->phone = '998995993603';
+        $model->status = 0;
+        $model->booking_date = time();
+        $model->booking_time = time();
+        $model->cars_id = 1;
+        $model->from_id = 1;
+        $model->to_id = 2;
+        $model->email = 'test@email.com';
+        $model->save(false);
+        return $this->redirect(\Yii::$app->request->referrer);
     }
 
     /**

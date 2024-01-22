@@ -28,7 +28,7 @@ class UploadsImage
                 if (!file_exists($dir)) {     //check if dir already exists
                     mkdir($dir, 0777, true);  //make dir ,give permissions
                 }
-                $name = $pathName . '_' . date('d-m-Y-H-i-s');
+                $name = $pathName . '_' . date('d-m-Y-H-i-s') . $uploadedFile->extension;
                 $fileName = $name;//$uploadedFile->name;
                 $model->imageFile->saveAs($dir . $fileName);
                 $model->imageFile = $fileName;

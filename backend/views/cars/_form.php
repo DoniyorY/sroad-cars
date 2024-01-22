@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'category_id')->dropDownList(\yii\helpers\ArrayHelper::map(\common\models\CarCategory::find()->all(), 'id', 'name_ru'), ['prompt' => 'Выберите Категорию']) ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'type_id')->dropDownList(\yii\helpers\ArrayHelper::map(\common\models\CarType::find()->all(), 'id', 'name_ru'), ['prompt' => 'Выберите тип']) ?>
+            <?= $form->field($model, 'type_id')->dropDownList(\yii\helpers\ArrayHelper::map(\common\models\CarType::find()->all(), 'id', 'name_ru'), ['prompt' => 'Выберите тип', 'value' => 0]) ?>
         </div>
         <div class="col-md-4 mt-2">
             <?= $form->field($model, 'name_ru')->textInput(['maxlength' => true]) ?>
@@ -74,13 +74,13 @@ use yii\widgets\ActiveForm;
             ]); ?>
         </div>
         <div class="col-md-3">
-            <?= $form->field($model, 'price')->textInput(['type'=>'number']) ?>
+            <?= $form->field($model, 'price')->textInput(['type' => 'number']) ?>
         </div>
         <div class="col-md-3">
-            <?= $form->field($model, 'capacity')->textInput(['type'=>'number']) ?>
+            <?= $form->field($model, 'capacity')->textInput(['type' => 'number']) ?>
         </div>
         <div class="col-md-3">
-            <?= $form->field($model, 'baggage')->textInput(['type'=>'number']) ?>
+            <?= $form->field($model, 'baggage')->textInput(['type' => 'number']) ?>
         </div>
         <div class="col-md-3 mt-4">
             <div class="form-group">
@@ -88,8 +88,6 @@ use yii\widgets\ActiveForm;
             </div>
         </div>
     </div>
-
-
 
 
     <?php ActiveForm::end(); ?>

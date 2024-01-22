@@ -20,7 +20,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h4 class="mb-sm-0"><?= $this->title ?></h4>
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item" data-key="t-main"><a href="<?= Yii::$app->homeUrl ?>">Гланая</a></li>
+                        <li class="breadcrumb-item" data-key="t-main"><a href="<?= Yii::$app->homeUrl ?>">Гланая</a>
+                        </li>
                         <li class="breadcrumb-item active"><?= $this->title ?></li>
                     </ol>
                 </div>
@@ -45,9 +46,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
+                'attribute' => 'booking_date',
+                'value' => function ($data) {
+                    return date('d.m.Y', $data->booking_date) . ' ' . date('H:i', $data->booking_time);
+                }
+            ],
+            [
                 'attribute' => 'cars_id',
                 'value' => function ($data) {
-                    return $data->cars->title_ru;
+                    return $data->cars->name_ru;
                 }
             ],
             //'email:email',
@@ -61,19 +68,17 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'status',
                 'value' => function ($data) {
-                    return Html::button(Yii::$app->params['booking_status'][$data->status], ['class' => Yii::$app->params['booking_status_class'][$data->status]]);
-                }
+                    return Html::a(Yii::$app->params['booking_status'][$data->status], '#', ['class' => Yii::$app->params['booking_status_class'][$data->status]]);
+                },
+                'format' => 'raw',
             ],
-            //'booking_date',
-            //'booking_time',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Booking $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
-                }
+                },
+                'template'=>'{view}'
             ],
         ],
     ]); ?>
-
-
 </div>

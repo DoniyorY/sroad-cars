@@ -62,7 +62,11 @@ class AddressController extends Controller
     {
         $searchModel = new AddressSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
-
+        $model = new Address();
+        if ($model->load(\Yii::$app->request->post())) {
+            $model->save(false);
+            return $this->redirect(\Yii::$app->request->referrer);
+        }
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

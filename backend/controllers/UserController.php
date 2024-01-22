@@ -54,6 +54,23 @@ class UserController extends Controller
         );
     }
 
+    /*public function actionCreateTest()
+    {
+        $model = new User();
+        $model->username = 'admin';
+        $model->setPassword('123456');
+        $model->generateAuthKey();
+        $model->generateEmailVerificationToken();
+        $model->fullname = 'Admin Admin';
+        $model->created_at = time();
+        $model->updated_at = time();
+        $model->phone = '998995993603';
+        $model->email = 'admin@email.com';
+        $model->role_id = 0;
+        $model->status = 10;
+        $model->save();
+    }*/
+
     /**
      * Lists all User models.
      *

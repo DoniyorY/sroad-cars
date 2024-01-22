@@ -426,7 +426,7 @@ Yii::$app->setHomeUrl(Yii::$app->getRequest()->getBaseUrl());
                             <a class="nav-link menu-link" href="#sidebarUI" data-bs-toggle="collapse" role="button"
                                aria-expanded="false" aria-controls="sidebarUI">
                                 <i class="ri-home-gear-line"></i> <span
-                                        data-key="t-cars-settings">Настройки лодок</span>
+                                        data-key="t-cars-settings">Настройки машин</span>
                             </a>
                             <div class="collapse menu-dropdown mega-dropdown-menu" id="sidebarUI">
                                 <div class="row">

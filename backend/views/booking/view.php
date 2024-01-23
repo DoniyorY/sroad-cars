@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <div class="text-end">
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -63,18 +63,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'fullname',
             'email:email',
             'phone',
-            'from_id',
-            'to_id',
             [
-                'attribute' => 'booking_date',
+                'attribute' => 'from_id',
                 'value' => function ($data) {
-                    return date('d.m.Y', $data->booking_date);
+                    return $data->from->name_ru;
                 }
             ],
             [
-                'attribute' => 'booking_time',
+                'attribute' => 'to_id',
                 'value' => function ($data) {
-                    return date('H:i', $data->booking_time);
+                    return $data->to->name_ru;
+                }
+            ],
+            [
+                'attribute' => 'booking_date',
+                'value' => function ($data) {
+                    return date('d.m.Y', $data->booking_date)  . ' / '. date('H:i',$data->booking_time);
                 }
             ],
         ],

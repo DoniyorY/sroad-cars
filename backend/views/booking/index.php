@@ -71,13 +71,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::a(Yii::$app->params['booking_status'][$data->status], '#', ['class' => Yii::$app->params['booking_status_class'][$data->status]]);
                 },
                 'format' => 'raw',
+                'filter' => yii::$app->params['booking_status'],
             ],
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Booking $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                 },
-                'template'=>'{view}'
+                'template' => '{view}'
             ],
         ],
     ]); ?>

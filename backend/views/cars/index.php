@@ -76,12 +76,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'status',
                 'value' => function ($data) {
                     if ($data->status == 0) {
-                        return Html::a(Yii::$app->params['status'][$data], ['status', 'id' => $data->id, 'status' => 1], ['class' => 'btn btn-success btn-sm w-100']);
+                        return Html::a(Yii::$app->params['status'][$data->status], ['status', 'id' => $data->id, 'status' => 1], ['class' => 'btn btn-success btn-sm w-100']);
                     } else {
-                        return Html::a(Yii::$app->params['status'][$data], ['status', 'id' => $data->id, 'status' => 0], ['class' => 'btn btn-danger w-100 btn-sm']);
+                        return Html::a(Yii::$app->params['status'][$data->status], ['status', 'id' => $data->id, 'status' => 0], ['class' => 'btn btn-danger w-100 btn-sm']);
                     }
                 },
                 'format' => 'raw',
+                'filter' => Yii::$app->params['status'],
             ],
             //'name_ru',
             //'name_en',

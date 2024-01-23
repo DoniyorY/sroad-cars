@@ -49,7 +49,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
-            'category_id',
+            [
+                'attribute' => 'category_id',
+                'value' => function ($data) {
+                    return Yii::$app->params['address_type'][$data->category_id];
+                },
+                'filter' => Yii::$app->params['address_type'],
+            ],
             'name_ru',
             'name_en',
             'name_uz',

@@ -13,6 +13,7 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'language' => 'ru',
+    'timeZone'=>'Asia/Tashkent',
     'name' => 'Silk Road Cars',
     'components' => [
         'request' => [

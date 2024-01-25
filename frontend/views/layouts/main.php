@@ -45,12 +45,12 @@ AppAsset::register($this);
         <nav id="w0" class="navbar navbar-expand-md navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="<?= Yii::$app->homeUrl ?>">
-                    <img src="<?= $baseUrl . '/logo.png' ?>" alt="">
+                    <img src="<?= $baseUrl . '/logo.png' ?>" alt="" style="object-fit: cover">
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#w0-collapse"
                         aria-controls="w0-collapse" aria-expanded="false" aria-label="Toggle navigation"><span
                             class="navbar-toggler-icon"></span></button>
-                <div id="w0-collapse" class="collapse navbar-collapse">
+                <div id="w0-collapse" class="collapse navbar-collapse collapse-dark">
                     <ul id="w1" class="navbar-nav me-auto mb-2 mb-md-0 nav">
                         <li class="nav-item">
                             <a class="nav-link"
@@ -75,10 +75,10 @@ AppAsset::register($this);
                         <?= MultiLanguageWidget::widget([
                             'addCurrentLang' => true, // add current lang
                             'calling_controller' => $this->context,
-                            'image_type'  => 'rounded', // classic or rounded
-                            'link_home'   => true, // true or false
+                            'image_type' => 'rounded', // classic or rounded
+                            'link_home' => true, // true or false
                             'widget_type' => 'classic', // classic or selector
-                            'width'       => '28'
+                            'width' => '28'
                         ]); ?>
                 </div>
         </nav>

@@ -29,10 +29,13 @@ class SignupCest
     {
         $I->submitForm(
             $this->formId, [
-            'SignupForm[username]'  => 'tester',
-            'SignupForm[email]'     => 'ttttt',
-            'SignupForm[password]'  => 'tester_password',
-        ]
+                'SignupForm[username]' => 'tester',
+                'SignupForm[email]' => 'ttttt',
+                'SignupForm[password]' => 'tester_password',
+                'SignupForm[role_id]' => 0,
+                'SignupForm[fullname]' => 'tester_fullname',
+                'SignupForm[phone]' => '998991112233',
+            ]
         );
         $I->dontSee('Username cannot be blank.', '.invalid-feedback');
         $I->dontSee('Password cannot be blank.', '.invalid-feedback');
@@ -45,12 +48,18 @@ class SignupCest
             'SignupForm[username]' => 'tester',
             'SignupForm[email]' => 'tester.email@example.com',
             'SignupForm[password]' => 'tester_password',
+            'SignupForm[role_id]' => 0,
+            'SignupForm[fullname]' => 'tester_fullname',
+            'SignupForm[phone]' => '998991112233',
         ]);
 
         $I->seeRecord('common\models\User', [
             'username' => 'tester',
             'email' => 'tester.email@example.com',
-            'status' => \common\models\User::STATUS_INACTIVE
+            'status' => \common\models\User::STATUS_ACTIVE,
+            'role_id' => 0,
+            'fullname' => 'tester_fullname',
+            'phone'=>'998991112233'
         ]);
 
         $I->seeEmailIsSent();

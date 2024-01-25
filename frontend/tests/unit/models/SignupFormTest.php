@@ -3,7 +3,7 @@
 namespace frontend\tests\unit\models;
 
 use common\fixtures\UserFixture;
-use frontend\models\SignupForm;
+use common\models\SignupForm;
 
 class SignupFormTest extends \Codeception\Test\Unit
 {
@@ -29,6 +29,9 @@ class SignupFormTest extends \Codeception\Test\Unit
             'username' => 'some_username',
             'email' => 'some_email@example.com',
             'password' => 'some_password',
+            'role_id' => 0,
+            'fullname' => 'test_fullname',
+            'phone'=>'998991112233'
         ]);
 
         $user = $model->signup();

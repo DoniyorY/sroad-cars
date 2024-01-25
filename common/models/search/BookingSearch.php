@@ -18,7 +18,7 @@ class BookingSearch extends Booking
     {
         return [
             [['id', 'created', 'status', 'cars_id', 'from_id', 'to_id', 'booking_date'], 'integer'],
-            [['fullname', 'email', 'phone', 'booking_time'], 'safe'],
+            [['fullname', 'email', 'phone', 'booking_time','airport_content','content'], 'safe'],
         ];
     }
 
@@ -70,6 +70,8 @@ class BookingSearch extends Booking
         $query->andFilterWhere(['like', 'fullname', $this->fullname])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'phone', $this->phone])
+            ->andFilterWhere(['airport_content', 'phone', $this->airport_content])
+            ->andFilterWhere(['content', 'phone', $this->content])
             ->andFilterWhere(['like', 'booking_time', $this->booking_time]);
 
         return $dataProvider;

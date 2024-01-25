@@ -17,6 +17,7 @@ class ComposerStaticInit1e63a7066ad2c275f2874f30053ab36b
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
@@ -47,6 +48,8 @@ class ComposerStaticInit1e63a7066ad2c275f2874f30053ab36b
         'c' => 
         array (
             'common\\tests\\' => 13,
+            'codemix\\localeurls\\' => 19,
+            'cinghie\\multilanguage\\' => 22,
             'cebe\\markdown\\' => 14,
         ),
         'b' => 
@@ -155,6 +158,14 @@ class ComposerStaticInit1e63a7066ad2c275f2874f30053ab36b
         array (
             0 => __DIR__ . '/../..' . '/common/tests',
             1 => __DIR__ . '/../..' . '/common/tests/_support',
+        ),
+        'codemix\\localeurls\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codemix/yii2-localeurls',
+        ),
+        'cinghie\\multilanguage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cinghie/yii2-multilanguage',
         ),
         'cebe\\markdown\\' => 
         array (
@@ -753,6 +764,7 @@ class ComposerStaticInit1e63a7066ad2c275f2874f30053ab36b
         'PharIo\\Manifest\\ManifestLoader' => __DIR__ . '/..' . '/phar-io/manifest/src/ManifestLoader.php',
         'PharIo\\Manifest\\ManifestLoaderException' => __DIR__ . '/..' . '/phar-io/manifest/src/exceptions/ManifestLoaderException.php',
         'PharIo\\Manifest\\ManifestSerializer' => __DIR__ . '/..' . '/phar-io/manifest/src/ManifestSerializer.php',
+        'PharIo\\Manifest\\NoEmailAddressException' => __DIR__ . '/..' . '/phar-io/manifest/src/exceptions/NoEmailAddressException.php',
         'PharIo\\Manifest\\PhpElement' => __DIR__ . '/..' . '/phar-io/manifest/src/xml/PhpElement.php',
         'PharIo\\Manifest\\PhpExtensionRequirement' => __DIR__ . '/..' . '/phar-io/manifest/src/values/PhpExtensionRequirement.php',
         'PharIo\\Manifest\\PhpVersionRequirement' => __DIR__ . '/..' . '/phar-io/manifest/src/values/PhpVersionRequirement.php',

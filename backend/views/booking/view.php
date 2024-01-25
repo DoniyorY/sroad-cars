@@ -78,9 +78,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'booking_date',
                 'value' => function ($data) {
-                    return date('d.m.Y', $data->booking_date)  . ' / '. date('H:i',$data->booking_time);
+                    return date('d.m.Y', $data->booking_date) . ' / ' . date('H:i', $data->booking_time);
                 }
             ],
+            'airport_content',
+            'content',
         ],
     ]) ?>
 

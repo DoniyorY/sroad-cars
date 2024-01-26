@@ -4,6 +4,7 @@
 use yii\helpers\Url;
 $lang = Yii::$app->language;
 $this->title = 'SilkRoad Samarkand';
+$baseUrl = Yii::$app->request->baseUrl;
 ?>
 
 <section class="banner">
@@ -28,7 +29,7 @@ $this->title = 'SilkRoad Samarkand';
                     </div>
                     <div class="banner_search_form">
                         <div class="vector_line">
-                            <img src="<?=$baseUrl=Yii::$app->request->baseUrl.'/img/banner_form_vector_line.png'?>" alt="">
+                            <img src="<?=$baseUrl .'/img/banner_form_vector_line.png'?>" alt="">
                         </div>
                         <form action="<?=Url::to(['cars/search'])?>">
                             <div class="form-group mt-4">
@@ -71,7 +72,7 @@ $this->title = 'SilkRoad Samarkand';
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center mb-5">
-                <h2>Наши преимущества</h2>
+                <h2 class="h1">Наши преимущества</h2>
             </div>
             <div class="col-md-12">
                 <div class="row">
@@ -153,6 +154,122 @@ $this->title = 'SilkRoad Samarkand';
                     С <strong>автопарком Silk Road Samarkand</strong>, ваше путешествие становится легким и приятным.
                     Доверьтесь нам организацию ваших туров и экскурсий, и мы гарантируем, что вы получите незабываемый опыт в самом комфортабельном и безопасном автотранспорте.
                 </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="owl_categories">
+    <div class="row w-100">
+        <div class="col-md-12 text-center">
+            <h2 class="h1">Категории доступного транспорта</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="card">
+                        <div class="card_header" style="z-index: 1;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="395" height="61" viewBox="0 0 395 61" fill="none">
+                                <g filter="url(#filter0_d_171_286)">
+                                    <path d="M395 0V20.3875H255.972C252.973 20.3875 250.072 21.4898 247.813 23.4716L217.855 49.9159C215.596 51.91 212.708 53 209.696 53H0V0H395Z" fill="#A08B54"/>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_171_286" x="-4" y="0" width="403" height="61" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="4"/>
+                                        <feGaussianBlur stdDeviation="2"/>
+                                        <feComposite in2="hardAlpha" operator="out"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_171_286"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_171_286" result="shape"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="card_image1" style="margin-top: -50px; z-index: 0;">
+                            <img src="<?=$baseUrl.'/img/owl-card.png'?>" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="card_header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="395" height="61" viewBox="0 0 395 61" fill="none">
+                                <g filter="url(#filter0_d_171_286)">
+                                    <path d="M395 0V20.3875H255.972C252.973 20.3875 250.072 21.4898 247.813 23.4716L217.855 49.9159C215.596 51.91 212.708 53 209.696 53H0V0H395Z" fill="#A08B54"/>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_171_286" x="-4" y="0" width="403" height="61" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="4"/>
+                                        <feGaussianBlur stdDeviation="2"/>
+                                        <feComposite in2="hardAlpha" operator="out"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_171_286"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_171_286" result="shape"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="card_image1">
+                            <img src="<?=$baseUrl.'/img/owl-card.png'?>" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="card_header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="395" height="61" viewBox="0 0 395 61" fill="none">
+                                <g filter="url(#filter0_d_171_286)">
+                                    <path d="M395 0V20.3875H255.972C252.973 20.3875 250.072 21.4898 247.813 23.4716L217.855 49.9159C215.596 51.91 212.708 53 209.696 53H0V0H395Z" fill="#A08B54"/>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_171_286" x="-4" y="0" width="403" height="61" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="4"/>
+                                        <feGaussianBlur stdDeviation="2"/>
+                                        <feComposite in2="hardAlpha" operator="out"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_171_286"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_171_286" result="shape"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="card_image1">
+                            <img src="<?=$baseUrl.'/img/owl-card.png'?>" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="card_header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="395" height="61" viewBox="0 0 395 61" fill="none">
+                                <g filter="url(#filter0_d_171_286)">
+                                    <path d="M395 0V20.3875H255.972C252.973 20.3875 250.072 21.4898 247.813 23.4716L217.855 49.9159C215.596 51.91 212.708 53 209.696 53H0V0H395Z" fill="#A08B54"/>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_171_286" x="-4" y="0" width="403" height="61" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="4"/>
+                                        <feGaussianBlur stdDeviation="2"/>
+                                        <feComposite in2="hardAlpha" operator="out"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_171_286"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_171_286" result="shape"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="card_image1">
+                            <img src="<?=$baseUrl.'/img/owl-card.png'?>" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

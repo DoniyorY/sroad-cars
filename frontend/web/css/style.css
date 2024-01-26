@@ -227,6 +227,10 @@ header nav ul li {
     padding-left: 90px;
     padding-right: 90px;
 }
+.owl_categories{
+    padding-top: 100px;
+    background: #f4f4f4;
+}
 
 @media (max-width: 578px) {
     .pre-header {

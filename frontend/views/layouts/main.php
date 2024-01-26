@@ -44,8 +44,8 @@ AppAsset::register($this);
     <header>
         <nav id="w0" class="navbar navbar-expand-md navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="<?= Yii::$app->homeUrl ?>">
-                    <img src="<?= $baseUrl . '/logo.png' ?>" alt="" style="object-fit: cover">
+                <a class="navbar-brand logo" href="<?= Yii::$app->homeUrl ?>">
+                    <img src="<?= $baseUrl . '/logo.png' ?>" alt="logo">
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#w0-collapse"
                         aria-controls="w0-collapse" aria-expanded="false" aria-label="Toggle navigation"><span
@@ -80,17 +80,15 @@ AppAsset::register($this);
                             'widget_type' => 'classic', // classic or selector
                             'width' => '28'
                         ]); ?>
+                    </ul>
                 </div>
         </nav>
     </header>
     <main role="main" class="flex-shrink-0">
-        <div class="container">
-            <?= Breadcrumbs::widget([
+        <?php /*= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= Alert::widget() ?>
-            <?= $content ?>
-        </div>
+            ]) */ ?>
+        <?= $content ?>
     </main>
 
     <footer class="footer mt-auto py-3 text-muted">

@@ -5,9 +5,7 @@
 /** @var string $content */
 
 use cinghie\multilanguage\widgets\MultiLanguageWidget;
-use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\helpers\Url;
 

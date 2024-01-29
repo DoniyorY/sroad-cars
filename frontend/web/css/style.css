@@ -142,23 +142,7 @@ header nav ul li {
     z-index: 0;
 }
 
-@media (max-width: 1660px) {
-    .kusok_derma {
-        width: 70.457px;
-        height: 70.457px;
-        transform: rotate(-45deg);
-        border-radius: 15px;
-        background-color: #A08B54;
-        position: absolute;
-        right: 210px;
-        top: 15px;
-        z-index: 0;
-    }
 
-    .banner_search_title h4 {
-        font-size: 22px !important;
-    }
-}
 
 .banner_search_form {
     padding: 20px 25px 25px 25px;
@@ -317,6 +301,7 @@ header nav ul li {
 .owl_categories {
     padding-top: 100px;
     background: #f4f4f4;
+    padding-bottom: 100px;
 }
 
 .owl-nav{
@@ -326,6 +311,10 @@ header nav ul li {
     justify-content: space-between;
     bottom: 135px;
 }
+.owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+}
 
 .owl-nav button{
     background: none !important;
@@ -334,11 +323,52 @@ header nav ul li {
 }
 .owl-nav .owl-prev{
     position: relative;
-    right: 200px;
+    right: 150px;
 }
 .owl-nav .owl-next{
     position: relative;
     left: 150px;
+}
+.section_cities{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.city_card_link{
+    text-align: right;
+    margin-top: 10px;
+}
+.city_card_link .btn-sroad{
+    width: 160px!important;
+    height: 40px!important;
+}
+.section_cities .card .card_image1{
+    margin: 0 !important;
+    z-index: 0 !important;
+}
+@media (max-width: 1600px) {
+    .kusok_derma {
+        width: 70.457px;
+        height: 70.457px;
+        transform: rotate(-45deg);
+        border-radius: 15px;
+        background-color: #A08B54;
+        position: absolute;
+        right: 210px;
+        top: 15px;
+        z-index: 0;
+    }
+
+    .banner_search_title h4 {
+        font-size: 22px !important;
+    }
+    .owl-nav .owl-prev{
+        position: relative;
+        right: 120px;
+    }
+    .owl-nav .owl-next{
+        position: relative;
+        left: 140px;
+    }
 }
 
 @media (max-width: 578px) {

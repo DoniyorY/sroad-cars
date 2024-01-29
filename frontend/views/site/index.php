@@ -246,3 +246,160 @@ $baseUrl = Yii::$app->request->baseUrl;
         </div>
     </div>
 </section>
+
+<section class="section_cities">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-md-12 text-center mb-5">
+                <h2 class="h1">Поездки по городам Узбекистана</h2>
+                <p style="font-size: 20px; text-align: center">
+                    Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового Пути.
+                </p>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card_image1">
+                        <img src="<?= $baseUrl . '/img/cities_samarkand.png' ?>" alt="" style="width: 100%;">
+                    </div>
+                    <div class="card_middle">
+                        <p>Экскурсия по Самарканду</p>
+                        <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p style="margin-top: 10px;">
+                            Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового
+                            Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого
+                            Шелкового Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам
+                            Великого Шелкового Пути.
+                        </p>
+                        <div class="city_card_link">
+                            <a href="#" class="btn btn-sroad">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card_image1">
+                        <img src="<?= $baseUrl . '/img/cities_xiva.png' ?>" alt="" style="width: 100%;">
+                    </div>
+                    <div class="card_middle">
+                        <p>Поездка в Хиву</p>
+                        <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p style="margin-top: 10px;">
+                            Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового
+                            Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого
+                            Шелкового Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам
+                            Великого Шелкового Пути.
+                        </p>
+                        <div class="city_card_link">
+                            <a href="#" class="btn btn-sroad">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card_image1">
+                        <img src="<?= $baseUrl . '/img/cities_shaxrisabz.png' ?>" alt="" style="width: 100%;">
+                    </div>
+                    <div class="card_middle">
+                        <p>Поездка в Шахрисабз</p>
+                        <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p style="margin-top: 10px;">
+                            Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового
+                            Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого
+                            Шелкового Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам
+                            Великого Шелкового Пути.
+                        </p>
+                        <div class="city_card_link">
+                            <a href="#" class="btn btn-sroad">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card_image1">
+                        <img src="<?= $baseUrl . '/img/cities_samarkand.png' ?>" alt="" style="width: 100%;">
+                    </div>
+                    <div class="card_middle">
+                        <p>Экскурсия по Самарканду</p>
+                        <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p style="margin-top: 10px;">
+                            Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового
+                            Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого
+                            Шелкового Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам
+                            Великого Шелкового Пути.
+                        </p>
+                        <div class="city_card_link">
+                            <a href="#" class="btn btn-sroad">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card_image1">
+                        <img src="<?= $baseUrl . '/img/cities_xiva.png' ?>" alt="" style="width: 100%;">
+                    </div>
+                    <div class="card_middle">
+                        <p>Поездка в Хиву</p>
+                        <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p style="margin-top: 10px;">
+                            Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового
+                            Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого
+                            Шелкового Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам
+                            Великого Шелкового Пути.
+                        </p>
+                        <div class="city_card_link">
+                            <a href="#" class="btn btn-sroad">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="card">
+                    <div class="card_image1">
+                        <img src="<?= $baseUrl . '/img/cities_shaxrisabz.png' ?>" alt="" style="width: 100%;">
+                    </div>
+                    <div class="card_middle">
+                        <p>Поездка в Шахрисабз</p>
+                        <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
+                    </div>
+                    <div class="card-body">
+                        <p style="margin-top: 10px;">
+                            Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового
+                            Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого
+                            Шелкового Пути.Приглашаем вас отправиться с нами в увлекательное путешествие по городам
+                            Великого Шелкового Пути.
+                        </p>
+                        <div class="city_card_link">
+                            <a href="#" class="btn btn-sroad">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

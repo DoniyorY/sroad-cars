@@ -2,9 +2,9 @@ $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 0,
     dots: false,
-    navSpeed: 800,
+    navSpeed: 1000,
     mouseDrag: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 10000,
     navText: ['<img src="/img/owl_prev.svg" alt="">','<img src="/img/owl_next.svg" alt="">'],
     responsive: {

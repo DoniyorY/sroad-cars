@@ -345,6 +345,45 @@ header nav ul li {
     margin: 0 !important;
     z-index: 0 !important;
 }
+.footer {
+    padding-top: 30px !important;
+    background-color: #121111;
+    height: auto;
+    color: #ffffff;
+    padding-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 90px;
+}
+
+.social-icons ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    list-style-type: none;
+    margin-top: 10px;
+    color:white;
+}
+
+.footer-info ul {
+    padding-left: 0;
+}
+
+.footer-info ul li span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-title {
+    color: #fff;
+    border-bottom: #A08B53 solid 1px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

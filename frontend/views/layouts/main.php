@@ -89,10 +89,82 @@ AppAsset::register($this);
         <?= $content ?>
     </main>
 
-    <footer class="footer mt-auto py-3 text-muted">
+    <footer class="footer mt-auto text-muted">
         <div class="container">
-            <p class="float-start">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-            <p class="float-end"><?= Yii::powered() ?></p>
+            <div class="row mt-5 justify-content-between">
+                <div class="col-md-3 col-sm-12 my-xs-5 ">
+                    <div class="footer-logo">
+                        <a href="<?=Yii::$app->homeUrl?>">
+                            <img src="<?=$baseUrl.'/img/footer-logo.png'?>" alt="footer-logo">
+                        </a>
+                    </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li>
+                                <a href="https://t.me/silkroad_samarkand" target="_blank">
+                                    <i class="bi bi-telegram"></i> Наш Telegram канал                                 </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/silkroadsamarkand/" target="_blank">
+                                    <i class="bi bi-instagram"></i> Наша страничка в Instagram                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/silkroadresort/" target="_blank">
+                                    <i class="bi bi-facebook"></i> Наша страничка на Facebook                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@silkroadsamarkand" target="_blank">
+                                    <i class="bi bi-youtube"></i> Наш Youtube канал                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 my-xs-5 ">
+                    <div class="footer-title">
+                        <h2>Наши контакты</h2>
+                    </div>
+                    <div class="footer-info">
+                        <ul>
+                            <li>
+                                <span>Адрес</span>: <br> Гребной канал, Самарканд, Узбекистан                            </li>
+                            <li>
+
+                                <span>Номер бронирования:</span> <br>
+                                <a href="tel:+998946700101">+998 (94) 670-01-01</a>                            </li>
+                            <li>
+
+                                <span>Email</span>:<br> <a style="display: block; width: 102%;" href="mailto:svyatoslav.kipin@silkroad-samarkand.com">svyatoslav.kipin@silkroad-samarkand.com</a>                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 my-xs-5 ">
+                    <div class="footer-title">
+                        <h2>Навигация</h2>
+                    </div>
+                    <div class="footer-info">
+                        <ul>
+                            <li>
+                                <a href="/">Главная</a>
+                            </li>
+                            <li>
+                                <a href="/about">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#contacts">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#category">Категории</a>
+                            </li>
+                            <li>
+                                <a href="/site/rules">Правила поведения на борту</a>
+                            </li>
+                            <li>
+                                <a href="/site/politics">Политика конфиденциальности</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 

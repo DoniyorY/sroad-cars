@@ -117,6 +117,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             </div>
                             <div class="card_image">
                                 <img src="<?= $baseUrl . '/img/property-3.svg' ?>" alt="">
+
                             </div>
                             <div class="card_desc">
                                 <p>
@@ -147,29 +148,99 @@ $baseUrl = Yii::$app->request->baseUrl;
             </div>
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
-                    <div class="item" style="width: 420px;">
+                    <div class="item">
                         <div class="card">
-                            <div class="card_header" style="z-index: 1;">
-                                <p class="p-0 " style=" margin-bottom: -36px; z-index: 3; position: relative; color: white; font-size: 24px; width: 100px; top: 10px; left: 50px;">99 Мест</p>
+                            <div class="card_header">
+                                <p class="p-0 ">99 Мест</p>
                                 <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
                             </div>
-                            <div class="card_image1" style="margin-top: -62px; z-index: 0;">
-                                <img src="<?= $baseUrl . '/img/owl-card.png' ?>" style="border-radius: 5px" alt="">
+                            <div class="card_image1">
+                                <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
                             </div>
                             <div class="card_middle">
-                                <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="" style="margin-top: -75px;z-index: 1;position: absolute; width: 100%;">
+                                <p>Mercedes-Benz Sprinter</p>
+                                <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                             </div>
                             <div class="card_image2">
-                                <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" style="width: 100%; object-fit: cover; height: 190px;" alt="">
+                                <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
                             </div>
                         </div>
-                        <div class="card-footer" style="margin-top: -30px;z-index: 2;margin-left: 1px;position: sticky;width: 80%;">
-                            <a class="btn btn-sroad p-0" href="#" style="height: 30px;width: 100%;">
+                        <div class="card-footer">
+                            <a class="btn btn-sroad p-0" href="#">
                                 Узнать подробнее
                             </a>
                         </div>
                     </div>
+                    <div class="item">
+                        <div class="card">
+                            <div class="card_header">
+                                <p class="p-0 ">99 Мест</p>
+                                <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
+                            </div>
+                            <div class="card_image1">
+                                <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
+                            </div>
+                            <div class="card_middle">
+                                <p>Mercedes-Benz Sprinter</p>
+                                <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
+                            </div>
+                            <div class="card_image2">
+                                <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-sroad p-0" href="#">
+                                Узнать подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <div class="card_header">
+                                <p class="p-0 ">99 Мест</p>
+                                <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
+                            </div>
+                            <div class="card_image1">
+                                <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
+                            </div>
+                            <div class="card_middle">
+                                <p>Mercedes-Benz Sprinter</p>
+                                <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
+                            </div>
+                            <div class="card_image2">
+                                <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-sroad p-0" href="#">
+                                Узнать подробнее
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <div class="card_header">
+                                <p class="p-0 ">99 Мест</p>
+                                <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
+                            </div>
+                            <div class="card_image1">
+                                <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
+                            </div>
+                            <div class="card_middle">
+                                <p>Mercedes-Benz Sprinter</p>
+                                <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
+                            </div>
+                            <div class="card_image2">
+                                <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-sroad p-0" href="#">
+                                Узнать подробнее
+                            </a>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </div>

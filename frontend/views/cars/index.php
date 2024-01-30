@@ -30,7 +30,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
     </div>
     <div class="cars_filter">
         <div class="container">
-            <form action="<?= Url::to(['cars/search']) ?>" method="get">
+            <form action="<?= Url::to(['cars/index']) ?>" method="get">
                 <div class="row align-items-center">
                     <div class="col-md-2 mt-2">
                         <h2>
@@ -39,19 +39,19 @@ $this->title = Yii::$app->params['Categories'][$lang]
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="cars_name">Название машины</label>
-                        <input id="cars_name" type="text" class="form-control" placeholder="Выберите машину">
+                        <input name="CarsSearch[title]" id="cars_name" type="text" class="form-control" placeholder="Выберите машину">
                     </div>
                     <div class="col-md-3 form-group">
-                        <label for="cars_destination">Направление</label>
-                        <input id="cars_destination" type="text" class="form-control"
-                               placeholder="Выберите направление">
+                        <label for="cars_destination">Категория</label>
+                        <input name="CarsSearch[type_id]" id="cars_destination" type="text" class="form-control"
+                               placeholder="Выберите категорию">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="cars_people_count">Количество пассажиров</label>
-                        <input id="cars_people_count" type="text" class="form-control">
+                        <input name="CarsSearch[capacity]" id="cars_people_count" type="text" class="form-control">
                     </div>
                     <div class="col-md-1 mt-4">
-                        <button type="submit" class="btn btn-sroad w-100">поиск</button>
+                        <button type="submit" class="btn btn-sroad w-100">Поиск</button>
                     </div>
                 </div>
             </form>

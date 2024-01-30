@@ -239,7 +239,6 @@ $baseUrl = Yii::$app->request->baseUrl;
                                 Узнать подробнее
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -60,7 +60,7 @@ AppAsset::register($this);
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active"
-                               href="<?= Yii::$app->homeUrl ?>"><?= Yii::$app->params['Categories'][$lang] ?></a>
+                               href="<?= Url::to(['cars/index']) ?>"><?= Yii::$app->params['Categories'][$lang] ?></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active"

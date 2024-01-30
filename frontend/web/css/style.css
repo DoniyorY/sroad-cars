@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    font-family: 'Manrope', sans-serif !important;
+    /* font-family: 'Manrope', sans-serif !important;*/
     background-color: #fff;
 }
 
@@ -8,9 +8,9 @@ p {
     text-align: justify;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', 'sans-serif' !important;
-}
+}*/
 
 a {
     text-decoration: none;
@@ -143,7 +143,6 @@ header nav ul li {
 }
 
 
-
 .banner_search_form {
     padding: 20px 25px 25px 25px;
     display: flex;
@@ -263,11 +262,12 @@ header nav ul li {
     position: absolute;
     width: 100%;
 }
-.card_middle p{
+
+.card_middle p {
     font-size: 25px;
     font-weight: 600;
     z-index: 4;
-    color:white;
+    color: white;
     position: relative;
     margin: 0;
     text-align: center;
@@ -288,8 +288,10 @@ header nav ul li {
     position: sticky;
     width: 90%;
 }
-.card-footer a{
-    height: 30px;width: 100%;
+
+.card-footer a {
+    height: 30px;
+    width: 100%;
 }
 
 .properties_desc {
@@ -304,47 +306,55 @@ header nav ul li {
     padding-bottom: 100px;
 }
 
-.owl-nav{
+.owl-nav {
     position: absolute;
     width: 100%;
     display: flex;
     justify-content: space-between;
     bottom: 135px;
 }
-.owl-carousel .owl-item{
+
+.owl-carousel .owl-item {
     display: flex;
     justify-content: center;
 }
 
-.owl-nav button{
+.owl-nav button {
     background: none !important;
     display: inline-block;
-    border: none!important;
+    border: none !important;
 }
-.owl-nav .owl-prev{
+
+.owl-nav .owl-prev {
     position: relative;
     right: 150px;
 }
-.owl-nav .owl-next{
+
+.owl-nav .owl-next {
     position: relative;
     left: 150px;
 }
-.section_cities{
+
+.section_cities {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.city_card_link{
+
+.city_card_link {
     text-align: right;
     margin-top: 10px;
 }
-.city_card_link .btn-sroad{
-    width: 160px!important;
-    height: 40px!important;
+
+.city_card_link .btn-sroad {
+    width: 160px !important;
+    height: 40px !important;
 }
-.section_cities .card .card_image1{
+
+.section_cities .card .card_image1 {
     margin: 0 !important;
     z-index: 0 !important;
 }
+
 .footer {
     padding-top: 30px !important;
     background-color: #121111;
@@ -364,7 +374,7 @@ header nav ul li {
 .footer ul li {
     list-style-type: none;
     margin-top: 10px;
-    color:white;
+    color: white;
 }
 
 .footer-info ul {
@@ -384,6 +394,84 @@ header nav ul li {
     font-weight: 400;
     line-height: normal;
 }
+
+.cars_banner {
+    width: 100%;
+}
+
+.cars_banner img {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+}
+
+.cars_section {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.cars_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cars_title .first_title h1 {
+    color: #071E3F;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cars_title .second_title p {
+    padding-left: 20px;
+    margin: 0;
+    text-align: left;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cars_title .second_title {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.cars_filter {
+    height: 123px;
+    background: #071E3f;
+    width: 100%;
+}
+
+.cars_filter .row {
+    height: 123px;
+
+}
+
+.cars_filter h2 {
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cars_filter form label {
+    color: white;
+}
+
+.cars_filter form input {
+    border-radius: 0 !important;
+}
+
+.cars_filter form .btn-sroad {
+    height: 38px;
+}
+
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;
@@ -400,11 +488,13 @@ header nav ul li {
     .banner_search_title h4 {
         font-size: 22px !important;
     }
-    .owl-nav .owl-prev{
+
+    .owl-nav .owl-prev {
         position: relative;
         right: 120px;
     }
-    .owl-nav .owl-next{
+
+    .owl-nav .owl-next {
         position: relative;
         left: 140px;
     }

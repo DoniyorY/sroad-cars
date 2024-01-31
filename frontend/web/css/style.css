@@ -480,6 +480,20 @@ header nav ul li {
     background: #b19e6b;
     color: white;
 }
+.left_title{
+    display: flex;
+    justify-content: center;
+}
+.left_desc {
+    padding: 50px 100px 0 100px;
+}
+.left_desc p{
+    font-size: 20px;
+}
+.left_cars_view h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .cars_view{
     max-width: 100%;
 }

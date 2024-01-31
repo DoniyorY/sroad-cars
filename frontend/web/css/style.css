@@ -513,22 +513,26 @@ header nav ul li {
 
 .cars_detail {
     background-image: url("/img/cars_view_2.png");
-    height: 880px;
+    /*height: 880px;*/
     padding-top: 100px;
+    padding-bottom: 100px;
 }
-.cars_detail_title h1{
+
+.cars_detail_title h1 {
     color: #FFF;
     font-size: 90px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
-.cars_detail_content{
+
+.cars_detail_content {
     margin-top: 50px;
-    color:white;
+    color: white;
     max-width: 1002px;
 }
-.cars_detail_content p{
+
+.cars_detail_content p {
     color: #FFF;
     font-size: 24px;
     font-style: normal;
@@ -536,6 +540,7 @@ header nav ul li {
     line-height: normal;
     margin-top: 70px;
 }
+
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

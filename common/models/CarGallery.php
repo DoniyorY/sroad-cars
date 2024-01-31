@@ -9,7 +9,6 @@ use Yii;
  *
  * @property int $id
  * @property int $cars_id
- * @property int $type_id
  * @property string $image
  */
 class CarGallery extends \yii\db\ActiveRecord
@@ -30,8 +29,8 @@ class CarGallery extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['cars_id', 'image','type_id'], 'required'],
-            [['cars_id','type_id'], 'integer'],
+            [['cars_id', 'image'], 'required'],
+            [['cars_id'], 'integer'],
             [['image'], 'string', 'max' => 255],
             ['imageFile', 'file', 'skipOnEmpty' => true, 'extensions' => 'jpg, png, jpeg']
         ];
@@ -46,7 +45,6 @@ class CarGallery extends \yii\db\ActiveRecord
             'id' => 'ID',
             'cars_id' => 'Cars ID',
             'image' => 'Image',
-            'type_id'=>'Type ID'
         ];
     }
 

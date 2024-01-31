@@ -46,9 +46,8 @@ AppAsset::register($this);
                     <img src="<?= $baseUrl . '/logo.png' ?>" alt="logo">
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#w0-collapse"
-                        aria-controls="w0-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                        aria-controls="w0-collapse" aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
                 <div id="w0-collapse" class="collapse navbar-collapse collapse-dark">
                     <ul id="w1" class="navbar-nav me-auto mb-2 mb-md-0 nav">
                         <li class="nav-item">
@@ -83,35 +82,39 @@ AppAsset::register($this);
                 </div>
         </nav>
     </header>
-
-    <?= $content ?>
+    <main role="main" class="flex-shrink-0">
+        <?php /*= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) */ ?>
+        <?= $content ?>
+    </main>
 
     <footer class="footer mt-auto text-muted">
         <div class="container">
             <div class="row mt-5 justify-content-between">
                 <div class="col-md-3 col-sm-12 my-xs-5 ">
                     <div class="footer-logo">
-                        <a href="<?= Yii::$app->homeUrl ?>">
-                            <img src="<?= $baseUrl . '/img/footer-logo.png' ?>" alt="footer-logo">
+                        <a href="<?=Yii::$app->homeUrl?>">
+                            <img src="<?=$baseUrl.'/img/footer-logo.png'?>" alt="footer-logo">
                         </a>
                     </div>
                     <div class="social-icons">
                         <ul>
                             <li>
                                 <a href="https://t.me/silkroad_samarkand" target="_blank">
-                                    <i class="bi bi-telegram"></i> Наш Telegram канал </a>
+                                    <i class="bi bi-telegram"></i> Наш Telegram канал                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/silkroadsamarkand/" target="_blank">
-                                    <i class="bi bi-instagram"></i> Наша страничка в Instagram </a>
+                                    <i class="bi bi-instagram"></i> Наша страничка в Instagram                                </a>
                             </li>
                             <li>
                                 <a href="https://www.facebook.com/silkroadresort/" target="_blank">
-                                    <i class="bi bi-facebook"></i> Наша страничка на Facebook </a>
+                                    <i class="bi bi-facebook"></i> Наша страничка на Facebook                                </a>
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/@silkroadsamarkand" target="_blank">
-                                    <i class="bi bi-youtube"></i> Наш Youtube канал </a>
+                                    <i class="bi bi-youtube"></i> Наш Youtube канал                                </a>
                             </li>
                         </ul>
                     </div>
@@ -123,16 +126,14 @@ AppAsset::register($this);
                     <div class="footer-info">
                         <ul>
                             <li>
-                                <span>Адрес</span>: <br> Гребной канал, Самарканд, Узбекистан
-                            </li>
+                                <span>Адрес</span>: <br> Гребной канал, Самарканд, Узбекистан                            </li>
                             <li>
+
                                 <span>Номер бронирования:</span> <br>
-                                <a href="tel:+998946700101">+998 (94) 670-01-01</a>
-                            </li>
+                                <a href="tel:+998946700101">+998 (94) 670-01-01</a>                            </li>
                             <li>
-                                <span>Email</span>:<br> <a style="display: block; width: 102%;"
-                                                           href="mailto:svyatoslav.kipin@silkroad-samarkand.com">svyatoslav.kipin@silkroad-samarkand.com</a>
-                            </li>
+
+                                <span>Email</span>:<br> <a style="display: block; width: 102%;" href="mailto:svyatoslav.kipin@silkroad-samarkand.com">svyatoslav.kipin@silkroad-samarkand.com</a>                            </li>
                         </ul>
                     </div>
                 </div>
@@ -143,19 +144,22 @@ AppAsset::register($this);
                     <div class="footer-info">
                         <ul>
                             <li>
-                                <a href="<?= Yii::$app->homeUrl ?>">Главная</a>
+                                <a href="/">Главная</a>
                             </li>
                             <li>
-                                <a href="<?= Url::to(['site/about']) ?>">О нас</a>
+                                <a href="/about">О нас</a>
                             </li>
                             <li>
-                                <a href="<?= Url::to(['site/contact']) ?>">Контакты</a>
+                                <a href="#contacts">Контакты</a>
                             </li>
                             <li>
-                                <a href="<?= Url::to(['cars/index']) ?>"><?= Yii::$app->params['Categories'][$lang] ?></a>
+                                <a href="#category">Категории</a>
                             </li>
                             <li>
-                                <a href="<?= Url::to(['site/politics']) ?>">Политика конфиденциальности</a>
+                                <a href="/site/rules">Правила поведения на борту</a>
+                            </li>
+                            <li>
+                                <a href="/site/politics">Политика конфиденциальности</a>
                             </li>
                         </ul>
                     </div>

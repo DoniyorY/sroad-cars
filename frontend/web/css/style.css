@@ -480,30 +480,62 @@ header nav ul li {
     background: #b19e6b;
     color: white;
 }
-.left_title{
+
+.left_title {
     display: flex;
     justify-content: center;
 }
+
 .left_desc {
     padding: 50px 100px 0 100px;
 }
-.left_desc p{
+
+.left_desc p {
     font-size: 20px;
 }
-.left_cars_view h1{
+
+.left_cars_view h1 {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.cars_view{
+
+.cars_view {
     max-width: 100%;
 }
-.right_cars_view{
+
+.right_cars_view {
     padding: 0;
 }
-.right_cars_view img{
+
+.right_cars_view img {
     width: 100%;
 }
 
+.cars_detail {
+    background-image: url("/img/cars_view_2.png");
+    height: 880px;
+    padding-top: 100px;
+}
+.cars_detail_title h1{
+    color: #FFF;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.cars_detail_content{
+    margin-top: 50px;
+    color:white;
+    max-width: 1002px;
+}
+.cars_detail_content p{
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 70px;
+}
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

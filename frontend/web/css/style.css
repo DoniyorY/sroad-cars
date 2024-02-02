@@ -385,7 +385,9 @@ header nav ul li {
     color: #ffffff;
     padding-bottom: 40px;
 }
-
+.footer-logo{
+    margin-bottom: 25px;
+}
 .footer-logo img {
     height: 90px;
 }
@@ -572,8 +574,8 @@ header nav ul li {
     background: #b19e6b;
     color:white;
     border-radius: 0;
-    width: 200px;
-    height: 40px;
+    width: 220px;
+    height: 45px;
 }
 .booking_btn button:hover{
     background: #071E3F;

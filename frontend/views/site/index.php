@@ -166,7 +166,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a class="btn btn-sroad p-0" href="<?=Url::to(['cars/view','id'=>1])?>">
+                            <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
                                 Узнать подробнее
                             </a>
                         </div>
@@ -189,7 +189,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a class="btn btn-sroad p-0" href="<?=Url::to(['cars/view','id'=>1])?>">
+                            <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
                                 Узнать подробнее
                             </a>
                         </div>
@@ -212,7 +212,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a class="btn btn-sroad p-0" href="<?=Url::to(['cars/view','id'=>1])?>">
+                            <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
                                 Узнать подробнее
                             </a>
                         </div>
@@ -235,7 +235,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a class="btn btn-sroad p-0" href="<?=Url::to(['cars/view','id'=>1])?>">
+                            <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
                                 Узнать подробнее
                             </a>
                         </div>

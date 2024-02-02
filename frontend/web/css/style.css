@@ -11,6 +11,13 @@ p {
 /*h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', 'sans-serif' !important;
 }*/
+input {
+    border-radius: 0 !important;
+}
+
+input::placeholder {
+    color: black !important;
+}
 
 a {
     text-decoration: none;
@@ -186,8 +193,20 @@ header nav ul li {
     color: white
 }
 
-.btn-sroad:active {
-    background: #071E3F;
+.btn-sroad:focus {
+    background: #b19e6b;
+    color: white
+}
+.btn-booking{
+    width: 100%;
+    flex-shrink: 0;
+    background: #A08B54;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.30);
+    border-radius: 0;
+    color: white;
+}
+.btn-booking:hover {
+    background: #b19e6b;
     color: white
 }
 
@@ -541,6 +560,46 @@ header nav ul li {
     margin-top: 70px;
 }
 
+.modal .modal-content {
+    border-radius: 0;
+    background: rgb(7, 30, 63, 0.8);
+    color: white;
+}
+.booking_btn{
+    margin-top: 50px;
+}
+.booking_btn button{
+    background: #b19e6b;
+    color:white;
+    border-radius: 0;
+    width: 200px;
+    height: 40px;
+}
+.booking_btn button:hover{
+    background: #071E3F;
+    color:white;
+    border-radius: 0;
+}
+.booking_info{
+    padding-left: 10px;
+}
+.booking_info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.booking_info ul li {
+    margin-bottom: 10px;
+}
+.booking_info ul li:last-child{
+    margin-bottom: 0px;
+}
+.booking_total{
+    border-top: 1px solid white;
+}
+.booking_total p{
+    margin-bottom: 0;
+    margin-top: 5px;
+}
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

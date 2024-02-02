@@ -1,7 +1,6 @@
 <?php
 
 use yii\helpers\Url;
-use yii\helpers\Html;
 
 $lang = Yii::$app->language;
 $baseUrl = Yii::$app->request->baseUrl;
@@ -48,6 +47,101 @@ $this->title = 'Автобус HIGER';
             <p>
                 Независимо от вашей цели, наши автобусы Higer обеспечат стиль, комфорт и надежность в каждой поездке.
             </p>
+            <div class="booking_btn">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                    Забронировать
+                </button>
+            </div>
         </div>
     </div>
 </section>
+<!-- Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="bookingModalLabel">Забронировать</h1>
+                <button type="button" class="btn-close text-bg-light" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="<?= Url::to(['cars/booking']) ?>" method="post">
+                            <div class="form-group">
+                                <input type="text" id="fullname" name="Booking[fullname]" class="form-control"
+                                       placeholder="Ф.И.О">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="email" id="email" name="Booking[email]" class="form-control"
+                                       placeholder="Email">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="text" id="phone" name="Booking[phone]" class="form-control"
+                                       placeholder="Номер телефона">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="text" id="from_id" name="Booking[from_id]" class="form-control"
+                                       placeholder="Откуда">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="text" id="to_id" name="Booking[to_id]" class="form-control"
+                                       placeholder="Куда">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="date" id="booking_date" name="Booking[booking_date]" class="form-control"
+                                       placeholder="Выберите дату">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="time" id="booking_time" name="Booking[booking_time]" class="form-control"
+                                       placeholder="Выберите время">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="text" id="airport_content" name="Booking[airport_content]"
+                                       class="form-control"
+                                       placeholder="Номер рейса">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="text" id="content" name="Booking[content]" class="form-control"
+                                       placeholder="Примечание">
+                            </div>
+                            <div class="form-group mt-2">
+                                <button type="submit" class="btn btn-booking">
+                                    Бронировать
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="booking_image">
+                            <img src="<?= $baseUrl . '/img/cars_view.png' ?>" alt=""
+                                 style="width: 100%; object-fit: cover">
+                        </div>
+                        <div class="mt-4 booking_info">
+                            <ul>
+                                <li>
+                                    Категория: Автобус
+                                </li>
+                                <li>
+                                    Марка: HIGER
+                                </li>
+                                <li>
+                                    Количество мест: 99
+                                </li>
+                                <li>
+                                    Вместимость багажа: 99
+                                </li>
+                            </ul>
+                            <div class="booking_total">
+                                <p>
+                                    Итоговая сумма: <strong>1 000 000 UZS</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

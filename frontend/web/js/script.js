@@ -21,19 +21,19 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
-var base_url = window.location.origin;
-console.log(base_url + '/v1/api/ajax?search_type=0')
+
 $(document).ready(function () {
-    $('.js-data-example-ajax').select2({
+    $('.js-from-select2').select2({
+        language: "ru",
         ajax: {
-            url: "https:localhost:8080/v1/api/ajax?search_type=0",
+            url: "http://10.10.200.221:8888/ru/v1/api/ajax?search_type=0",
             dataType: 'json',
             //delay: 250,
             type: 'get',
 
             data: function (params) {
                 return {
-                    nome: params.term
+                    req: params.term
                 }
             },
             processResults: function (data) {
@@ -45,6 +45,30 @@ $(document).ready(function () {
         },
         status: 1,
         placeholder: 'Выберите маршрут',
+    });
+});
+$(document).ready(function () {
+    $('.js-to-select2').select2({
+        language: "ru",
+        ajax: {
+            url: "http://localhost:8080/ru/v1/api/ajax?search_type=1",
+            dataType: 'json',
+            //delay: 250,
+            type: 'get',
 
+            data: function (params) {
+                return {
+                    req: params.term
+                }
+            },
+            processResults: function (data) {
+                return {
+                    results: data // Make sure the data structure matches what Select2 expects
+                };
+            },
+            cache: true,
+        },
+        status: 1,
+        placeholder: 'Выберите маршрут'
     });
 });

@@ -177,7 +177,6 @@ header nav ul li {
     margin-top: 50px;
     height: 2px;
 }
-
 .btn-sroad {
     width: 250px;
     height: 50px;
@@ -602,6 +601,7 @@ header nav ul li {
     margin-bottom: 0;
     margin-top: 5px;
 }
+
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

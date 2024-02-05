@@ -36,12 +36,11 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <form action="<?= Url::to(['cars/index']) ?>">
                             <div class="form-group mt-4">
                                 <label for="from_address">Выберите начальнюю локацию маршрута</label>
-                                <!--<input type="text" class="form-control" placeholder="Выберите маршрут">-->
-                                <select class="js-data-example-ajax form-control"></select>
+                                <select class="js-from-select2 form-control"></select>
                             </div>
                             <div class="form-group mt-4">
                                 <label for="from_address">Выберите конечную локацию маршрута</label>
-                                <input type="text" class="form-control" placeholder="Выберите маршрут">
+                                <select class="js-to-select2 form-control"></select>
                             </div>
                             <div class="row mt-4">
                                 <div class="col-md-6">

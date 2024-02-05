@@ -35,6 +35,17 @@ class Address extends \yii\db\ActiveRecord
         ];
     }
 
+    public function fields()
+    {
+        return array(
+            'id',
+            'text' => function ($data) {
+                return $data->{'name_' . Yii::$app->language};
+            }
+        );
+
+    }
+
     /**
      * {@inheritdoc}
      */

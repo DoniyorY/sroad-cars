@@ -3,6 +3,7 @@
 namespace app\modules\api\controllers;
 
 use common\models\Address;
+use yii\data\ActiveDataProvider;
 use yii\rest\ActiveController;
 use yii\web\Response;
 
@@ -17,14 +18,26 @@ class ApiController extends ActiveController
      * Renders the index view for the module
      * @return array|string
      */
-    public function actionAjax($search_type)
+    public function actionAjax($search_type, $req = false)
     {
         $this->response->format = Response::FORMAT_JSON;
-        if ($search_type == 0) {
-            $model = Address::findAll(['category_id' => 0]);
-        } else {
-            $model = Address::findAll(['category_id' => 1]);
+        $query = Address::find();
+        $model = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        if ($req) {
+            $query->orFilterWhere(['like', 'name_ru', $req])
+                ->orFilterWhere(['like', 'name_en', $req])
+                ->orFilterWhere(['like', 'name_uz', $req]);
         }
-        return $model;
+
+        if ($search_type == 0) {
+            $query->andFilterWhere(['category_id' => 0]);
+        } else {
+            $query->andFilterWhere(['category_id' => 1]);
+        }
+
+        return $model->getModels();
     }
 }

@@ -1803,7 +1803,7 @@
 			}, this)
 		};
 
-		// set default options
+		// set api options
 		this._core.options = $.extend({}, AutoRefresh.Defaults, this._core.options);
 
 		// register event handlers
@@ -1937,7 +1937,7 @@
 			}, this)
 		};
 
-		// set the default options
+		// set the api options
 		this._core.options = $.extend({}, Lazy.Defaults, this._core.options);
 
 		// register event handler
@@ -2064,7 +2064,7 @@
 			}, this)
 		};
 
-		// set default options
+		// set api options
 		this._core.options = $.extend({}, AutoHeight.Defaults, this._core.options);
 
 		// register event handlers
@@ -2226,7 +2226,7 @@
 			}, this)
 		};
 
-		// set default options
+		// set api options
 		this._core.options = $.extend({}, Video.Defaults, this._core.options);
 
 		// register event handlers
@@ -2709,7 +2709,7 @@
 		// register event handlers
 		this._core.$element.on(this._handlers);
 
-		// set default options
+		// set api options
 		this._core.options = $.extend({}, Autoplay.Defaults, this._core.options);
 	};
 
@@ -2948,7 +2948,7 @@
 			}, this)
 		};
 
-		// set default options
+		// set api options
 		this._core.options = $.extend({}, Navigation.Defaults, this._core.options);
 
 		// register event handlers
@@ -3314,7 +3314,7 @@
 			}, this)
 		};
 
-		// set default options
+		// set api options
 		this._core.options = $.extend({}, Hash.Defaults, this._core.options);
 
 		// register the event handlers

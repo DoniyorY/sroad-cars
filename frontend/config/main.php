@@ -13,7 +13,7 @@ return [
     'name'=>'SilkRoad Samarkand',
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
-        'api' => [
+        'v1' => [
             'class' => 'app\modules\api\Api',
         ],
     ],

@@ -12,7 +12,7 @@ return [
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@common/mail',
-            // send all mails to a file by default.
+            // send all mails to a file by api.
             'useFileTransport' => true,
             // You have to set
             //
@@ -27,7 +27,7 @@ return [
             //        'username' => '',
             //        'password' => '',
             //        'port' => 465,
-            //        'dsn' => 'native://default',
+            //        'dsn' => 'native://api',
             //    ],
             //
             // DSN example:

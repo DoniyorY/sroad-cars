@@ -22,14 +22,15 @@ $('.owl-carousel').owlCarousel({
     }
 });
 var base_url = window.location.origin;
-
+console.log(base_url + '/v1/api/ajax?search_type=0')
 $(document).ready(function () {
-    $('.js-example-responsive').select2({
+    $('.js-data-example-ajax').select2({
         ajax: {
-            url: base_url + "/api/api/ajax?search_type=0",
+            url: "https:localhost:8080/v1/api/ajax?search_type=0",
             dataType: 'json',
-            delay: 250,
+            //delay: 250,
             type: 'get',
+
             data: function (params) {
                 return {
                     nome: params.term
@@ -42,6 +43,7 @@ $(document).ready(function () {
             },
             cache: true,
         },
+        status: 1,
         placeholder: 'Выберите маршрут',
 
     });

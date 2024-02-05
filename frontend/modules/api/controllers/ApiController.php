@@ -25,8 +25,6 @@ class ApiController extends ActiveController
         } else {
             $model = Address::findAll(['category_id' => 1]);
         }
-        return [
-            'address' => $model,
-        ];
+        return $model;
     }
 }

@@ -37,7 +37,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             <div class="form-group mt-4">
                                 <label for="from_address">Выберите начальнюю локацию маршрута</label>
                                 <!--<input type="text" class="form-control" placeholder="Выберите маршрут">-->
-                                <select class="js-example-responsive form-control"></select>
+                                <select class="js-data-example-ajax form-control"></select>
                             </div>
                             <div class="form-group mt-4">
                                 <label for="from_address">Выберите конечную локацию маршрута</label>

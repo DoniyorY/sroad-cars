@@ -23,49 +23,26 @@ $('.owl-carousel').owlCarousel({
 });
 var base_url = window.location.origin;
 
-
-/*$(document).ready(function () {
+$(document).ready(function () {
     $('.js-example-responsive').select2({
         ajax: {
-            url: base_url + '/cars/ajax?search_type=0',
+            url: base_url + "/api/api/ajax?search_type=0",
             dataType: 'json',
-            processResults: function (data) {
-                // Transforms the top-level key of the response object from 'items' to 'results'
+            delay: 250,
+            type: 'get',
+            data: function (params) {
                 return {
-                    results: data.items
-                };
-            }
-        },
-        placeholder: 'Выберите маршрут'
-    });
-});*/
-$(".js-example-responsive").select2({
-    ajax: {
-        url: base_url + '/cars/ajax?search_type=0',
-        dataType: 'json',
-        delay: 250,
-        data: function (params) {
-            return {
-                q: params.term, // search term
-                page: params.page
-            };
-        },
-        processResults: function (data, params) {
-            // parse the results into the format expected by Select2
-            // since we are using custom formatting functions we do not need to
-            // alter the remote JSON data, except to indicate that infinite
-            // scrolling can be used
-            params.page = params.page || 1;
-
-            return {
-                results: data.items,
-                pagination: {
-                    more: (params.page * 30) < data.total_count
+                    nome: params.term
                 }
-            };
+            },
+            processResults: function (data) {
+                return {
+                    results: data // Make sure the data structure matches what Select2 expects
+                };
+            },
+            cache: true,
         },
-        cache: true
-    },
-    placeholder: 'Search for a repository',
-    minimumInputLength: 1,
+        placeholder: 'Выберите маршрут',
+
+    });
 });

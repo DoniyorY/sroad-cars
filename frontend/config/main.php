@@ -12,6 +12,11 @@ return [
     'bootstrap' => ['log'],
     'name'=>'SilkRoad Samarkand',
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'api' => [
+            'class' => 'app\modules\api\Api',
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',

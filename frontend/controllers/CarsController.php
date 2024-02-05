@@ -24,15 +24,6 @@ class CarsController extends Controller
         ]);
     }
 
-    public function actionAjax($search_type)
-    {
-        $this->response->format = Response::FORMAT_JSON;
-        if ($search_type == 0) {
-            $model = Address::findAll(['category_id' => 0]);
-        } else {
-            $model = Address::findAll(['category_id' => 1]);
-        }
-        return $model;
-    }
+
 
 }

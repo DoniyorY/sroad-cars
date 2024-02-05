@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Cars;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -75,7 +76,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('index', [
+            'owl_cars' => Cars::findAll(['status' => 0]),
+        ]);
     }
 
     /**
@@ -127,7 +130,6 @@ class SiteController extends Controller
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error sending your message.');
             }
-
             return $this->refresh();
         }
 
@@ -168,7 +170,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Requests password reset.
+     * Requests password res et.
      *
      * @return mixed
      */
@@ -178,7 +180,6 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
                 Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
-
                 return $this->goHome();
             }
 
@@ -220,8 +221,8 @@ class SiteController extends Controller
      * Verify email address
      *
      * @param string $token
-     * @throws BadRequestHttpException
      * @return yii\web\Response
+     * @throws BadRequestHttpException
      */
     public function actionVerifyEmail($token)
     {

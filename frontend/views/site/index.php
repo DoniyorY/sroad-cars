@@ -33,10 +33,11 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <div class="vector_line">
                             <img src="<?= $baseUrl . '/img/banner_form_vector_line.png' ?>" alt="">
                         </div>
-                        <form action="<?= Url::to(['cars/search']) ?>">
+                        <form action="<?= Url::to(['cars/index']) ?>">
                             <div class="form-group mt-4">
                                 <label for="from_address">Выберите начальнюю локацию маршрута</label>
-                                <input type="text" class="form-control" placeholder="Выберите маршрут">
+                                <!--<input type="text" class="form-control" placeholder="Выберите маршрут">-->
+                                <select class="js-example-responsive form-control"></select>
                             </div>
                             <div class="form-group mt-4">
                                 <label for="from_address">Выберите конечную локацию маршрута</label>
@@ -148,6 +149,7 @@ $baseUrl = Yii::$app->request->baseUrl;
             </div>
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
+                    <?php foreach ($owl_cars as $item):?>
                     <div class="item">
                         <div class="card">
                             <div class="card_header">
@@ -171,6 +173,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             </a>
                         </div>
                     </div>
+                    <?php endforeach;?>
                     <div class="item">
                         <div class="card">
                             <div class="card_header">

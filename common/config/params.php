@@ -6,6 +6,7 @@ return [
     'senderName' => 'Example.com mailer',
     'user.passwordResetTokenExpire' => 3600,
     'user.passwordMinLength' => 6,
+    'bsVersion'=>'5.x',
     'user_role' => [
         0 => 'Админ',
         1 => 'Пользователь'

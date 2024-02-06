@@ -14,7 +14,7 @@ $('.owl-carousel').owlCarousel({
         },
         600: {
             items: 2,
-            nav:true,
+            nav: true,
         },
         1000: {
             items: 3,
@@ -22,12 +22,15 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
-
+let baseUrl = window.location.origin
+let lang = document.documentElement.lang
+let select2_url = baseUrl + '/' + lang + "/v1/api/ajax?search_type=";
 $(document).ready(function () {
+
     $('.js-from-select2').select2({
         language: "ru",
         ajax: {
-            url: "http://localhost:8080/ru/v1/api/ajax?search_type=0",
+            url: select2_url+'0',
             dataType: 'json',
             //delay: 250,
             type: 'get',
@@ -52,7 +55,7 @@ $(document).ready(function () {
     $('.js-to-select2').select2({
         language: "ru",
         ajax: {
-            url: "http://localhost:8080/ru/v1/api/ajax?search_type=1",
+            url: select2_url+'1',
             dataType: 'json',
             //delay: 250,
             type: 'get',

@@ -13,7 +13,8 @@ $('.owl-carousel').owlCarousel({
             nav: false,
         },
         600: {
-            items: 1
+            items: 2,
+            nav:true,
         },
         1000: {
             items: 3,
@@ -26,7 +27,7 @@ $(document).ready(function () {
     $('.js-from-select2').select2({
         language: "ru",
         ajax: {
-            url: "http://10.10.200.221:8888/ru/v1/api/ajax?search_type=0",
+            url: "http://localhost:8080/ru/v1/api/ajax?search_type=0",
             dataType: 'json',
             //delay: 250,
             type: 'get',
@@ -51,7 +52,7 @@ $(document).ready(function () {
     $('.js-to-select2').select2({
         language: "ru",
         ajax: {
-            url: "http://10.10.200.221:8888/ru/v1/api/ajax?search_type=1",
+            url: "http://localhost:8080/ru/v1/api/ajax?search_type=1",
             dataType: 'json',
             //delay: 250,
             type: 'get',

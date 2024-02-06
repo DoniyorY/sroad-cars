@@ -109,6 +109,8 @@ header nav ul li {
     height: 90vh;
     width: 100%;
     background-image: url("/img/banner_1.png");
+    background-repeat: no-repeat;
+
     /*position: absolute;*/
     color: white;
 }

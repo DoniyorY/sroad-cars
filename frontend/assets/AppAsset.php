@@ -25,7 +25,7 @@ class AppAsset extends AssetBundle
         'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js',
         'js/owl-carousel/owl.carousel.js',
         'js/owl-carousel/owl.carousel.min.js',
-        'js/select2/select2.js',
+        'js/select2/select2.min.js',
         'js/script.js'
     ];
     public $depends = [

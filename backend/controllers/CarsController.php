@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use common\models\CarGallery;
 use common\models\Cars;
+use common\models\Connector;
 use common\models\search\CarsSearch;
 use common\models\UploadsImage;
 use yii\filters\AccessControl;
@@ -30,6 +31,7 @@ class CarsController extends Controller
                     'actions' => [
                         'delete' => ['POST'],
                         'status' => ['post'],
+                        'delete-address' => ['post'],
                     ],
                 ],
                 'access' => [
@@ -46,7 +48,10 @@ class CarsController extends Controller
                                 'update',
                                 'delete',
                                 'status',
-                                'create'
+                                'create',
+                                'create-address',
+                                'add-photo',
+                                'delete-address',
                             ],
                             'allow' => true,
                             'roles' => ['@'],
@@ -84,6 +89,8 @@ class CarsController extends Controller
         $model = $this->findModel($id);
         $gallery = CarGallery::findAll(['cars_id' => $model->id]);
         $photo = new CarGallery();
+        $connector = new Connector();
+        $show_conn = Connector::findAll(['car_id' => $id]);
         if ($this->request->isPost) {
             if ($photo->load(\Yii::$app->request->post())) {
                 $file = UploadedFile::getInstance($model, 'imageFile');
@@ -98,13 +105,34 @@ class CarsController extends Controller
             }
         }
 
+
         return $this->render('view', [
             'model' => $model,
             'photo' => $photo,
-            'gallery' => $gallery
+            'gallery' => $gallery,
+            'connect' => $connector,
+            'show_conn' => $show_conn,
         ]);
     }
 
+    public function actionCreateAddress()
+    {
+        $model = new Connector();
+        if ($model->load(\Yii::$app->request->post()) and $model->createConnector()) {
+            \Yii::$app->session->setFlash('success');
+            return $this->redirect(\Yii::$app->request->referrer);
+        } else {
+            \Yii::$app->session->setFlash('danger');
+            return $this->redirect(\Yii::$app->request->referrer);
+        }
+    }
+
+    public function actionDeleteAddress($id)
+    {
+        $model = Connector::findOne(['id' => $id]);
+        $model->delete();
+        return $this->redirect(\Yii::$app->request->referrer);
+    }
 
     public function actionStatus($id, $status)
     {

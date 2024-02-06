@@ -1,5 +1,7 @@
 <?php
 
+use common\models\Address;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
@@ -109,40 +111,85 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-md-7">
             <h2>Фотографии</h2>
-            <?php $form = ActiveForm::begin(['action' => Url::to(['add-photo']), 'method' => 'post']); ?>
-            <?= $form->field($photo, 'cars_id')->textInput(['hidden' => true])->label(false) ?>
             <div class="row">
-                <div class="col-md-4">
-                    <?= $form->field($photo, 'type_id')->dropDownList(Yii::$app->params['photo_type'], ['prompt' => 'Выберите категорию']) ?>
+                <?php $form = ActiveForm::begin(['action' => Url::to(['add-photo']), 'method' => 'post']); ?>
+                <?= $form->field($photo, 'cars_id')->textInput(['hidden' => true, 'value' => $model->id])->label(false) ?>
+                <div class="row">
+                    <div class="col-md-4">
+                        <?= $form->field($photo, 'type_id')->dropDownList(Yii::$app->params['photo_type'], ['prompt' => 'Выберите категорию']) ?>
+                    </div>
+                    <div class="col-md-4">
+                        <?= $form->field($photo, 'imageFile')->fileInput() ?>
+                    </div>
+                    <div class="col-md-4">
+                        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success mt-4 w-100']) ?>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <?= $form->field($photo, 'imageFile')->fileInput() ?>
+                <?php ActiveForm::end(); ?>
+                <div class="col-md-12 mt-2">
+                    <table class="table table-sm table-bordered table-striped text-center">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Категория</th>
+                            <th>Название</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-md-4">
-                    <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success mt-4 w-100']) ?>
+                <div class="col-md-12">
+                    <h2>Цены на маршруты</h2>
+                    <?php $form = ActiveForm::begin(['action' => Url::to(['create-address'])]) ?>
+                    <div class="row">
+                        <?= $form->field($connect, 'car_id')->textInput(['hidden' => true, 'value' => $model->id])->label(false) ?>
+                        <div class="col-md-4">
+                            <?= $form->field($connect, 'address_id')->dropDownList(ArrayHelper::map(Address::findAll(['category_id' => 1]), 'id', 'name_ru'),['prompt'=>'Выберите адрес']) ?>
+                        </div>
+                        <div class="col-md-4">
+                            <?= $form->field($connect, 'price')->textInput() ?>
+                        </div>
+                        <div class="col-md-4">
+                            <?= Html::submitButton('Добавить', ['class' => 'btn btn-success w-100 mt-4']) ?>
+                        </div>
+                    </div>
+                    <?php ActiveForm::end() ?>
+                </div>
+                <div class="col-md-12 mt-3">
+                    <table class="table table-sm table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Маршрут</th>
+                            <th>Цена</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php $i = 1;
+                        foreach ($show_conn as $item): ?>
+                            <tr>
+                                <td><?= $i ?></td>
+                                <td><?= $item->address->name_ru ?></td>
+                                <td><?= Yii::$app->formatter->asDecimal($item->price, 0) ?></td>
+                                <td>
+                                    <?= Html::a('Удалить', ['delete-address', 'id' => $item->id], ['class' => 'btn btn-danger btn-sm w-100','data-method'=>'post']) ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <?php ActiveForm::end(); ?>
-            <div class="col-md-12 mt-2">
-                <table class="table table-sm table-bordered table-striped text-center">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Категория</th>
-                        <th>Название</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+
         </div>
 
     </div>

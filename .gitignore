@@ -44,6 +44,6 @@ phpunit.phar
 
 sroad-cars
 sroad-cars.pub
-/backend/config/*
-/common/config/*
-frontend/config/*
+/backend/config
+/common/config
+/frontend/config

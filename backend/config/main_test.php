@@ -26,7 +26,7 @@ return [
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the backend
+            // this is the name of the session cookie used for login on the backend123123123123
             'name' => 'advanced-backend',
         ],
         'log' => [

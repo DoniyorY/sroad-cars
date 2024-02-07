@@ -92,7 +92,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
                             <img src="<?= $main ?>" alt="">
                         </div>
                         <div class="card_middle">
-                            <p><?= $item->{"name_$lang"} ?></p>
+                            <p><?= $item->car->{"name_$lang"} ?></p>
                             <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                         </div>
                         <div class="card_image2">

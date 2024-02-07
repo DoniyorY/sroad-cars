@@ -59,6 +59,8 @@ $this->title = Yii::$app->params['Categories'][$lang]
     <div class="cars_cards container mt-5">
         <div class="row">
             <?php foreach ($model as $item):
+                $main = CarGallery::findOne(['car_id' => $item->id, 'type_id' => 0]);
+                $secondary = CarGallery::findOne(['car_id' => $item->id, 'type_id' => 1]);
                 switch ($lang) {
                     case 'ru':
                         $capacity = $item->capacity . ' Мест';
@@ -78,14 +80,14 @@ $this->title = Yii::$app->params['Categories'][$lang]
                         <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
                     </div>
                     <div class="card_image1">
-                        <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
+                        <img src="<?= $baseUrl . "/uploads/cars/$main->image" ?>" alt="">
                     </div>
                     <div class="card_middle">
                         <p><?= $item->{"name_$lang"} ?></p>
                         <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                     </div>
                     <div class="card_image2">
-                        <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
+                        <img src="<?= $baseUrl . "/uploads/cars/$secondary->image" ?>" alt="">
                     </div>
                 </div>
                 <div class="card-footer">

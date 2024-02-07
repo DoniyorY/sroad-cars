@@ -27,7 +27,7 @@ class ConnectorSearch extends Connector
 
     public function filter($params)
     {
-        $query = Connector::find()->joinWith('car');
+        $query = Connector::find()->joinWith('car')->groupBy('car_id');
 
         // add conditions that should always apply here
 

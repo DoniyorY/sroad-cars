@@ -11,8 +11,6 @@ use yii\widgets\DetailView;
 /** @var common\models\Cars $model */
 
 $this->title = $model->name_ru;
-$this->params['breadcrumbs'][] = ['label' => 'Cars', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="cars-view">
@@ -41,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             echo Html::a('Активный', ['status', 'id' => $model->id, 'status' => 1], [
                 'class' => 'btn btn-success',
                 'data' => [
-                    'confirm' => 'Are you sure you want to delete this item?',
+                    'confirm' => 'Подтвердите действие!!!',
                     'method' => 'post',
                 ],
             ]);
@@ -49,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
             echo Html::a('Отключённый', ['status', 'id' => $model->id, 'status' => 0], [
                 'class' => 'btn btn-danger',
                 'data' => [
-                    'confirm' => 'Are you sure you want to delete this item?',
+                    'confirm' => 'Подтвердите действие!!!',
                     'method' => 'post',
                 ],
             ]);
@@ -98,12 +96,6 @@ $this->params['breadcrumbs'][] = $this->title;
                             return Yii::$app->params['status'][$data->status];
                         }
                     ],
-                    [
-                        'attribute' => 'price',
-                        'value' => function ($data) {
-                            return Yii::$app->formatter->asDecimal($data->price, 0);
-                        }
-                    ],
                     'capacity',
                     'baggage',
                 ],
@@ -112,7 +104,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-md-7">
             <h2>Фотографии</h2>
             <div class="row">
-                <?php $form = ActiveForm::begin(['action' => Url::to(['add-photo']), 'method' => 'post']); ?>
+                <?php $form = ActiveForm::begin(['method' => 'post']); ?>
                 <?= $form->field($photo, 'cars_id')->textInput(['hidden' => true, 'value' => $model->id])->label(false) ?>
                 <div class="row">
                     <div class="col-md-4">
@@ -122,7 +114,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?= $form->field($photo, 'imageFile')->fileInput() ?>
                     </div>
                     <div class="col-md-4">
-                        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success mt-4 w-100']) ?>
+                        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-secondary mt-4 w-100']) ?>
                     </div>
                 </div>
                 <?php ActiveForm::end(); ?>
@@ -137,12 +129,15 @@ $this->params['breadcrumbs'][] = $this->title;
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        <?php $i = 1;
+                        foreach ($gallery as $item): ?>
+                            <tr>
+                                <td><?= $i ?></td>
+                                <td><?= Yii::$app->params['photo_type'][$item->type_id] ?></td>
+                                <td><?= $item->image ?></td>
+                                <td><?= Html::a('<i class="ri-delete-bin-line">', ['delete-photo', 'id' => $item->id], ['class' => 'btn btn-danger btn-sm', 'data-method' => 'post']) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -152,19 +147,19 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="row">
                         <?= $form->field($connect, 'car_id')->textInput(['hidden' => true, 'value' => $model->id])->label(false) ?>
                         <div class="col-md-4">
-                            <?= $form->field($connect, 'address_id')->dropDownList(ArrayHelper::map(Address::findAll(['category_id' => 1]), 'id', 'name_ru'),['prompt'=>'Выберите адрес']) ?>
+                            <?= $form->field($connect, 'address_id')->dropDownList(ArrayHelper::map(Address::findAll(['category_id' => 1]), 'id', 'name_ru'), ['prompt' => 'Выберите адрес']) ?>
                         </div>
                         <div class="col-md-4">
                             <?= $form->field($connect, 'price')->textInput() ?>
                         </div>
                         <div class="col-md-4">
-                            <?= Html::submitButton('Добавить', ['class' => 'btn btn-success w-100 mt-4']) ?>
+                            <?= Html::submitButton('Добавить', ['class' => 'btn btn-secondary w-100 mt-4']) ?>
                         </div>
                     </div>
                     <?php ActiveForm::end() ?>
                 </div>
                 <div class="col-md-12 mt-3">
-                    <table class="table table-sm table-bordered table-striped">
+                    <table class="table table-sm table-bordered table-striped text-center">
                         <thead>
                         <tr>
                             <th>#</th>
@@ -181,7 +176,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <td><?= $item->address->name_ru ?></td>
                                 <td><?= Yii::$app->formatter->asDecimal($item->price, 0) ?></td>
                                 <td>
-                                    <?= Html::a('Удалить', ['delete-address', 'id' => $item->id], ['class' => 'btn btn-danger btn-sm w-100','data-method'=>'post']) ?>
+                                    <a href="<?= Url::to(['delete-address', 'id' => $item->id]) ?>" class="btn btn-danger btn-sm" data-method="post">
+                                        <i class="ri-delete-bin-line"></i>
+                                    </a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -189,9 +186,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     </table>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </div>

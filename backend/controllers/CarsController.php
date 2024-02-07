@@ -32,6 +32,7 @@ class CarsController extends Controller
                         'delete' => ['POST'],
                         'status' => ['post'],
                         'delete-address' => ['post'],
+                        'delete-photo' => ['post'],
                     ],
                 ],
                 'access' => [
@@ -52,6 +53,7 @@ class CarsController extends Controller
                                 'create-address',
                                 'add-photo',
                                 'delete-address',
+                                'delete-photo',
                             ],
                             'allow' => true,
                             'roles' => ['@'],
@@ -93,14 +95,14 @@ class CarsController extends Controller
         $show_conn = Connector::findAll(['car_id' => $id]);
         if ($this->request->isPost) {
             if ($photo->load(\Yii::$app->request->post())) {
-                $file = UploadedFile::getInstance($model, 'imageFile');
+                $file = UploadedFile::getInstance($photo, 'imageFile');
                 $upload = UploadsImage::uploadImage($photo, $file, 'cars');
                 if ($upload) {
-                    $model->image = $upload;
+                    $photo->image = $upload;
                 } else {
                     throw new NotFoundHttpException('The requested page does not exist.');
                 }
-                $model->save();
+                $photo->save();
                 return $this->redirect(\Yii::$app->request->referrer);
             }
         }
@@ -130,6 +132,13 @@ class CarsController extends Controller
     public function actionDeleteAddress($id)
     {
         $model = Connector::findOne(['id' => $id]);
+        $model->delete();
+        return $this->redirect(\Yii::$app->request->referrer);
+    }
+
+    public function actionDeletePhoto($id)
+    {
+        $model = CarGallery::findOne(['id' => $id]);
         $model->delete();
         return $this->redirect(\Yii::$app->request->referrer);
     }

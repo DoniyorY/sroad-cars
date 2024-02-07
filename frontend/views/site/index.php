@@ -152,6 +152,13 @@ $baseUrl = Yii::$app->request->baseUrl;
                     <?php foreach ($owl_cars as $item):
                         $main = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 0]);
                         $secondary = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 1]);
+                        if (is_null($main) or is_null($secondary)) {
+                            $main = "$baseUrl/img/owl_card.png";
+                            $secondary = "$baseUrl/img/owl_card.png";
+                        } else {
+                            $main = "$baseUrl/uploads/cars/$main->image";
+                            $secondary = "$baseUrl/uploads/cars/$secondary->image";
+                        }
                         switch ($lang) {
                             case 'ru':
                                 $capacity = $item->capacity . ' Мест';
@@ -171,14 +178,14 @@ $baseUrl = Yii::$app->request->baseUrl;
                                     <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
                                 </div>
                                 <div class="card_image1">
-                                    <img src="<?= $baseUrl . "/uploads/cars/$main->image" ?>" alt="">
+                                    <img src="<?= $main ?>" alt="">
                                 </div>
                                 <div class="card_middle">
                                     <p><?= $item->{"name_$lang"} ?></p>
                                     <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                                 </div>
                                 <div class="card_image2">
-                                    <img src="<?= $baseUrl . "/uploads/cars/$secondary->image" ?>" alt="">
+                                    <img src="<?= $secondary ?>" alt="">
                                 </div>
                             </div>
                             <div class="card-footer">

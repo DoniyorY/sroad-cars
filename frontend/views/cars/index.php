@@ -89,14 +89,14 @@ $this->title = Yii::$app->params['Categories'][$lang]
                             <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
                         </div>
                         <div class="card_image1">
-                            <img src="<?= $baseUrl . "/uploads/cars/$main->image" ?>" alt="">
+                            <img src="<?= $main ?>" alt="">
                         </div>
                         <div class="card_middle">
                             <p><?= $item->{"name_$lang"} ?></p>
                             <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                         </div>
                         <div class="card_image2">
-                            <img src="<?= $baseUrl . "/uploads/cars/$secondary->image" ?>" alt="">
+                            <img src="<?= $secondary ?>" alt="">
                         </div>
                     </div>
                     <div class="card-footer">

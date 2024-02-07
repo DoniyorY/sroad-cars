@@ -153,8 +153,8 @@ $baseUrl = Yii::$app->request->baseUrl;
                         $main = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 0]);
                         $secondary = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 1]);
                         if (is_null($main) or is_null($secondary)) {
-                            $main = "$baseUrl/img/owl_card.png";
-                            $secondary = "$baseUrl/img/owl_card.png";
+                            $main = "$baseUrl/img/owl-card.png";
+                            $secondary = "$baseUrl/img/owl-card-2.png";
                         } else {
                             $main = "$baseUrl/uploads/cars/$main->image";
                             $secondary = "$baseUrl/uploads/cars/$secondary->image";

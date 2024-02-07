@@ -95,6 +95,12 @@ class CarsController extends Controller
         $show_conn = Connector::findAll(['car_id' => $id]);
         if ($this->request->isPost) {
             if ($photo->load(\Yii::$app->request->post())) {
+                $check = CarGallery::findOne(['cars_id' => $id, 'type_id' => 0]);
+                $check1 = CarGallery::findOne(['cars_id' => $id, 'type_id' => 1]);
+                if (isset($check) or isset($check1)){
+                    \Yii::$app->session->setFlash('warning','Изображение уже существует');
+                    return $this->refresh();
+                }
                 $file = UploadedFile::getInstance($photo, 'imageFile');
                 $upload = UploadsImage::uploadImage($photo, $file, 'cars');
                 if ($upload) {

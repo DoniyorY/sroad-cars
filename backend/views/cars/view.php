@@ -181,7 +181,7 @@ $this->title = $model->name_ru;
                                     </a>
                                 </td>
                             </tr>
-                        <?php endforeach; ?>
+                        <?php $i++; endforeach; ?>
                         </tbody>
                     </table>
                 </div>

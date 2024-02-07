@@ -52,6 +52,8 @@ class ApiController extends ActiveController
         $query->orFilterWhere(['like', 'name_ru', $data])
             ->orFilterWhere(['like', 'name_en', $data])
             ->orFilterWhere(['like', 'name_uz', $data]);
+
+
         return $model->getModels();
     }
 }

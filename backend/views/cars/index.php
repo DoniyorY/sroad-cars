@@ -54,12 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->category->name_ru;
                 }
             ],
-            [
-                'attribute' => 'type_id',
-                'value' => function ($data) {
-                    return $data->type->name_ru;
-                }
-            ],
+            'name_ru',
             [
                 'attribute' => 'created',
                 'value' => function ($data) {
@@ -76,9 +71,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'status',
                 'value' => function ($data) {
                     if ($data->status == 0) {
-                        return Html::a(Yii::$app->params['status'][$data->status], ['status', 'id' => $data->id, 'status' => 1], ['class' => 'btn btn-success btn-sm w-100']);
+                        return Html::a(Yii::$app->params['status'][$data->status], ['status', 'id' => $data->id, 'status' => 1], ['class' => 'btn btn-success btn-sm w-100', 'data-method' => 'post']);
                     } else {
-                        return Html::a(Yii::$app->params['status'][$data->status], ['status', 'id' => $data->id, 'status' => 0], ['class' => 'btn btn-danger w-100 btn-sm']);
+                        return Html::a(Yii::$app->params['status'][$data->status], ['status', 'id' => $data->id, 'status' => 0], ['class' => 'btn btn-danger w-100 btn-sm', 'data-method' => 'post']);
                     }
                 },
                 'format' => 'raw',
@@ -98,6 +93,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'urlCreator' => function ($action, Cars $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                 },
+                'template' => '{view}'
             ],
         ],
     ]); ?>

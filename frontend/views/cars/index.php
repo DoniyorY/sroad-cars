@@ -44,7 +44,8 @@ $this->title = Yii::$app->params['Categories'][$lang]
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="cars_destination">Направление</label>
-                        <select id="cars_destination" name="CarsSearch[to_id]" class="js-to-select2 form-control"></select>
+                        <select id="cars_destination" name="CarsSearch[to_id]"
+                                class="js-to-select2 form-control"></select>
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="cars_people_count">Количество пассажиров</label>
@@ -60,8 +61,8 @@ $this->title = Yii::$app->params['Categories'][$lang]
     <div class="cars_cards container mt-5">
         <div class="row">
             <?php foreach ($model as $item):
-                $main = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 0]);
-                $secondary = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 1]);
+                $main = CarGallery::findOne(['cars_id' => $item->car_id, 'type_id' => 0]);
+                $secondary = CarGallery::findOne(['cars_id' => $item->car_id, 'type_id' => 1]);
                 if (is_null($main) or is_null($secondary)) {
                     $main = "$baseUrl/img/owl-card.png";
                     $secondary = "$baseUrl/img/owl-card-2.png";
@@ -71,40 +72,40 @@ $this->title = Yii::$app->params['Categories'][$lang]
                 }
                 switch ($lang) {
                     case 'ru':
-                        $capacity = $item->capacity . ' Мест';
+                        $capacity = $item->car->capacity . ' Мест';
                         break;
                     case 'en':
-                        $capacity = "Capacity: $item->capacity";
+                        $capacity = "Capacity: " . $item->car->capacity;
                         break;
                     case 'uz':
-                        $capacity = "$item->capacity Joy";
+                        $capacity = $item->car->capacity . ' Joy';
                         break;
                 }
                 ?>
-            <div class="col-md-4 mt-3">
-                <div class="card">
-                    <div class="card_header">
-                        <p class="p-0 "><?= $capacity ?></p>
-                        <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
+                <div class="col-md-4 mt-3">
+                    <div class="card">
+                        <div class="card_header">
+                            <p class="p-0 "><?= $capacity ?></p>
+                            <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
+                        </div>
+                        <div class="card_image1">
+                            <img src="<?= $baseUrl . "/uploads/cars/$main->image" ?>" alt="">
+                        </div>
+                        <div class="card_middle">
+                            <p><?= $item->{"name_$lang"} ?></p>
+                            <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
+                        </div>
+                        <div class="card_image2">
+                            <img src="<?= $baseUrl . "/uploads/cars/$secondary->image" ?>" alt="">
+                        </div>
                     </div>
-                    <div class="card_image1">
-                        <img src="<?= $baseUrl . "/uploads/cars/$main->image" ?>" alt="">
-                    </div>
-                    <div class="card_middle">
-                        <p><?= $item->{"name_$lang"} ?></p>
-                        <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                    </div>
-                    <div class="card_image2">
-                        <img src="<?= $baseUrl . "/uploads/cars/$secondary->image" ?>" alt="">
+                    <div class="card-footer">
+                        <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => $item->car_id]) ?>">
+                            Узнать подробнее
+                        </a>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
-                        Узнать подробнее
-                    </a>
-                </div>
-            </div>
-            <?php endforeach;?>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

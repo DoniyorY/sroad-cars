@@ -2,16 +2,18 @@
 
 namespace frontend\controllers;
 
-use common\models\Address;
+use common\models\search\CarsSearch;
 use common\models\Cars;
+use common\models\search\ConnectorSearch;
 use yii\web\Controller;
-use yii\web\Response;
 
 class CarsController extends Controller
 {
 
     public function actionIndex()
     {
+        $searchModel = new ConnectorSearch();
+        $dataProvider = $searchModel->filter($this->request->queryParams);
         return $this->render('index');
     }
 
@@ -23,7 +25,6 @@ class CarsController extends Controller
             'model' => $model,
         ]);
     }
-
 
 
 }

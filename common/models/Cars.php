@@ -70,19 +70,29 @@ class Cars extends \yii\db\ActiveRecord
         ];
     }
 
+    public function fields()
+    {
+        return [
+            'id',
+            'text' => function ($data) {
+                return $data->{'name_' . Yii::$app->language};
+            }
+        ];
+    }
+
     public function getManufacture()
     {
-        return $this->hasOne(CarManufacturer::className(),['id'=>'manufacture_id']);
+        return $this->hasOne(CarManufacturer::className(), ['id' => 'manufacture_id']);
     }
 
     public function getCategory()
     {
-        return $this->hasOne(CarCategory::className(),['id'=>'category_id']);
+        return $this->hasOne(CarCategory::className(), ['id' => 'category_id']);
     }
 
     public function getType()
     {
-        return $this->hasOne(CarType::className(),['id'=>'type_id']);
+        return $this->hasOne(CarType::className(), ['id' => 'type_id']);
     }
 
 }

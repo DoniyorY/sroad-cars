@@ -76,3 +76,28 @@ $(document).ready(function () {
         placeholder: 'Выберите маршрут'
     });
 });
+$(document).ready(function () {
+    $('.js-title-select2').select2({
+        language: "ru",
+        ajax: {
+            url: baseUrl + '/' + lang + "/v1/api/find-car",
+            dataType: 'json',
+            //delay: 250,
+            type: 'get',
+
+            data: function (params) {
+                return {
+                    data: params.term
+                }
+            },
+            processResults: function (data) {
+                return {
+                    results: data // Make sure the data structure matches what Select2 expects
+                };
+            },
+            cache: true,
+        },
+        status: 1,
+        placeholder: 'Выберите машину'
+    });
+});

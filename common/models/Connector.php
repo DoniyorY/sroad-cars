@@ -12,7 +12,9 @@ use yii\db\ActiveRecord;
  */
 class Connector extends ActiveRecord
 {
-
+    public $title;
+    public $to_id;
+    public $people_count;
     public static function tableName()
     {
         return 'connector';

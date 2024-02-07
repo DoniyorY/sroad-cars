@@ -2,6 +2,7 @@
 
 namespace common\models\search;
 
+use common\models\Connector;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Cars;
@@ -78,4 +79,6 @@ class CarsSearch extends Cars
 
         return $dataProvider;
     }
+
+
 }

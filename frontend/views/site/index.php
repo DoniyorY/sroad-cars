@@ -36,23 +36,23 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <form action="<?= Url::to(['cars/index']) ?>">
                             <div class="form-group mt-4">
                                 <label for="from_address">Выберите начальнюю локацию маршрута</label>
-                                <select class="js-from-select2 form-control"></select>
+                                <select name="CarsSearch[from_id]" class="js-from-select2 form-control"></select>
                             </div>
                             <div class="form-group mt-4">
                                 <label for="from_address">Выберите конечную локацию маршрута</label>
-                                <select class="js-to-select2 form-control"></select>
+                                <select name="CarsSearch[to_id]" class="js-to-select2 form-control"></select>
                             </div>
                             <div class="row mt-4">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="from_address">Дата начала маршрута</label>
-                                        <input type="date" class="form-control">
+                                        <input name="CarsSearch[begin]" type="date" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="from_address">Время начала маршрута</label>
-                                        <input type="time" class="form-control">
+                                        <input name="CarsSearch[end]" type="time" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -148,31 +148,31 @@ $baseUrl = Yii::$app->request->baseUrl;
             </div>
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
-                    <?php foreach ($owl_cars as $item):?>
-                    <div class="item">
-                        <div class="card">
-                            <div class="card_header">
-                                <p class="p-0 ">99 Мест</p>
-                                <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
+                    <?php foreach ($owl_cars as $item): ?>
+                        <div class="item">
+                            <div class="card">
+                                <div class="card_header">
+                                    <p class="p-0 ">99 Мест</p>
+                                    <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
+                                </div>
+                                <div class="card_image1">
+                                    <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
+                                </div>
+                                <div class="card_middle">
+                                    <p>Mercedes-Benz Sprinter</p>
+                                    <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
+                                </div>
+                                <div class="card_image2">
+                                    <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
+                                </div>
                             </div>
-                            <div class="card_image1">
-                                <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
-                            </div>
-                            <div class="card_middle">
-                                <p>Mercedes-Benz Sprinter</p>
-                                <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                            </div>
-                            <div class="card_image2">
-                                <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
+                            <div class="card-footer">
+                                <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
+                                    Узнать подробнее
+                                </a>
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
-                                Узнать подробнее
-                            </a>
-                        </div>
-                    </div>
-                    <?php endforeach;?>
+                    <?php endforeach; ?>
                     <div class="item">
                         <div class="card">
                             <div class="card_header">

@@ -8,6 +8,9 @@ use yii\helpers\Url;
 $lang = Yii::$app->language;
 $this->title = 'SilkRoad Samarkand';
 $baseUrl = Yii::$app->request->baseUrl;
+/**
+ * @var common\models\Cars $owl_cars
+ */
 ?>
 
 <section class="banner">
@@ -175,10 +178,10 @@ $baseUrl = Yii::$app->request->baseUrl;
                             <div class="card">
                                 <div class="card_header">
                                     <p class="p-0 "><?= $capacity ?></p>
-                                    <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
+                                    <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
                                 </div>
                                 <div class="card_image1">
-                                    <img src="<?= $main ?>" alt="">
+                                    <img src="<?= $main ?>" alt="" style="width: 100%;">
                                 </div>
                                 <div class="card_middle">
                                     <p><?= $item->{"name_$lang"} ?></p>

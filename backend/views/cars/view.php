@@ -9,6 +9,10 @@ use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
 /** @var common\models\Cars $model */
+/** @var common\models\CarGallery $photo */
+/** @var common\models\CarGallery $gallery */
+/** @var common\models\Connector $connect */
+/** @var common\models\Connector $show_conn */
 
 $this->title = $model->name_ru;
 \yii\web\YiiAsset::register($this);
@@ -137,7 +141,7 @@ $this->title = $model->name_ru;
                                 <td><?= $item->image ?></td>
                                 <td><?= Html::a('<i class="ri-delete-bin-line">', ['delete-photo', 'id' => $item->id], ['class' => 'btn btn-danger btn-sm', 'data-method' => 'post']) ?></td>
                             </tr>
-                        <?php endforeach; ?>
+                        <?php $i++; endforeach; ?>
                         </tbody>
                     </table>
                 </div>

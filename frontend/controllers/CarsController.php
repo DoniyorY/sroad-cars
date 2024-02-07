@@ -14,7 +14,9 @@ class CarsController extends Controller
     {
         $searchModel = new ConnectorSearch();
         $dataProvider = $searchModel->filter($this->request->queryParams);
-        return $this->render('index');
+        return $this->render('index', [
+            'model' => $dataProvider->getModels(),
+        ]);
     }
 
     public function actionView($id = null)

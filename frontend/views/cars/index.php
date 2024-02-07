@@ -58,17 +58,30 @@ $this->title = Yii::$app->params['Categories'][$lang]
     </div>
     <div class="cars_cards container mt-5">
         <div class="row">
+            <?php foreach ($model as $item):
+                switch ($lang) {
+                    case 'ru':
+                        $capacity = $item->capacity . ' Мест';
+                        break;
+                    case 'en':
+                        $capacity = "Capacity: $item->capacity";
+                        break;
+                    case 'uz':
+                        $capacity = "$item->capacity Joy";
+                        break;
+                }
+                ?>
             <div class="col-md-4 mt-3">
                 <div class="card">
                     <div class="card_header">
-                        <p class="p-0 ">99 Мест</p>
-                        <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
+                        <p class="p-0 "><?= $capacity ?></p>
+                        <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
                     </div>
                     <div class="card_image1">
-                        <img src="<?= $baseUrl . '/img/owl-card.png' ?>" style="width: 100%;" alt="">
+                        <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
                     </div>
                     <div class="card_middle">
-                        <p>Mercedes-Benz Sprinter</p>
+                        <p><?= $item->{"name_$lang"} ?></p>
                         <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                     </div>
                     <div class="card_image2">
@@ -76,126 +89,12 @@ $this->title = Yii::$app->params['Categories'][$lang]
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a class="btn btn-sroad p-0" href="#">
+                    <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
                         Узнать подробнее
                     </a>
                 </div>
             </div>
-            <div class="col-md-4 mt-3">
-                <div class="card">
-                    <div class="card_header">
-                        <p class="p-0 ">99 Мест</p>
-                        <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_image1">
-                        <img src="<?= $baseUrl . '/img/owl-card.png' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_middle">
-                        <p>Mercedes-Benz Sprinter</p>
-                        <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                    </div>
-                    <div class="card_image2">
-                        <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a class="btn btn-sroad p-0" href="#">
-                        Узнать подробнее
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 mt-3">
-                <div class="card">
-                    <div class="card_header">
-                        <p class="p-0 ">99 Мест</p>
-                        <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_image1">
-                        <img src="<?= $baseUrl . '/img/owl-card.png' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_middle">
-                        <p>Mercedes-Benz Sprinter</p>
-                        <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                    </div>
-                    <div class="card_image2">
-                        <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a class="btn btn-sroad p-0" href="#">
-                        Узнать подробнее
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 mt-3">
-                <div class="card">
-                    <div class="card_header">
-                        <p class="p-0 ">99 Мест</p>
-                        <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_image1">
-                        <img src="<?= $baseUrl . '/img/owl-card.png' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_middle">
-                        <p>Mercedes-Benz Sprinter</p>
-                        <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                    </div>
-                    <div class="card_image2">
-                        <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a class="btn btn-sroad p-0" href="#">
-                        Узнать подробнее
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 mt-3">
-                <div class="card">
-                    <div class="card_header">
-                        <p class="p-0 ">99 Мест</p>
-                        <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_image1">
-                        <img src="<?= $baseUrl . '/img/owl-card.png' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_middle">
-                        <p>Mercedes-Benz Sprinter</p>
-                        <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                    </div>
-                    <div class="card_image2">
-                        <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a class="btn btn-sroad p-0" href="#">
-                        Узнать подробнее
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 mt-3">
-                <div class="card">
-                    <div class="card_header">
-                        <p class="p-0 ">99 Мест</p>
-                        <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_image1">
-                        <img src="<?= $baseUrl . '/img/owl-card.png' ?>" style="width: 100%;" alt="">
-                    </div>
-                    <div class="card_middle">
-                        <p>Mercedes-Benz Sprinter</p>
-                        <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                    </div>
-                    <div class="card_image2">
-                        <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a class="btn btn-sroad p-0" href="#">
-                        Узнать подробнее
-                    </a>
-                </div>
-            </div>
+            <?php endforeach;?>
         </div>
     </div>
 </section>

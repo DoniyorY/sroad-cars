@@ -62,9 +62,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
-                'attribute' => 'price',
+                'attribute' => 'capacity',
                 'value' => function ($data) {
-                    return Yii::$app->formatter->asDecimal($data->price, 0);
+                    return $data->capacity . ' / ' . $data->baggage;
                 }
             ],
             [

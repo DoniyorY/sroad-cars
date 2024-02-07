@@ -148,18 +148,30 @@ $baseUrl = Yii::$app->request->baseUrl;
             </div>
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
-                    <?php foreach ($owl_cars as $item): ?>
+                    <?php foreach ($owl_cars as $item):
+                        switch ($lang) {
+                            case 'ru':
+                                $capacity = $item->capacity . ' Мест';
+                                break;
+                            case 'en':
+                                $capacity = "Capacity: $item->capacity";
+                                break;
+                            case 'uz':
+                                $capacity = "$item->capacity Joy";
+                                break;
+                        }
+                        ?>
                         <div class="item">
                             <div class="card">
                                 <div class="card_header">
-                                    <p class="p-0 ">99 Мест</p>
+                                    <p class="p-0 "><?= $capacity ?></p>
                                     <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
                                 </div>
                                 <div class="card_image1">
                                     <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
                                 </div>
                                 <div class="card_middle">
-                                    <p>Mercedes-Benz Sprinter</p>
+                                    <p><?= $item->{"name_$lang"} ?></p>
                                     <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                                 </div>
                                 <div class="card_image2">
@@ -167,58 +179,12 @@ $baseUrl = Yii::$app->request->baseUrl;
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
+                                <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
                                     Узнать подробнее
                                 </a>
                             </div>
                         </div>
                     <?php endforeach; ?>
-                    <div class="item">
-                        <div class="card">
-                            <div class="card_header">
-                                <p class="p-0 ">99 Мест</p>
-                                <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
-                            </div>
-                            <div class="card_image1">
-                                <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
-                            </div>
-                            <div class="card_middle">
-                                <p>Mercedes-Benz Sprinter</p>
-                                <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                            </div>
-                            <div class="card_image2">
-                                <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
-                                Узнать подробнее
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card">
-                            <div class="card_header">
-                                <p class="p-0 ">99 Мест</p>
-                                <img src="<?= $baseUrl . '/img/card_header.svg' ?>" alt="">
-                            </div>
-                            <div class="card_image1">
-                                <img src="<?= $baseUrl . '/img/owl-card.png' ?>" alt="">
-                            </div>
-                            <div class="card_middle">
-                                <p>Mercedes-Benz Sprinter</p>
-                                <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
-                            </div>
-                            <div class="card_image2">
-                                <img src="<?= $baseUrl . '/img/owl-card-2.png' ?>" alt="">
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => 1]) ?>">
-                                Узнать подробнее
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

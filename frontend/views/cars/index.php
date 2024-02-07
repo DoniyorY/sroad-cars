@@ -1,5 +1,6 @@
 <?php
 
+use common\models\CarGallery;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
@@ -59,8 +60,8 @@ $this->title = Yii::$app->params['Categories'][$lang]
     <div class="cars_cards container mt-5">
         <div class="row">
             <?php foreach ($model as $item):
-                $main = CarGallery::findOne(['car_id' => $item->id, 'type_id' => 0]);
-                $secondary = CarGallery::findOne(['car_id' => $item->id, 'type_id' => 1]);
+                $main = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 0]);
+                $secondary = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 1]);
                 switch ($lang) {
                     case 'ru':
                         $capacity = $item->capacity . ' Мест';

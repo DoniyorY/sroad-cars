@@ -150,8 +150,8 @@ $baseUrl = Yii::$app->request->baseUrl;
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
                     <?php foreach ($owl_cars as $item):
-                        $main = CarGallery::findOne(['car_id' => $item->id, 'type_id' => 0]);
-                        $secondary = CarGallery::findOne(['car_id' => $item->id, 'type_id' => 1]);
+                        $main = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 0]);
+                        $secondary = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 1]);
                         switch ($lang) {
                             case 'ru':
                                 $capacity = $item->capacity . ' Мест';

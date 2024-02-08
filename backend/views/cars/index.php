@@ -65,7 +65,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'capacity',
                 'value' => function ($data) {
                     return $data->capacity . ' / ' . $data->baggage;
-                }
+                },
+                'header'=>'Вмещаемость / Багаж'
             ],
             [
                 'attribute' => 'status',
@@ -85,7 +86,6 @@ $this->params['breadcrumbs'][] = $this->title;
             //'content_ru:ntext',
             //'content_en:ntext',
             //'content_uz:ntext',
-
             //'capacity',
             //'baggage',
             [

@@ -54,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'cars_id',
                 'value' => function ($data) {
-                    return $data->cars->name_ru;
+                    if (isset($data->cars)) return $data->cars->name_ru;
                 }
             ],
             //'email:email',

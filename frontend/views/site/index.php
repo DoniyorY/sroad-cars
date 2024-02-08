@@ -175,7 +175,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                         }
                         ?>
                         <div class="item">
-                            <div class="card">
+                            <div class="card border-0 rounded-0 ">
                                 <div class="card_header">
                                     <p class="p-0 "><?= $capacity ?></p>
                                     <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
@@ -188,13 +188,23 @@ $baseUrl = Yii::$app->request->baseUrl;
                                     <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                                 </div>
                                 <div class="card_image2">
-                                    <img src="<?= $secondary ?>" alt="">
+                                    <div class="card_info">
+                                        <div class="capacity"><strong>Вместимость:</strong> 99</div>
+                                        <div class="baggage"><strong>Багаж:</strong> 99</div>
+                                    </div>
+                                    <p style="mt10">
+                                        <?= mb_substr($item->{"content_$lang"}, 0, 175) . '...';?>
+                                    </p>
+                                   <!-- <img src="<?php /*= $secondary */?>" alt="">-->
                                 </div>
-                            </div>
-                            <div class="card-footer">
-                                <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
-                                    Узнать подробнее
-                                </a>
+                                <div class="card_footer">
+                                    <div class="card_price">
+                                        <strong>Цена от:</strong> 1 000 000 UZS
+                                    </div>
+                                    <a class="btn btn-sroad" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
+                                        Узнать подробнее
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     <?php endforeach; ?>

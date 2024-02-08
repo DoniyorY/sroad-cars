@@ -6,6 +6,7 @@ body {
 
 p {
     text-align: justify;
+    margin: 0;
 }
 
 /*h1, h2, h3, h4, h5, h6 {
@@ -297,7 +298,15 @@ header nav ul li {
     text-align: center;
 }
 
+.card_image2 {
+    height: 250px;
+    padding: 45px 25px 25px 25px;
+}
+.card_image2 .card_info{
 
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 .card_image2 img {
     width: 100%;
     object-fit: cover;
@@ -305,17 +314,24 @@ header nav ul li {
     background: rgba(0, 24, 62, 0.60);
 }
 
-.card-footer {
-    margin-top: -30px;
+.card_footer {
+    margin-top: 0px;
     z-index: 2;
-    margin-left: 1px;
+   /* margin-left: 1px;*/
     position: sticky;
-    width: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.card-footer a {
-    height: 30px;
-    width: 100%;
+.card_footer a {
+    height: 45px;
+    width: 50%;
+}
+.card_price{
+    font-size: 15px;
+    padding-left: 10px;
 }
 
 .properties_desc {
@@ -336,11 +352,16 @@ header nav ul li {
     display: flex;
     justify-content: space-between;
     bottom: 135px;
+    z-index: 0;
 }
 
 .owl-carousel .owl-item {
     display: flex;
     justify-content: center;
+
+}
+.owl-stage-outer{
+    z-index: 1;
 }
 
 .owl-nav button {

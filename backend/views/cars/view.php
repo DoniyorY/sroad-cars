@@ -36,6 +36,15 @@ $this->title = $model->name_ru;
             </div>
         </div>
     </div>
+    <?php
+    if (Yii::$app->session->hasFlash('warning')):
+    ?>
+    <!-- Warning Alert -->
+    <div class="alert alert-warning alert-border-left alert-dismissible fade show" role="alert">
+        <i class="ri-alert-line me-3 align-middle"></i> <strong>Внимание </strong><?=Yii::$app->session->getFlash('warning')?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif;?>
     <div class="mb-3 btn-group">
         <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?php

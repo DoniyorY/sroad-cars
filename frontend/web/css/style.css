@@ -358,8 +358,15 @@ header nav ul li {
 .owl-carousel .owl-item {
     display: flex;
     justify-content: center;
-
 }
+.owl-carousel .about_item{
+    width: 100% !important;
+}
+.owl-carousel .about_item .owl-img {
+    height: 600px;
+    object-fit: cover;
+}
+
 .owl-stage-outer{
     z-index: 1;
 }
@@ -624,7 +631,9 @@ header nav ul li {
     margin-bottom: 0;
     margin-top: 5px;
 }
-
+.site-about{
+    margin-top: 50px;
+}
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

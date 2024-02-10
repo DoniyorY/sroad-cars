@@ -145,9 +145,6 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        echo "<pre>";
-        print_r($this->action->controller->getView());
-        die();
         return $this->render('about');
     }
 

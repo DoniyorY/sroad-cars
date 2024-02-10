@@ -153,7 +153,7 @@ $baseUrl = Yii::$app->request->baseUrl;
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
                     <?php foreach ($owl_cars as $item):
-                        $conn=\common\models\Connector::find()->where(['car_id'=>$item->id])->orderBy(['price'=>SORT_ASC])->one();
+                        $conn = \common\models\Connector::find()->where(['car_id' => $item->id])->orderBy(['price' => SORT_ASC])->one();
                         $main = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 0]);
                         $secondary = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 1]);
                         if (is_null($main) or is_null($secondary)) {
@@ -166,15 +166,15 @@ $baseUrl = Yii::$app->request->baseUrl;
                         switch ($lang) {
                             case 'ru':
                                 $capacity = $item->capacity . ' Мест';
-                                $price='<strong>Цена от: </strong>' .Yii::$app->formatter->asDecimal($conn->price,0) . ' UZS';
+                                $price = '<strong>Цена от: </strong>' . Yii::$app->formatter->asDecimal($conn->price, 0) . ' UZS';
                                 break;
                             case 'en':
                                 $capacity = "Capacity: $item->capacity";
-                                $price='<strong>Price: </strong>' .Yii::$app->formatter->asDecimal($conn->price,0) . ' UZS';
+                                $price = '<strong>Price: </strong>' . Yii::$app->formatter->asDecimal($conn->price, 0) . ' UZS';
                                 break;
                             case 'uz':
                                 $capacity = "$item->capacity Joy";
-                                $price=Yii::$app->formatter->asDecimal($conn->price,0) . ' <strong> So`mdan</strong>';
+                                $price = Yii::$app->formatter->asDecimal($conn->price, 0) . ' <strong> So`mdan</strong>';
                                 break;
                         }
                         ?>
@@ -193,17 +193,18 @@ $baseUrl = Yii::$app->request->baseUrl;
                                 </div>
                                 <div class="card_image2">
                                     <div class="card_info">
-                                        <div class="capacity"><strong>Вместимость:</strong> <?=$item->capacity?></div>
-                                        <div class="baggage"><strong>Багаж:</strong> <?=$item->baggage?></div>
+                                        <div class="capacity"><strong>Вместимость:</strong> <?= $item->capacity ?></div>
+                                        <div class="baggage"><strong>Багаж:</strong> <?= $item->baggage ?></div>
                                     </div>
                                     <p style="margin-top: 10px;">
-                                        <?= mb_substr($item->{"content_$lang"}, 0, 175) . '...';?>
+                                        <?= mb_substr($item->{"content_$lang"}, 0, 175) . '...'; ?>
                                     </p>
-                                   <!-- <img src="<?php /*= $secondary */?>" alt="">-->
+                                    <!-- <img src="<?php /*= $secondary */
+                                    ?>" alt="">-->
                                 </div>
                                 <div class="card_footer">
                                     <div class="card_price">
-                                        <?=$price?>
+                                        <?= $price ?>
                                     </div>
                                     <a class="btn btn-sroad" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
                                         Узнать подробнее

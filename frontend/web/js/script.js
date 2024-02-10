@@ -1,10 +1,24 @@
+let about_owl = $('.my-owl');
+if (about_owl){
+    about_owl.owlCarousel({
+        loop: true,
+        margin: 0,
+        dots: false,
+        mouseDrag: true,
+        autoplay: false,
+        autoplayTimeout: 10000,
+        nav:false,
+        items:1,
+    });
+}
+
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 0,
     dots: false,
     navSpeed: 1000,
     mouseDrag: true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 10000,
     navText: ['<img src="/img/owl_prev.svg" alt="">', '<img src="/img/owl_next.svg" alt="">'],
     responsive: {
@@ -22,6 +36,7 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
 let baseUrl = window.location.origin
 let lang = document.documentElement.lang
 let select2_url = baseUrl + '/' + lang + "/v1/api/ajax?search_type=";

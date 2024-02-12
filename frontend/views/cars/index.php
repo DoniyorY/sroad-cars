@@ -73,26 +73,26 @@ $this->title = Yii::$app->params['Categories'][$lang]
                 switch ($lang) {
                     case 'ru':
                         $capacity = $item->car->capacity . ' Мест';
-                        if ($conn){
+                        if ($conn) {
                             $price = '<strong>Цена от: </strong>' . Yii::$app->formatter->asDecimal($conn->price, 0) . ' UZS';
-                        }else{
-                            $price=0;
+                        } else {
+                            $price = '<strong>Цена от: </strong>' . 0 . ' UZS';
                         }
                         break;
                     case 'en':
                         $capacity = "Capacity: " . $item->car->capacity;
-                        if ($conn){
+                        if ($conn) {
                             $price = '<strong>Price: </strong>' . Yii::$app->formatter->asDecimal($conn->price, 0) . ' UZS';
-                        }else{
-                            $price=0;
+                        } else {
+                            $price = '<strong>Price: </strong>' . 0 . ' UZS';
                         }
                         break;
                     case 'uz':
                         $capacity = $item->car->capacity . ' Joy';
-                        if ($conn){
+                        if ($conn) {
                             $price = Yii::$app->formatter->asDecimal($conn->price, 0) . ' <strong> So`mdan</strong>';
-                        }else{
-                            $price=0;
+                        } else {
+                            $price = 0 . ' <strong> So`mdan</strong>';
                         }
                         break;
                 }

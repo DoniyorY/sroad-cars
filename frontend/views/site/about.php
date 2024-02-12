@@ -20,30 +20,22 @@ $this->title = Yii::$app->params['About'][$lang];
             </div>
             <div class="col-md-6 p-3" style="font-size: 18px;">
                 <p align="justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem ducimus eius error est hic magni
-                    minus nesciunt nulla, officiis perspiciatis repellat reprehenderit repudiandae sequi sunt tenetur ut
-                    velit. Atque ea enim eum harum praesentium repellat voluptatum? Cum facere nam porro totam unde
-                    voluptas. Ex minima mollitia non nostrum quia ratione ullam? Ab aliquid amet commodi doloribus fugit
-                    iste labore nihil nulla perspiciatis possimus, reiciendis, reprehenderit sed ullam? A assumenda
-                    consectetur enim facilis necessitatibus quos veniam veritatis. Asperiores atque autem beatae cum
-                    cumque deserunt, dignissimos dolor est illo incidunt ipsum iusto labore libero magni maiores minima
-                    modi molestiae molestias nulla perferendis porro possimus praesentium quam quidem sint tempora
-                    temporibus vitae! Aliquam atque eos exercitationem magni officiis repellat repudiandae vel. Aut
-                    consequatur eius exercitationem illum incidunt laboriosam minima placeat quisquam! Adipisci alias
-                    aliquid amet at consequatur consequuntur deleniti dignissimos distinctio doloremque, dolorum earum
-                    est et harum impedit in ipsam ipsum laudantium magnam maiores maxime minus modi molestiae nam nihil
-                    nobis, nulla officiis optio porro possimus quasi quia quisquam reiciendis repellat repellendus
-                    similique sit unde? Aspernatur cumque eos maxime sit? Architecto autem deserunt, eius ex fuga fugit
-                    in molestias, nemo neque officiis optio perferendis porro praesentium quasi, quia sit tenetur.
-                    Aliquam aliquid asperiores dolores quam repellat. Eveniet, harum, sed. A accusamus aliquid
-                    consequatur, culpa exercitationem maxime, natus nemo neque nulla officia quae quam quod. Accusamus
-                    accusantium consectetur doloremque eligendi eum ex, necessitatibus quas voluptates? Assumenda
-                    doloribus perspiciatis praesentium suscipit? Commodi, debitis voluptas. Aspernatur aut commodi
-                    deserunt dolorem incidunt ipsum maxime nisi ut vel veritatis. Aliquid cumque facilis harum maiores
-                    nulla quo reprehenderit voluptatem. A accusamus accusantium aliquid animi aut cum delectus eligendi
-                    error et explicabo impedit, labore molestiae mollitia neque nesciunt nostrum optio perspiciatis
-                    reiciendis reprehenderit rerum totam ullam veniam! Ad aliquam aperiam architecto dolores hic in,
-                    inventore laboriosam sequi sint suscipit.
+                    Добро пожаловать в мир комфорта и безопасности с автопарком Silk Road Samarkand! <br>
+                    Мы являемся вашим надежным партнером для организации трансферов и увлекательных поездок по
+                    Узбекистану. <br> <br>
+                    Наш автопарк состоит из современных и надежных транспортных средств, призванных обеспечить нашим
+                    клиентам максимальный комфорт и удовольствие во время путешествия. <br> <br>
+                    <strong>Автобусы Higer:</strong> Наши 17 автобусов Higer на 40 мест обеспечивают просторное и удобное путешествие для
+                    больших групп. Высокий стандарт безопасности и комфорта делают их идеальным выбором для организации
+                    туров и экскурсий. <br> <br>
+                    <strong>Микроавтобусы Mercedes-Benz Sprinter:</strong> У нас имеются как 6-местные, так и 16-местные Mercedes-Benz
+                    Sprinter, чтобы соответствовать вашим потребностям. Они обеспечат уют и удобство для вашей компании.
+                    <br><br>
+                    <strong>Минивэны Kia Carnival:</strong> Для семейных поездок и небольших групп мы предлагаем 5-местные минивэны Kia
+                    Carnival. Они отличаются просторным интерьером и современными удобствами. <br> <br>
+                    <strong>Электромобили Honqgi:</strong> Мы гордимся тем, что мы также предлагаем экологически чистый транспорт. Наши 2
+                    электромобиля Honqgi EHS 9 и 18 электромобилей Honqgi E QMS 5 обеспечивают не только комфорт, но и
+                    вкладывают в будущее планеты.
                 </p>
             </div>
             <div class="col-md-6">

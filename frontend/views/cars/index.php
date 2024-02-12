@@ -64,13 +64,11 @@ $this->title = Yii::$app->params['Categories'][$lang]
         <div class="row">
             <?php foreach ($model as $item):
                 $main = CarGallery::findOne(['cars_id' => $item->car_id, 'type_id' => 0]);
-                $secondary = CarGallery::findOne(['cars_id' => $item->car_id, 'type_id' => 1]);
-                if (is_null($main) or is_null($secondary)) {
+
+                if (is_null($main)) {
                     $main = "$baseUrl/img/owl-card.png";
-                    $secondary = "$baseUrl/img/owl-card-2.png";
                 } else {
                     $main = "$baseUrl/uploads/cars/$main->image";
-                    $secondary = "$baseUrl/uploads/cars/$secondary->image";
                 }
                 switch ($lang) {
                     case 'ru':

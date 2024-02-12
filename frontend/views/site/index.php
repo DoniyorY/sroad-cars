@@ -155,13 +155,10 @@ $baseUrl = Yii::$app->request->baseUrl;
                     <?php foreach ($owl_cars as $item):
                         $conn = \common\models\Connector::find()->where(['car_id' => $item->id])->orderBy(['price' => SORT_ASC])->one();
                         $main = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 0]);
-                        $secondary = CarGallery::findOne(['cars_id' => $item->id, 'type_id' => 1]);
-                        if (is_null($main) or is_null($secondary)) {
+                        if (is_null($main)) {
                             $main = "$baseUrl/img/owl-card.png";
-                            $secondary = "$baseUrl/img/owl-card-2.png";
                         } else {
                             $main = "$baseUrl/uploads/cars/$main->image";
-                            $secondary = "$baseUrl/uploads/cars/$secondary->image";
                         }
                         switch ($lang) {
                             case 'ru':

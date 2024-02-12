@@ -75,17 +75,20 @@ $this->title = Yii::$app->params['Categories'][$lang]
                 switch ($lang) {
                     case 'ru':
                         $capacity = $item->car->capacity . ' Мест';
+                        $price = '<strong>Цена от: </strong>' . Yii::$app->formatter->asDecimal($conn->price, 0) . ' UZS';
                         break;
                     case 'en':
                         $capacity = "Capacity: " . $item->car->capacity;
+                        $price = '<strong>Price: </strong>' . Yii::$app->formatter->asDecimal($conn->price, 0) . ' UZS';
                         break;
                     case 'uz':
                         $capacity = $item->car->capacity . ' Joy';
+                        $price = Yii::$app->formatter->asDecimal($conn->price, 0) . ' <strong> So`mdan</strong>';
                         break;
                 }
                 ?>
                 <div class="col-md-4 mt-3">
-                    <div class="card">
+                    <div class="card border-0 rounded-0 ">
                         <div class="card_header">
                             <p class="p-0 "><?= $capacity ?></p>
                             <img src="<?= $baseUrl . '/img/card_header.svg' ?>" style="width: 100%;" alt="">
@@ -94,17 +97,28 @@ $this->title = Yii::$app->params['Categories'][$lang]
                             <img src="<?= $main ?>" alt="" style="width: 100%;">
                         </div>
                         <div class="card_middle">
-                            <p><?= $item->car->{"name_$lang"} ?></p>
+                            <p><?= $item->{"name_$lang"} ?></p>
                             <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                         </div>
                         <div class="card_image2">
-                            <img src="<?= $secondary ?>" alt="">
+                            <div class="card_info">
+                                <div class="capacity"><strong>Вместимость:</strong> <?= $item->capacity ?></div>
+                                <div class="baggage"><strong>Багаж:</strong> <?= $item->baggage ?></div>
+                            </div>
+                            <p style="margin-top: 10px;">
+                                <?= mb_substr($item->{"content_$lang"}, 0, 175) . '...'; ?>
+                            </p>
+                            <!-- <img src="<?php /*= $secondary */
+                            ?>" alt="">-->
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <a class="btn btn-sroad p-0" href="<?= Url::to(['cars/view', 'id' => $item->car_id]) ?>">
-                            Узнать подробнее
-                        </a>
+                        <div class="card_footer">
+                            <div class="card_price">
+                                <?= $price ?>
+                            </div>
+                            <a class="btn btn-sroad" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
+                                Узнать подробнее
+                            </a>
+                        </div>
                     </div>
                 </div>
             <?php endforeach; ?>

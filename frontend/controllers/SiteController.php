@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use common\models\Cars;
+use common\models\Contact;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -145,6 +146,10 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+        $contact = new Contact();
+        if ($contact->load(Yii::$app->request->post()) and $contact->sendMessage()) {
+            return $this->refresh();
+        }
         return $this->render('about');
     }
 

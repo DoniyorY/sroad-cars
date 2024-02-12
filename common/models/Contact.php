@@ -39,6 +39,19 @@ class Contact extends \yii\db\ActiveRecord
         ];
     }
 
+    public function sendMessage()
+    {
+        $model = new Contact();
+        $model->created = time();
+        $model->status = 0;
+        $model->fullname = $this->fullname;
+        $model->phone = $this->phone;
+        $model->email = $this->email;
+        $model->subject = $this->subject;
+        $model->message = $this->message;
+        $model->save(false);
+    }
+
     /**
      * {@inheritdoc}
      */

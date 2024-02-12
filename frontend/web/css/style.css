@@ -12,7 +12,7 @@ p {
 /*h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', 'sans-serif' !important;
 }*/
-input {
+input, textarea {
     border-radius: 0 !important;
 }
 
@@ -633,6 +633,39 @@ header nav ul li {
 }
 .site-about{
     margin-top: 50px;
+}
+.contacts {
+    padding: 100px 0 100px 0;
+}
+
+.contacts-block {
+    max-width: 1300px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: #FFF;
+    height: auto;
+    padding-bottom: 80px;
+    box-shadow: 5px -3px 9px 8px rgba(160, 139, 84, 0.25);
+}
+.main-title {
+    padding-top: 30px;
+}
+.form-block {
+    padding-right: 85px;
+    padding-left: 85px;
+    padding-top: 40px;
+}
+
+.form-block .row .form-group {
+    margin-top: 20px;
+}
+
+.form-block .row input {
+    background-color: #EEE;
+}
+
+.form-block .row textarea {
+    background-color: #EEE;
 }
 @media (max-width: 1600px) {
     .kusok_derma {

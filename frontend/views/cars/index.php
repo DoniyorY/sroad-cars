@@ -100,8 +100,8 @@ $this->title = Yii::$app->params['Categories'][$lang]
                         </div>
                         <div class="card_image2">
                             <div class="card_info">
-                                <div class="capacity"><strong>Вместимость:</strong> <?= $item->capacity ?></div>
-                                <div class="baggage"><strong>Багаж:</strong> <?= $item->baggage ?></div>
+                                <div class="capacity"><strong>Вместимость:</strong> <?= $item->car->capacity ?></div>
+                                <div class="baggage"><strong>Багаж:</strong> <?= $item->car->baggage ?></div>
                             </div>
                             <p style="margin-top: 10px;">
                                 <?= mb_substr($item->car->{"content_$lang"}, 0, 175) . '...'; ?>

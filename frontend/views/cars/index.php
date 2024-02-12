@@ -95,7 +95,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
                             <img src="<?= $main ?>" alt="" style="width: 100%;">
                         </div>
                         <div class="card_middle">
-                            <p><?= $item->{"name_$lang"} ?></p>
+                            <p><?= $item->car->{"name_$lang"} ?></p>
                             <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                         </div>
                         <div class="card_image2">
@@ -104,7 +104,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
                                 <div class="baggage"><strong>Багаж:</strong> <?= $item->baggage ?></div>
                             </div>
                             <p style="margin-top: 10px;">
-                                <?= mb_substr($item->{"content_$lang"}, 0, 175) . '...'; ?>
+                                <?= mb_substr($item->car->{"content_$lang"}, 0, 175) . '...'; ?>
                             </p>
                             <!-- <img src="<?php /*= $secondary */
                             ?>" alt="">-->

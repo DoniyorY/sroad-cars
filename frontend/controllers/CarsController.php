@@ -3,7 +3,6 @@
 namespace frontend\controllers;
 
 use common\models\CarGallery;
-use common\models\search\CarsSearch;
 use common\models\Cars;
 use common\models\search\ConnectorSearch;
 use yii\web\Controller;
@@ -20,6 +19,10 @@ class CarsController extends Controller
         ]);
     }
 
+    /**
+     * @param $id
+     * @return string
+     */
     public function actionView($id)
     {
         $model = Cars::findOne(['id' => $id]);

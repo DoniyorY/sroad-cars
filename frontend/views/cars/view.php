@@ -4,7 +4,10 @@ use yii\helpers\Url;
 
 $lang = Yii::$app->language;
 $baseUrl = Yii::$app->request->baseUrl;
-$this->title = $model->category->{"name_$lang"} . ' ' .$model->{"name_$lang"};
+/** @var \common\models\Cars $model
+ * @var \common\models\CarGallery $photo
+ */
+$this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
 
 ?>
 <div class="cars_banner">
@@ -14,11 +17,11 @@ $this->title = $model->category->{"name_$lang"} . ' ' .$model->{"name_$lang"};
     <div class="row w-100">
         <div class="col-md-5 p-0 left_cars_view">
             <div class="left_title">
-                <h1><?=$this->title?></h1>
+                <h1><?= $this->title ?></h1>
             </div>
             <div class="left_desc">
                 <p>
-                    <?=$model->{"content_$lang"}?>
+                    <?= $model->{"content_$lang"} ?>
                 </p>
             </div>
         </div>

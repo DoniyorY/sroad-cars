@@ -20,14 +20,14 @@ class CarsController extends Controller
         ]);
     }
 
-    public function actionView($id = null)
+    public function actionView($id)
     {
         $model = Cars::findOne(['id' => $id]);
-        $photo=CarGallery::findOne(['car_id'=>$id,'type_id'=>0]);
+        $photo = CarGallery::findOne(['cars_id' => $id, 'type_id' => 0]);
 
         return $this->render('view', [
             'model' => $model,
-            'photo'=>$photo
+            'photo' => $photo
         ]);
     }
 

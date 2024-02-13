@@ -19,8 +19,7 @@ $baseUrl = Yii::$app->request->baseUrl;
             <div class="col-md-8 left_banner">
                 <div class="banner_name">
                     <p>
-                        Добро пожаловать в мир комфорта
-                        и безопасности с автопарком
+                        <?= Yii::$app->params['Добро пожаловать в мир комфорта и безопасности с автопарком'][$lang] ?>
                     </p>
                 </div>
                 <div class="banner_title">
@@ -31,7 +30,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                 <div class="banner_search_main">
                     <div class="banner_search_title text-center">
                         <div class="kusok_derma"></div>
-                        <h4>Забронируйте трансфер от точки до точки</h4>
+                        <h4><?= Yii::$app->params['Забронируйте трансфер от точки до точки'][$lang] ?></h4>
                     </div>
                     <div class="banner_search_form">
                         <div class="vector_line">
@@ -39,23 +38,23 @@ $baseUrl = Yii::$app->request->baseUrl;
                         </div>
                         <form action="<?= Url::to(['cars/index']) ?>">
                             <div class="form-group mt-4">
-                                <label for="from_address">Выберите начальнюю локацию маршрута</label>
+                                <label for="from_address"><?= Yii::$app->params['Выберите начальнюю локацию маршрута'][$lang] ?></label>
                                 <select name="CarsSearch[from_id]" class="js-from-select2 form-control"></select>
                             </div>
                             <div class="form-group mt-4">
-                                <label for="from_address">Выберите конечную локацию маршрута</label>
+                                <label for="from_address"><?= Yii::$app->params['Выберите конечную локацию маршрута'][$lang] ?></label>
                                 <select name="CarsSearch[to_id]" class="js-to-select2 form-control"></select>
                             </div>
                             <div class="row mt-4">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="from_address">Дата начала маршрута</label>
+                                        <label for="from_address"><?= Yii::$app->params['Дата начала маршрута'][$lang] ?></label>
                                         <input name="CarsSearch[begin]" type="date" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="from_address">Время начала маршрута</label>
+                                        <label for="from_address"><?= Yii::$app->params['Время начала маршрута'][$lang] ?></label>
                                         <input name="CarsSearch[end]" type="time" class="form-control">
                                     </div>
                                 </div>
@@ -63,7 +62,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             <hr>
                             <div class="form-group text-center">
                                 <button class="btn btn-sroad" type="submit">
-                                    Найти транспорт
+                                    <?= Yii::$app->params['Найти транспорт'][$lang] ?>
                                 </button>
                             </div>
                         </form>
@@ -78,22 +77,21 @@ $baseUrl = Yii::$app->request->baseUrl;
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center mb-5">
-                <h2 class="h1">Наши преимущества</h2>
+                <h2 class="h1"><?= Yii::$app->params['Наши преимущества'][$lang] ?></h2>
             </div>
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card card-body card_secondary">
                             <div class="card_title">
-                                <h3>Надёжность</h3>
+                                <h3><?= Yii::$app->params['Надёжность'][$lang] ?></h3>
                             </div>
                             <div class="card_image">
                                 <img src="<?= $baseUrl . '/img/property-1.svg' ?>" alt="">
                             </div>
                             <div class="card_desc">
                                 <p>
-                                    Мы гарантируем точное и надежное выполнение всех услуг, чтобы ваше путешествие
-                                    началось с хорошего настроения.
+                                    <?= Yii::$app->params['Мы гарантируем точное и надежное выполнение всех услуг, чтобы ваше путешествие началось с хорошего настроения.'][$lang] ?>
                                 </p>
                             </div>
                         </div>
@@ -101,15 +99,14 @@ $baseUrl = Yii::$app->request->baseUrl;
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card card-body card_secondary">
                             <div class="card_title">
-                                <h3>Комфорт</h3>
+                                <h3><?=Yii::$app->params['Комфорт'][$lang]?></h3>
                             </div>
                             <div class="card_image">
                                 <img src="<?= $baseUrl . '/img/property-2.svg' ?>" alt="">
                             </div>
                             <div class="card_desc">
                                 <p>
-                                    Все наши транспортные средства поддерживаются в идеальном состоянии, а ваша
-                                    безопасность - нашей первостепенной заботой.
+                                    <?=Yii::$app->params['Все наши транспортные средства поддерживаются в идеальном состоянии, а ваша безопасность - нашей первостепенной заботой.'][$lang]?>
                                 </p>
                             </div>
                         </div>
@@ -117,7 +114,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card card-body card_secondary">
                             <div class="card_title">
-                                <h3>Профессионализм</h3>
+                                <h3><?=Yii::$app->params['Профессионализм'][$lang]?></h3>
                             </div>
                             <div class="card_image">
                                 <img src="<?= $baseUrl . '/img/property-3.svg' ?>" alt="">
@@ -125,8 +122,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                             </div>
                             <div class="card_desc">
                                 <p>
-                                    Наши водители опытные и заботливые профессионалы, готовые сделать ваше пребывание
-                                    незабываемым.
+                                    <?=Yii::$app->params['Наши водители опытные и заботливые профессионалы, готовые сделать ваше пребывание незабываемым.'][$lang]?>
                                 </p>
                             </div>
                         </div>
@@ -135,9 +131,7 @@ $baseUrl = Yii::$app->request->baseUrl;
             </div>
             <div class="col-md-12 my-5 properties_desc">
                 <p>
-                    С <strong>автопарком Silk Road Samarkand</strong>, ваше путешествие становится легким и приятным.
-                    Доверьтесь нам организацию ваших туров и экскурсий, и мы гарантируем, что вы получите незабываемый
-                    опыт в самом комфортабельном и безопасном автотранспорте.
+                    <?=Yii::$app->params['properties_desc'][$lang]?>
                 </p>
             </div>
         </div>
@@ -148,7 +142,7 @@ $baseUrl = Yii::$app->request->baseUrl;
     <div class="container">
         <div class="row w-100">
             <div class="col-md-12 text-center mb-5">
-                <h2 class="h1">Категории доступных транспортов</h2>
+                <h2 class="h1"><?=Yii::$app->params['Категории доступных транспортов'][$lang]?></h2>
             </div>
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
@@ -190,8 +184,8 @@ $baseUrl = Yii::$app->request->baseUrl;
                                 </div>
                                 <div class="card_image2">
                                     <div class="card_info">
-                                        <div class="capacity"><strong>Вместимость:</strong> <?= $item->capacity ?></div>
-                                        <div class="baggage"><strong>Багаж:</strong> <?= $item->baggage ?></div>
+                                        <div class="capacity"><strong><?=Yii::$app->params['Вместимость'][$lang]?>:</strong> <?= $item->capacity ?></div>
+                                        <div class="baggage"><strong><?=Yii::$app->params['Багаж'][$lang]?>:</strong> <?= $item->baggage ?></div>
                                     </div>
                                     <p style="margin-top: 10px;">
                                         <?= mb_substr($item->{"content_$lang"}, 0, 175) . '...'; ?>
@@ -204,7 +198,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                                         <?= $price ?>
                                     </div>
                                     <a class="btn btn-sroad" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
-                                        Узнать подробнее
+                                        <?=Yii::$app->params['learnMore'][$lang]?>
                                     </a>
                                 </div>
                             </div>
@@ -220,9 +214,9 @@ $baseUrl = Yii::$app->request->baseUrl;
     <div class="container">
         <div class="row w-100">
             <div class="col-md-12 text-center mb-5">
-                <h2 class="h1">Поездки по городам Узбекистана</h2>
+                <h2 class="h1"><?=Yii::$app->params['Поездки по городам Узбекистана'][$lang]?></h2>
                 <p style="font-size: 20px; text-align: center">
-                    Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового Пути.
+                    <?=Yii::$app->params['Приглашаем вас отправиться с нами в увлекательное путешествие по городам Великого Шелкового Пути.'][$lang]?>
                 </p>
             </div>
             <div class="col-md-4 mt-2">

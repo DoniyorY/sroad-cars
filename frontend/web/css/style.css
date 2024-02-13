@@ -667,9 +667,10 @@ header nav ul li {
 .form-block .row textarea {
     background-color: #EEE;
 }
-.cars_cards .card .card_image2, .card_footer{
+.cars_cards .card .card_image2{
     background-color: #f3f3f3;
 }
+
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

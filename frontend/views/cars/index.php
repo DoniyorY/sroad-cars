@@ -121,7 +121,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
                             <!-- <img src="<?php /*= $secondary */
                             ?>" alt="">-->
                         </div>
-                        <div class="card_footer">
+                        <div class="card_footer" style="background: #f3f3f3">
                             <div class="card_price">
                                 <?= $price ?>
                             </div>

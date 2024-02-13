@@ -1,18 +1,23 @@
 let about_owl = $('.my-owl');
 let lang = document.documentElement.lang
 const Lang = {
-   from_id:{
-       ru:'Выберите адрес отправления...',
-       en:'Select departure address...',
-       uz:'',
-   },
-    to_id:{
-        ru:'Выберите адрес назначения…',
-        en:'Select destination address...',
-        uz:'',
+    from_id: {
+        ru: 'Выберите адрес отправления...',
+        en: 'Select departure address...',
+        uz: '',
+    },
+    to_id: {
+        ru: 'Выберите адрес назначения…',
+        en: 'Select destination address...',
+        uz: '',
+    },
+    choose_car: {
+        ru: 'Выберите машину',
+        en: 'Choose a Car',
+        uz: '',
     }
 }
-if (about_owl){
+if (about_owl) {
     about_owl.owlCarousel({
         loop: true,
         margin: 0,
@@ -20,8 +25,8 @@ if (about_owl){
         mouseDrag: true,
         autoplay: false,
         autoplayTimeout: 10000,
-        nav:false,
-        items:1,
+        nav: false,
+        items: 1,
     });
 }
 
@@ -58,7 +63,7 @@ $(document).ready(function () {
     $('.js-from-select2').select2({
         language: "ru",
         ajax: {
-            url: select2_url+'0',
+            url: select2_url + '0',
             dataType: 'json',
             //delay: 250,
             type: 'get',
@@ -83,7 +88,7 @@ $(document).ready(function () {
     $('.js-to-select2').select2({
         language: "ru",
         ajax: {
-            url: select2_url+'1',
+            url: select2_url + '1',
             dataType: 'json',
             //delay: 250,
             type: 'get',
@@ -126,6 +131,6 @@ $(document).ready(function () {
             cache: true,
         },
         status: 1,
-        placeholder: 'Выберите машину'
+        placeholder: Lang.choose_car[lang],
     });
 });

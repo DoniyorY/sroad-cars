@@ -26,7 +26,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
             </div>
             <div class="col-md-5">
                 <div class="second_title">
-                    <p>Ознакомьтесь с нашим каталогом машин для незабываемой поездки</p>
+                    <p><?=Yii::$app->params['our_cars_content'][$lang]?></p>
                 </div>
             </div>
         </div>
@@ -37,24 +37,24 @@ $this->title = Yii::$app->params['Categories'][$lang]
                 <div class="row align-items-center">
                     <div class="col-md-2 mt-2">
                         <h2>
-                            Фильтр
+                            <?=Yii::$app->params['filter'][$lang]?>
                         </h2>
                     </div>
                     <div class="col-md-3 form-group">
-                        <label for="cars_name">Название машины</label>
+                        <label for="cars_name"><?=Yii::$app->params['Название машины'][$lang]?></label>
                         <select id="cars_name" name="CarsSearch[title]" class="js-title-select2 form-control"></select>
                     </div>
                     <div class="col-md-3 form-group">
-                        <label for="cars_destination">Направление</label>
+                        <label for="cars_destination"><?=Yii::$app->params['Направление'][$lang]?></label>
                         <select id="cars_destination" name="CarsSearch[to_id]"
                                 class="js-to-select2 form-control"></select>
                     </div>
                     <div class="col-md-3 form-group">
-                        <label for="cars_people_count">Количество пассажиров</label>
+                        <label for="cars_people_count"><?=Yii::$app->params['Количество пассажиров'][$lang]?></label>
                         <input name="CarsSearch[people_count]" id="cars_people_count" type="text" class="form-control">
                     </div>
                     <div class="col-md-1 mt-4">
-                        <button type="submit" class="btn btn-sroad w-100">поиск</button>
+                        <button type="submit" class="btn btn-sroad w-100"><?=Yii::$app->params['search'][$lang]?></button>
                     </div>
                 </div>
             </form>
@@ -112,8 +112,8 @@ $this->title = Yii::$app->params['Categories'][$lang]
                         </div>
                         <div class="card_image2">
                             <div class="card_info">
-                                <div class="capacity"><strong>Вместимость:</strong> <?= $item->car->capacity ?></div>
-                                <div class="baggage"><strong>Багаж:</strong> <?= $item->car->baggage ?></div>
+                                <div class="capacity"><strong><?=Yii::$app->params['Вместимость'][$lang]?>:</strong> <?= $item->car->capacity ?></div>
+                                <div class="baggage"><strong><?=Yii::$app->params['Багаж'][$lang]?>:</strong> <?= $item->car->baggage ?></div>
                             </div>
                             <p style="margin-top: 10px;">
                                 <?= mb_substr($item->car->{"content_$lang"}, 0, 175) . '...'; ?>
@@ -126,7 +126,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
                                 <?= $price ?>
                             </div>
                             <a class="btn btn-sroad" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
-                                Узнать подробнее
+                                <?=yii::$app->params['Узнать подробнее'][$lang]?>
                             </a>
                         </div>
                     </div>

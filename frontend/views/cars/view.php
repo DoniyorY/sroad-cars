@@ -68,31 +68,31 @@ $this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
                         <form action="<?= Url::to(['cars/booking']) ?>" method="post">
                             <div class="form-group">
                                 <input type="text" id="fullname" name="Booking[fullname]" class="form-control"
-                                       placeholder="Ф.И.О">
+                                       placeholder="<?=Yii::$app->params['placeholder_fullname'][$lang]?>">
                             </div>
                             <div class="form-group mt-2">
                                 <input type="email" id="email" name="Booking[email]" class="form-control"
-                                       placeholder="Email">
+                                       placeholder="<?=Yii::$app->params['placeholder_email'][$lang]?>">
                             </div>
                             <div class="form-group mt-2">
                                 <input type="text" id="phone" name="Booking[phone]" class="form-control"
-                                       placeholder="Номер телефона">
+                                       placeholder="<?=Yii::$app->params['placeholder_phone'][$lang]?>">
                             </div>
                             <div class="form-group mt-2">
                                 <input type="text" id="from_id" name="Booking[from_id]" class="form-control"
-                                       placeholder="Откуда">
+                                       placeholder="<?=Yii::$app->params['Откуда'][$lang]?>">
                             </div>
                             <div class="form-group mt-2">
                                 <input type="text" id="to_id" name="Booking[to_id]" class="form-control"
-                                       placeholder="Куда">
+                                       placeholder="<?=Yii::$app->params['Куда'][$lang]?>">
                             </div>
                             <div class="form-group mt-2">
                                 <input type="date" id="booking_date" name="Booking[booking_date]" class="form-control"
-                                       placeholder="Выберите дату">
+                                       placeholder="<?=Yii::$app->params['booking_date'][$lang]?>">
                             </div>
                             <div class="form-group mt-2">
                                 <input type="time" id="booking_time" name="Booking[booking_time]" class="form-control"
-                                       placeholder="Выберите время">
+                                       placeholder="<?=Yii::$app->params['booking_time'][$lang]?>">
                             </div>
                             <div class="form-group mt-2">
                                 <input type="text" id="airport_content" name="Booking[airport_content]"
@@ -101,11 +101,11 @@ $this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
                             </div>
                             <div class="form-group mt-2">
                                 <input type="text" id="content" name="Booking[content]" class="form-control"
-                                       placeholder="Примечание">
+                                       placeholder="<?=Yii::$app->params['Примечание'][$lang]?>">
                             </div>
                             <div class="form-group mt-2">
                                 <button type="submit" class="btn btn-booking">
-                                    Бронировать
+                                    <?=Yii::$app->params['book'][$lang]?>
                                 </button>
                             </div>
                         </form>
@@ -118,21 +118,21 @@ $this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
                         <div class="mt-4 booking_info">
                             <ul>
                                 <li>
-                                    Категория: <?=$model->category->{"name_$lang"}?>
+                                    <?=Yii::$app->params['Категория'][$lang]?>: <?=$model->category->{"name_$lang"}?>
                                 </li>
                                 <li>
-                                    Марка: <?=$model->{"name_$lang"}?>
+                                    <?=Yii::$app->params['Марка'][$lang]?>: <?=$model->{"name_$lang"}?>
                                 </li>
                                 <li>
-                                    Количество мест: <?=$model->capacity?>
+                                    <?=Yii::$app->params['Вместимость'][$lang]?>: <?=$model->capacity?>
                                 </li>
                                 <li>
-                                    Вместимость багажа: <?=$model->baggage?>
+                                    <?=Yii::$app->params['Багаж'][$lang]?>: <?=$model->baggage?>
                                 </li>
                             </ul>
                             <div class="booking_total">
                                 <p>
-                                    Итоговая сумма: <strong>1 000 000 UZS</strong>
+                                    <?=Yii::$app->params['Итоговая сумма'][$lang]?>: <strong id="booking_total">0 UZS</strong>
                                 </p>
                             </div>
                         </div>

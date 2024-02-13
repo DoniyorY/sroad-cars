@@ -64,7 +64,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
         <div class="row">
             <?php foreach ($model as $item):
                 $main = CarGallery::findOne(['cars_id' => $item->car_id, 'type_id' => 0]);
-                $conn = \common\models\Connector::find()->where(['car_id' => $item->id])->orderBy(['price' => SORT_ASC])->one();
+                $conn = \common\models\Connector::find()->where(['car_id' => $item->car_id])->orderBy(['price' => SORT_ASC])->one();
                 if (is_null($main)) {
                     $main = "$baseUrl/img/owl-card.png";
                 } else {

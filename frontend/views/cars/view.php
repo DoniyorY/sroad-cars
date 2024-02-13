@@ -112,22 +112,22 @@ $this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
                     </div>
                     <div class="col-md-6">
                         <div class="booking_image">
-                            <img src="<?= $baseUrl . '/img/cars_view.png' ?>" alt=""
+                            <img src="<?= $baseUrl . "/uploads/cars/$photo->image" ?>" alt=""
                                  style="width: 100%; object-fit: cover">
                         </div>
                         <div class="mt-4 booking_info">
                             <ul>
                                 <li>
-                                    Категория: Автобус
+                                    Категория: <?=$model->category->{"name_$lang"}?>
                                 </li>
                                 <li>
-                                    Марка: HIGER
+                                    Марка: <?=$model->{"name_$lang"}?>
                                 </li>
                                 <li>
-                                    Количество мест: 99
+                                    Количество мест: <?=$model->capacity?>
                                 </li>
                                 <li>
-                                    Вместимость багажа: 99
+                                    Вместимость багажа: <?=$model->baggage?>
                                 </li>
                             </ul>
                             <div class="booking_total">

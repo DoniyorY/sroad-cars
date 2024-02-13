@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\CarGallery;
 use common\models\search\CarsSearch;
 use common\models\Cars;
 use common\models\search\ConnectorSearch;
@@ -22,9 +23,11 @@ class CarsController extends Controller
     public function actionView($id = null)
     {
         $model = Cars::findOne(['id' => $id]);
+        $photo=CarGallery::findOne(['car_id'=>$id,'type_id'=>0]);
 
         return $this->render('view', [
             'model' => $model,
+            'photo'=>$photo
         ]);
     }
 

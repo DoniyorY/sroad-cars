@@ -5,6 +5,7 @@ use yii\helpers\Url;
 $lang = Yii::$app->language;
 $baseUrl = Yii::$app->request->baseUrl;
 $this->title = $model->category->{"name_$lang"} . ' ' .$model->{"name_$lang"};
+
 ?>
 <div class="cars_banner">
     <img src="<?= $baseUrl . '/img/breadcrumbs_banner.png' ?>" alt="">
@@ -22,7 +23,7 @@ $this->title = $model->category->{"name_$lang"} . ' ' .$model->{"name_$lang"};
             </div>
         </div>
         <div class="col-md-7 right_cars_view">
-            <img src="<?= $baseUrl . '/img/cars_view.png' ?>" alt="">
+            <img src="<?= $baseUrl . "/uploads/cars/$photo->image" ?>" alt="">
         </div>
     </div>
 </section>

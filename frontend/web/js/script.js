@@ -1,4 +1,17 @@
 let about_owl = $('.my-owl');
+let lang = document.documentElement.lang
+const Lang = {
+   from_id:{
+       ru:'Выберите адрес отправления...',
+       en:'Select departure address...',
+       uz:'',
+   },
+    to_id:{
+        ru:'Выберите адрес назначения…',
+        en:'Select destination address...',
+        uz:'',
+    }
+}
 if (about_owl){
     about_owl.owlCarousel({
         loop: true,
@@ -38,7 +51,7 @@ $('.owl-carousel').owlCarousel({
 });
 
 let baseUrl = window.location.origin
-let lang = document.documentElement.lang
+
 let select2_url = baseUrl + '/' + lang + "/v1/api/ajax?search_type=";
 $(document).ready(function () {
 
@@ -63,7 +76,7 @@ $(document).ready(function () {
             cache: true,
         },
         status: 1,
-        placeholder: 'Выберите маршрут',
+        placeholder: Lang.from_id[lang],
     });
 });
 $(document).ready(function () {
@@ -88,7 +101,7 @@ $(document).ready(function () {
             cache: true,
         },
         status: 1,
-        placeholder: 'Выберите маршрут'
+        placeholder: Lang.to_id[lang]
     });
 });
 $(document).ready(function () {

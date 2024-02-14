@@ -16,6 +16,7 @@ use Yii;
  * @property string $phone
  * @property int $from_id
  * @property int $to_id
+ * @property int $people_count
  * @property int $booking_date
  * @property string $booking_time
  * @property string $airport_content
@@ -38,7 +39,7 @@ class Booking extends \yii\db\ActiveRecord
     {
         return [
             [['created', 'status', 'cars_id', 'fullname', 'email', 'phone', 'from_id', 'to_id', 'booking_date', 'booking_time'], 'required'],
-            [['created', 'status', 'cars_id', 'from_id', 'to_id', 'booking_date'], 'integer'],
+            [['created', 'status', 'cars_id', 'from_id', 'to_id', 'booking_date','people_count'], 'integer'],
             [['fullname', 'email', 'phone', 'booking_time', 'airport_content', 'content'], 'string', 'max' => 255],
         ];
     }
@@ -62,6 +63,7 @@ class Booking extends \yii\db\ActiveRecord
             'booking_time' => 'Время заказа',
             'airport_content' => 'Номер рейса',
             'content' => 'Примечание',
+            'people_count'=>'Количество'
         ];
     }
 

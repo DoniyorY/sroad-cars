@@ -4,6 +4,7 @@ namespace app\modules\api\controllers;
 
 use common\models\Address;
 use common\models\Cars;
+use common\models\Connector;
 use yii\data\ActiveDataProvider;
 use yii\rest\ActiveController;
 use yii\web\Response;
@@ -45,7 +46,7 @@ class ApiController extends ActiveController
     public function actionFindCar($data = null)
     {
         $this->response->format = Response::FORMAT_JSON;
-        $query = Cars::find()->andFilterWhere(['status'=>0]);
+        $query = Cars::find()->andFilterWhere(['status' => 0]);
         $model = new ActiveDataProvider([
             'query' => $query,
         ]);
@@ -55,5 +56,11 @@ class ApiController extends ActiveController
 
 
         return $model->getModels();
+    }
+
+    public function actionSelected($address_id, $car_id)
+    {
+        $model = Connector::findOne(['address_id' => $address_id, 'car_id' => $car_id]);
+        return \Yii::$app->formatter->asDecimal($model->price, 0) . ' UZS';
     }
 }

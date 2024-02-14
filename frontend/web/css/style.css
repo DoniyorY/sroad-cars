@@ -671,6 +671,10 @@ header nav ul li {
     background-color: #f3f3f3;
 }
 
+.modal-body form .form-group .select2-container{
+    width: 100% !important;
+}
+
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

@@ -41,7 +41,7 @@ class Address extends \yii\db\ActiveRecord
             'id',
             'text' => function ($data) {
                 return $data->{'name_' . Yii::$app->language};
-            }
+            },
         );
 
     }

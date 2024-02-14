@@ -59,7 +59,6 @@ let baseUrl = window.location.origin
 
 let select2_url = baseUrl + '/' + lang + "/v1/api/ajax?search_type=";
 $(document).ready(function () {
-
     $('.js-from-select2').select2({
         language: "ru",
         ajax: {
@@ -83,8 +82,6 @@ $(document).ready(function () {
         status: 1,
         placeholder: Lang.from_id[lang],
     });
-});
-$(document).ready(function () {
     $('.js-to-select2').select2({
         language: "ru",
         ajax: {
@@ -108,8 +105,6 @@ $(document).ready(function () {
         status: 1,
         placeholder: Lang.to_id[lang]
     });
-});
-$(document).ready(function () {
     $('.js-title-select2').select2({
         language: "ru",
         ajax: {
@@ -133,4 +128,74 @@ $(document).ready(function () {
         status: 1,
         placeholder: Lang.choose_car[lang],
     });
+    let select2FromId = $('#from_id').select2({
+        language: "ru",
+        dropdownParent: $('#bookingModal'),
+        ajax: {
+            url: select2_url + '0',
+            dataType: 'json',
+            //delay: 250,
+            type: 'get',
+
+            data: function (params) {
+                return {
+                    req: params.term
+                }
+            },
+            processResults: function (data) {
+                return {
+                    results: data // Make sure the data structure matches what Select2 expects
+                };
+            },
+            cache: true,
+        },
+        status: 1,
+        placeholder: Lang.from_id[lang],
+    });
+    let select2ToId = $('#to_id').select2({
+        language: "ru",
+        dropdownParent: $('#bookingModal'),
+        ajax: {
+            url: select2_url + '1',
+            dataType: 'json',
+            //delay: 250,
+            type: 'get',
+
+            data: function (params) {
+                return {
+                    req: params.term
+                }
+            },
+            processResults: function (data) {
+                return {
+                    results: data // Make sure the data structure matches what Select2 expects
+                };
+            },
+            cache: true,
+        },
+        status: 1,
+        placeholder: Lang.to_id[lang],
+    });
+    select2FromId.on('select2:select', function (e) {
+        let data = e.params.data;
+        if (data.id === 4) {
+            console.log($('#airport_group'))
+            $('#airport_group').removeClass('d-none')
+        } else {
+            $('#airport_group').addClass('d-none')
+        }
+    })
+    select2ToId.on('select2:select', function (e) {
+        let data = e.params.data;
+        let select2CarId = document.getElementById('to_id').getAttribute('data-model-car');
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("GET", baseUrl + '/' + lang + '/v1/api/selected?address_id=' + data.id + '&car_id=' + select2CarId);
+        xhttp.send();
+        xhttp.onreadystatechange = function (){
+            if(this.readyState==4 && this.status==200){
+                let getJson=JSON.parse(this.responseText);
+                let total=document.getElementById('booking_total').innerText=getJson;
+            }
+        }
+    })
 });

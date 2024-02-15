@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use common\models\CarGallery;
 use common\models\Cars;
+use common\models\CarsOwl;
 use common\models\Connector;
 use common\models\search\CarsSearch;
 use common\models\UploadsImage;
@@ -33,6 +34,8 @@ class CarsController extends Controller
                         'status' => ['post'],
                         'delete-address' => ['post'],
                         'delete-photo' => ['post'],
+                        'create-owl' => ['post'],
+                        'delete-owl' => ['post'],
                     ],
                 ],
                 'access' => [
@@ -54,6 +57,8 @@ class CarsController extends Controller
                                 'add-photo',
                                 'delete-address',
                                 'delete-photo',
+                                'create-owl',
+                                'delete-owl',
                             ],
                             'allow' => true,
                             'roles' => ['@'],
@@ -93,6 +98,8 @@ class CarsController extends Controller
         $photo = new CarGallery();
         $connector = new Connector();
         $show_conn = Connector::findAll(['car_id' => $id]);
+        $owl = CarsOwl::findAll(['car_id' => $id]);
+
         if ($this->request->isPost) {
             if ($photo->load(\Yii::$app->request->post())) {
                 $file = UploadedFile::getInstance($photo, 'imageFile');
@@ -114,6 +121,7 @@ class CarsController extends Controller
             'gallery' => $gallery,
             'connect' => $connector,
             'show_conn' => $show_conn,
+            'owl' => $owl
         ]);
     }
 
@@ -127,6 +135,19 @@ class CarsController extends Controller
             \Yii::$app->session->setFlash('danger');
             return $this->redirect(\Yii::$app->request->referrer);
         }
+    }
+
+    public function actionCreateOwl()
+    {
+        $model = new CarsOwl();
+        if ($model->load(\Yii::$app->request->post()) and $model->save()) return $this->redirect(\Yii::$app->request->referrer);
+    }
+
+    public function actionDeleteOwl($id)
+    {
+        $model = CarsOwl::findOne(['id' => $id]);
+        $model->delete();
+        return $this->redirect(\Yii::$app->request->referrer);
     }
 
     public function actionDeleteAddress($id)

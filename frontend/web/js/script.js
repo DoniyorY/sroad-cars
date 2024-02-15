@@ -186,7 +186,7 @@ $(document).ready(function () {
         }
     })
 
-    function numberWithCommas(x) {
+    function numberWithSpaces(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     }
 
@@ -199,7 +199,7 @@ $(document).ready(function () {
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 let getJson = JSON.parse(this.responseText);
-                let total = document.getElementById('booking_total').innerText = numberWithCommas(getJson) + ' UZS';
+                let total = document.getElementById('booking_total').innerText = numberWithSpaces(getJson) + ' UZS';
                 let input_total_price = document.getElementById('input_total_price');
                 input_total_price.value = getJson;
             }

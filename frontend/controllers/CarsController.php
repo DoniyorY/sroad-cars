@@ -31,9 +31,6 @@ class CarsController extends Controller
             $model->save(false);
             \Yii::$app->session->setFlash('success', \Yii::$app->params['success_alert'][\Yii::$app->language]);
             return $this->redirect(\Yii::$app->request->referrer);
-            /*echo "<pre>";
-            print_r($_POST);
-            die();*/
         }
     }
 

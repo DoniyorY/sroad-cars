@@ -185,16 +185,26 @@ $(document).ready(function () {
             $('#airport_group').addClass('d-none')
         }
     })
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
+
     select2ToId.on('select2:select', function (e) {
         let data = e.params.data;
         let select2CarId = document.getElementById('to_id').getAttribute('data-model-car');
         const xhttp = new XMLHttpRequest();
         xhttp.open("GET", baseUrl + '/' + lang + '/v1/api/selected?address_id=' + data.id + '&car_id=' + select2CarId);
         xhttp.send();
-        xhttp.onreadystatechange = function (){
-            if(this.readyState==4 && this.status==200){
-                let getJson=JSON.parse(this.responseText);
-                let total=document.getElementById('booking_total').innerText=getJson;
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let getJson = JSON.parse(this.responseText);
+                let total = document.getElementById('booking_total').innerText = numberWithCommas(getJson) + ' UZS';
+                let input_total_price = document.getElementById('input_total_price');
+                input_total_price.value = getJson;
+
+                console.log(input_total_price)
+                console.log(input_total_price.value)
             }
         }
     })

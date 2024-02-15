@@ -61,6 +61,6 @@ class ApiController extends ActiveController
     public function actionSelected($address_id, $car_id)
     {
         $model = Connector::findOne(['address_id' => $address_id, 'car_id' => $car_id]);
-        return \Yii::$app->formatter->asDecimal($model->price, 0) . ' UZS';
+        return $model->price; // \Yii::$app->formatter->asDecimal($model->price, 0) . ' UZS';
     }
 }

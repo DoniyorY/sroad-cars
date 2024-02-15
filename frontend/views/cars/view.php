@@ -10,10 +10,17 @@ $baseUrl = Yii::$app->request->baseUrl;
 $this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
 
 ?>
+<?php if (Yii::$app->session->hasFlash('success')):?>
+    <div class="alert alert-success alert-dismissible fade show position-absolute w-100" role="alert">
+        <?=Yii::$app->session->getFlash('success')?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif;?>
 <div class="cars_banner">
     <img src="<?= $baseUrl . '/img/breadcrumbs_banner.png' ?>" alt="">
 </div>
 <section class="cars_view">
+
     <div class="row w-100">
         <div class="col-md-5 p-0 left_cars_view">
             <div class="left_title">

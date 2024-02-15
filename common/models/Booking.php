@@ -18,6 +18,7 @@ use Yii;
  * @property int $to_id
  * @property int $people_count
  * @property int $booking_date
+ * @property int $price
  * @property string $booking_time
  * @property string $airport_content
  * @property string $content
@@ -63,7 +64,8 @@ class Booking extends \yii\db\ActiveRecord
             'booking_time' => 'Время заказа',
             'airport_content' => 'Номер рейса',
             'content' => 'Примечание',
-            'people_count'=>'Количество'
+            'people_count'=>'Количество',
+            'price'=>'Цена'
         ];
     }
 

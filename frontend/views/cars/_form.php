@@ -7,6 +7,9 @@ use yii\helpers\Url;
 <div class="row">
     <div class="col-md-6">
         <form action="<?= Url::to(['cars/booking']) ?>" method="post">
+            <input type="text" name="Booking[price]" id="input_total_price" hidden="hidden" value="">
+            <input type="text" name="Booking[cars_id]" id="input_total_price" hidden="hidden" value="<?=$model->id?>">
+            <input type="text" name="<?=Yii::$app->request->csrfParam?>" value="<?=Yii::$app->request->csrfToken?>" hidden="hidden">
             <div class="row">
                 <div class="form-group col-md-12">
                     <input type="text" id="fullname" name="Booking[fullname]" class="form-control"
@@ -40,7 +43,7 @@ use yii\helpers\Url;
                 </div>
                 <div class="form-group col-md-6 mt-2">
                     <input type="number" id="booking_count" name="Booking[people_count]" class="form-control"
-                          placeholder="Кол-во человек" >
+                          placeholder="Кол-во человек" maxlength="<?=$model->capacity?>">
                 </div>
                 <div class="form-group col-md-12 mt-2 d-none" id="airport_group">
                     <input type="text" id="airport_content" name="Booking[airport_content]"

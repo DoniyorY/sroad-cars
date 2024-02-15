@@ -20,7 +20,6 @@ $this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
     <img src="<?= $baseUrl . '/img/breadcrumbs_banner.png' ?>" alt="">
 </div>
 <section class="cars_view">
-
     <div class="row w-100">
         <div class="col-md-5 p-0 left_cars_view">
             <div class="left_title">

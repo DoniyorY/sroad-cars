@@ -202,9 +202,6 @@ $(document).ready(function () {
                 let total = document.getElementById('booking_total').innerText = numberWithCommas(getJson) + ' UZS';
                 let input_total_price = document.getElementById('input_total_price');
                 input_total_price.value = getJson;
-
-                console.log(input_total_price)
-                console.log(input_total_price.value)
             }
         }
     })

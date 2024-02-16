@@ -38,23 +38,23 @@ $baseUrl = Yii::$app->request->baseUrl;
                         </div>
                         <form action="<?= Url::to(['cars/index']) ?>">
                             <div class="form-group mt-4">
-                                <label for="from_address"><?= Yii::$app->params['Выберите начальнюю локацию маршрута'][$lang] ?></label>
+                                <label for="from_address"><?= Yii::$app->params['Откуда'][$lang] ?></label>
                                 <select name="CarsSearch[from_id]" class="js-from-select2 form-control"></select>
                             </div>
                             <div class="form-group mt-4">
-                                <label for="from_address"><?= Yii::$app->params['Выберите конечную локацию маршрута'][$lang] ?></label>
+                                <label for="from_address"><?= Yii::$app->params['Куда'][$lang] ?></label>
                                 <select name="CarsSearch[to_id]" class="js-to-select2 form-control"></select>
                             </div>
                             <div class="row mt-4">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="from_address"><?= Yii::$app->params['Дата начала маршрута'][$lang] ?></label>
+                                        <label for="from_address"><?= Yii::$app->params['booking_date'][$lang] ?></label>
                                         <input name="CarsSearch[begin]" type="date" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="from_address"><?= Yii::$app->params['Время начала маршрута'][$lang] ?></label>
+                                        <label for="from_address"><?= Yii::$app->params['booking_time'][$lang] ?></label>
                                         <input name="CarsSearch[end]" type="time" class="form-control">
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                 </div>
             </div>
             <div class="col-md-12 my-5 properties_desc">
-                <p>
+                <p class="text-center">
                     <?=Yii::$app->params['properties_desc'][$lang]?>
                 </p>
             </div>

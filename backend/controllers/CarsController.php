@@ -10,6 +10,7 @@ use common\models\search\CarsSearch;
 use common\models\UploadsImage;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\HttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
@@ -137,10 +138,20 @@ class CarsController extends Controller
         }
     }
 
+    /**
+     * @throws HttpException
+     * @returns string $model->imageFile
+     */
     public function actionCreateOwl()
     {
         $model = new CarsOwl();
-        if ($model->load(\Yii::$app->request->post()) and $model->save()) return $this->redirect(\Yii::$app->request->referrer);
+        if ($model->load(\Yii::$app->request->post())) {
+            $file = UploadedFile::getInstance($model, 'imageFile');
+            $upload = UploadsImage::uploadImage($model, $file, 'cars_owl');
+            $model->image = $upload;
+            $model->save();
+            return $this->redirect(\Yii::$app->request->referrer);
+        }
     }
 
     public function actionDeleteOwl($id)

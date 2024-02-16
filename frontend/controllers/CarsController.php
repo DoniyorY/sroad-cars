@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use common\models\Booking;
 use common\models\CarGallery;
 use common\models\Cars;
+use common\models\CarsOwl;
 use common\models\search\ConnectorSearch;
 use yii\web\Controller;
 
@@ -42,10 +43,12 @@ class CarsController extends Controller
     {
         $model = Cars::findOne(['id' => $id]);
         $photo = CarGallery::findOne(['cars_id' => $id, 'type_id' => 0]);
+        $owl=CarsOwl::findAll(['car_id'=>$id]);
 
         return $this->render('view', [
             'model' => $model,
-            'photo' => $photo
+            'photo' => $photo,
+            'owl'=>$owl
         ]);
     }
 

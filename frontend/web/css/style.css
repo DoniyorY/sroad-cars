@@ -675,6 +675,17 @@ header nav ul li {
     width: 100% !important;
 }
 
+.cars_detail .owl-view .owl-nav{
+    position: static;
+    display: none;
+}
+.cars_detail .owl-view .owl-item{
+    width: 100% !important;
+}
+.cars_detail .owl-view .owl-item{
+    width: 100% !important;
+}
+
 @media (max-width: 1600px) {
     .kusok_derma {
         width: 70.457px;

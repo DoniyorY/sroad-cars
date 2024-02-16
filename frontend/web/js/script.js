@@ -54,6 +54,30 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+/*$('#owl-view').owlCarousel({
+    loop: false,
+    margin: 0,
+    dots: false,
+    navSpeed: 1000,
+    mouseDrag: true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    navText: ['<img src="/img/owl_prev.svg" alt="">', '<img src="/img/owl_next.svg" alt="">'],
+    responsive: {
+        0: {
+            items: 1,
+            nav: false,
+        },
+        600: {
+            items: 2,
+            nav: true,
+        },
+        1000: {
+            items: 3,
+            nav: true,
+        }
+    }
+});*/
 
 let baseUrl = window.location.origin
 

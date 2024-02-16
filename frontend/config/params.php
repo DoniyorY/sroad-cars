@@ -323,47 +323,47 @@ return [
     ],
     'Экскурсия по Самарканду' => [
         'ru' => 'Экскурсия по Самарканду',
-        'en' => '',
+        'en' => 'Samarkand City Tour',
         'uz' => '',
     ],
     'Поездка в Хиву' => [
         'ru' => 'Поездка в Хиву',
-        'en' => '',
+        'en' => 'A trip to Khiva',
         'uz' => '',
     ],
     'Поездка в Шахрисабз' => [
         'ru' => 'Поездка в Шахрисабз',
-        'en' => '',
+        'en' => 'A trip to Shaxrisabz',
         'uz' => '',
     ],
     'Поездка в Ташкент' => [
         'ru' => 'Поездка в Ташкент',
-        'en' => '',
+        'en' => 'A trip to Tashkent',
         'uz' => '',
     ],
     'city_desc4' => [
         'ru' => 'Погрузитесь в уникальную атмосферу древней Нураты, путешествуя на нашем современном и комфортабельном транспорте                                                                                                          Встретьтесь с удивительным миром Нураты, где каждый камень хранит следы многовековой истории и культуры.                                                                                                                                                                                           Наши услуги по организации поездок в Нурату обеспечат вам исключительный комфорт и возможность наслаждаться каждым моментом путешествия, позволяя вам полностью погрузиться в изучение этого чарующего города, не отвлекаясь на планирование маршрута.',
-        'en' => '',
+        'en' => 'Experience an exiting journey to Nurata, immersing yourself in the unique atmosphere of this ancient city aboard our modern and comfortable transport.                                                                                                                                                                                       Encounter the amazing world of Nurata, where every stone bears the traces of centuries-old history and culture.                                                                                                                                                                                                         Our services for organizing trips to Nurata will provide you with exceptional comfort and the opportunity to enjoy every moment of the journey, allowing you to fully dive into exploring this enchanting city without being distracted by route planning.',
         'uz' => '',
     ],
     'city_desc5' => [
         'ru' => 'Отправляйтесь в путешествие в Бухару, исследуя её завораживающую красоту на нашем современном и комфортабельном транспорте.                                                                                                                               Познакомьтесь с этим волшебным городом, который служит живым свидетельством богатой истории и культурного наследия Шелкового пути.                                                                                                                            Наши услуги по организации поездок в Бухару гарантируют вам безупречный комфорт и возможность наслаждаться каждой минутой путешествия, позволяя вам сосредоточиться на впечатлениях, а не на деталях планирования.',
-        'en' => '',
+        'en' => 'Embark on a journey to Bukhara, exploring its mesmerizing beauty aboard our modern and comfortable transport.                                                                                                                                                                                                         Get acquainted with this magical city, a living testament to the rich history and cultural heritage of the Silk Road.                                                                                                                                                                                                                                                              Our services for organizing trips to Bukhara ensure flawless comfort and the opportunity to enjoy every minute of your journey, allowing you to focus on the experiences rather than the details of planning.',
         'uz' => '',
     ],
     'city_desc6' => [
         'ru' => 'Погрузитесь в уникальную атмосферу Хивы, путешествуя на нашем современном и комфортабельном транспорте.                                                                                                                                                                          Откройте для себя этот древний город, где каждый уголок рассказывает свою историю, а воздух пропитан вековыми традициями.                                                                                                                                                Наши услуги по организации поездки в Хиву гарантируют вам максимальный комфорт и возможность насладиться каждым моментом путешествия, не отвлекаясь на организационные моменты. ',
-        'en' => '',
+        'en' => 'Immerse yourself in the unique atmosphere of Khiva, traveling on our modern and comfortable transportation.                                                                                                                                                                                                                        Discover this ancient city, where every corner tells its own story, and the air is imbued with centuries-old traditions.                                                                                                                                                                                                                Our services for organizing trips to Khiva guarantee you maximum comfort and the opportunity to enjoy every moment of the journey without being distracted by organizational details.',
         'uz' => '',
     ],
     'Поездка в Нурату' => [
         'ru' => 'Поездка в Нурату',
-        'en' => '',
+        'en' => 'A trip to Nurata',
         'uz' => '',
     ],
     'Поездка в Бухару' => [
         'ru' => 'Поездка в Бухару',
-        'en' => '',
+        'en' => 'A trip to Bukhara',
         'uz' => '',
     ],
     '' => [

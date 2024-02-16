@@ -43,12 +43,12 @@ class CarsController extends Controller
     {
         $model = Cars::findOne(['id' => $id]);
         $photo = CarGallery::findOne(['cars_id' => $id, 'type_id' => 0]);
-        $owl=CarsOwl::findAll(['car_id'=>$id]);
+        //$owl=CarsOwl::findAll(['car_id'=>$id]);
 
         return $this->render('view', [
             'model' => $model,
             'photo' => $photo,
-            'owl'=>$owl
+           // 'owl'=>$owl
         ]);
     }
 

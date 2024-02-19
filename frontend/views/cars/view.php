@@ -37,24 +37,26 @@ $this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
     </div>
 </section>
 <section class="cars_detail">
-    <div class="container">
-        <div class="cars_detail_title">
-            <h1>
-                Экскурсии по городам на автобусах Higer
-            </h1>
-        </div>
-        <div class="cars_detail_content">
-            <p>
-                Этот автобус идеально подходит для организации трансферов и захватывающих поездок по Самарканду, Бухаре,
-                Хиве, Нурате и Ташкенту, чтобы вы могли насладиться всей красотой и богатством Узбекистана.
-            </p>
-            <p>
-                Независимо от вашей цели, наши автобусы Higer обеспечат стиль, комфорт и надежность в каждой поездке.
-            </p>
-            <div class="booking_btn">
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bookingModal">
-                    Забронировать
-                </button>
+    <div class="cars_detail2">
+        <div class="container">
+            <div class="cars_detail_title">
+                <h1>
+                    Экскурсии по городам на автобусах Higer
+                </h1>
+            </div>
+            <div class="cars_detail_content">
+                <p>
+                    Этот автобус идеально подходит для организации трансферов и захватывающих поездок по Самарканду, Бухаре,
+                    Хиве, Нурате и Ташкенту, чтобы вы могли насладиться всей красотой и богатством Узбекистана.
+                </p>
+                <p>
+                    Независимо от вашей цели, наши автобусы Higer обеспечат стиль, комфорт и надежность в каждой поездке.
+                </p>
+                <div class="booking_btn">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        Забронировать
+                    </button>
+                </div>
             </div>
         </div>
     </div>

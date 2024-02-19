@@ -366,55 +366,380 @@ return [
         'en' => 'A trip to Bukhara',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'Politics' => [
+        'ru' => 'Политика конфиденциальности',
+        'en' => 'Privacy policy',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'Navigation' => [
+        'ru' => 'Навигация',
+        'en' => 'Navigation',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'address' => [
+        'ru' => '<span>Адрес</span>: <br> Гребной канал, Самарканд, Узбекистан',
+        'en' => '<span>Address</span>: <br> Rowing Canal, Konigil Massif, Samarkand, Uzbekistan',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'Our Contact' => [
+        'ru' => 'Наши контакты',
+        'en' => 'Our Contacts',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'Booking Number' => [
+        'ru' => 'Номер бронирования',
+        'en' => 'Booking Number',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'Telegram' => [
+        'ru' => 'Наш Telegram канал',
+        'en' => 'Our Telegram channel',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'Instagram' => [
+        'ru' => 'Наша страничка в Instagram',
+        'en' => 'Our Instagram',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'Facebook' => [
+        'ru' => 'Наша страничка на Facebook',
+        'en' => 'Our Facebook page',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
+    'Youtube' => [
+        'ru' => 'Наш Youtube канал',
+        'en' => 'Our Youtube channel',
         'uz' => '',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
-        'uz' => '',
+    'politics_text' => [
+        'ru' => '<p>
+                Настоящая Политика в области обработки персональных данных и конфиденциальности персональной информации
+                (далее — Политика) действует в отношении всей информации, которую ООО "Samarkand Touristic Centre" и/или
+                его аффилированные лица, включая все лица, входящие в одну группу с ООО "Samarkand Touristic Centre",
+                могут получить о пользователе во время использования им любого из сайтов, сервисов, служб, программ и
+                продуктов ООО "Samarkand Touristic Centre" (далее — Сервисы), а также в ходе исполнения ООО "Samarkand
+                Touristic Centre" и его аффилированными лицами любых соглашений и договоров, заключенных с пользователем
+                в связи с использованием Сервисов. Согласие пользователя на предоставление персональных данных
+                (персональной информации), данное им в соответствии с настоящей Политикой в рамках отношений с одним из
+                лиц, входящих в группу лиц ООО "Samarkand Touristic Centre", распространяется на все лица, входящие в
+                данную группу лиц.
+                <br><br>
+
+                Использование Сервисов означает безоговорочное согласие пользователя с настоящей Политикой и указанными
+                в ней условиями обработки его персональной информации, а именно на совершение действий, предусмотренных
+                законом Республики Узбекистан от 02.07.2019г. N ЗРУ -547 "О персональных данных" как без, так и с
+                использованием средств автоматизации, и подтверждает, что, давая такое согласие, он действует свободно,
+                своей волей и в своем интересе; в случае несогласия с этими условиями пользователь должен воздержаться
+                от использования Сервисов.
+                <br><br>
+            </p>
+            <h4>1. Персональная информация пользователей, которую получает и обрабатывает ООО "Samarkand Touristic
+                Centre".</h4>
+            <p>
+                1.1. В рамках настоящей Политики под «персональной информацией пользователя» понимаются: <br><br>
+
+                1.1.1. Персональная информация, которую пользователь предоставляет о себе самостоятельно при регистрации
+                (создании учетной записи) или в процессе использования Сервисов, включая персональные данные пользователя.
+                обязательная для предоставления Сервисов (оказания услуг) информация помечена специальным образом. Иная
+                информация предоставляется пользователем на его усмотрение.
+                <br><br>
+
+                1.1.2. Данные, которые автоматически передаются Сервисом в процессе их использования с помощью
+                установленного на устройстве пользователя программного обеспечения, в том числе iР-адрес, информация из
+                cookie, информация о браузере пользователя (или иной программе, с помощью которой осуществляется доступ к
+                Сервисам), время доступа, адрес запрашиваемой страницы.
+                <br><br>
+
+                1.1.3. Иная информация о пользователе в случае, если ее сбор и/или предоставление определено в регулирующих
+                документах отдельных Сервисов.
+                <br><br>
+
+                1.2. Настоящая Политика применима только к Сервисам ООО "Samarkand Touristic Centre". ООО "Samarkand
+                Touristic Centre" не контролирует и не несет ответственность за сайты третьих лиц, на которые пользователь
+                может перейти по ссылкам, доступным в Сервисах ООО "Samarkand Touristic Centre". На таких сайтах у
+                пользователя может собираться или запрашиваться иная персональная информация, а также могут совершаться иные
+                действия.
+                <br><br>
+
+                1.3. ООО "Samarkand Touristic Centre" в общем случае не проверяет достоверность персональной информации,
+                предоставляемой пользователями, и не осуществляет контроль за их дееспособностью. Однако ООО "Samarkand
+                Touristic Centre" исходит из того, что пользователь предоставляет достоверную и достаточную персональную
+                информацию по вопросам, предлагаемым в форме регистрации, что указанные им при регистрации персональные
+                данные принадлежат лично ему и поддерживает эту информацию в актуальном состоянии. Риск предоставления
+                недостоверной информации несет предоставивший ее пользователь.
+                <br><br>
+
+                1.4. Согласие пользователя на обработку персональных данных действует бессрочно с момента осуществления
+                регистрации пользователя на сайте и/или Сервисах, и не требует периодического подтверждения. ООО "Samarkand
+                Touristic Centre" будет хранить персональную информацию столько времени, сколько это необходимо для
+                достижения цели, для которой она была собрана, или для соблюдения требований законодательства и нормативных
+                актов.
+                <br><br>
+
+            </p>
+
+            <h4>2. Цели сбора и обработки персональной информации пользователей</h4>
+            <p>
+                2.1. ООО "Samarkand Touristic Centre" собирает, обрабатывает и хранит только те персональные данные, которые
+                необходимы для предоставления Сервисов и оказания услуг (исполнения соглашений и договоров с пользователем),
+                в строгом соответствии с действующим законодательством. <br><br>
+
+                2.2. Персональную информацию пользователя ООО "Samarkand Touristic Centre" может использовать в следующих
+                целях: <br><br>
+
+                2.2.1. Идентификация стороны в рамках соглашений и договоров с ООО "Samarkand Touristic Centre"; <br><br>
+
+                2.2.2. Обработка необходима для выполнения договорных обязательств ООО "Samarkand Touristic Centre" перед
+                пользователем; <br><br>
+
+                2.2.3. Связь с пользователем, в том числе направление уведомлений, запросов и информации, касающихся
+                использования Сервисов, оказания услуг, а также обработка запросов и заявок от пользователя; <br><br>
+
+                2.2.4. Улучшение качества Сервисов, удобства их использования, разработка новых Сервисов и услуг; <br><br>
+
+                2.2.5. Таргетирование рекламных материалов; <br><br>
+
+                2.2.6. Проведение статистических и иных исследований, на основе обезличенных данных <br><br>
+
+            </p>
+
+            <h4>3. Условия обработки персональной информации пользователя и ее передачи третьим лицам</h4>
+            <p>
+                3.1. В отношении персональной информации пользователя сохраняется ее конфиденциальность, кроме случаев
+                добровольного предоставления пользователем информации о себе для общего доступа неограниченному кругу лиц.
+                <br><br>
+                3.2. ООО "Samarkand Touristic Centre" вправе передать персональную информацию пользователя третьим лицам в
+                следующих случаях:
+                <br><br>
+                3.2.1. Пользователь выразил свое согласие на такие действия;
+                <br><br>
+                3.2.2. Передача необходима в рамках использования пользователем определенного Сервиса либо для оказания
+                услуги пользователю;
+                <br><br>
+                3.2.3. Передача предусмотрена применимым законодательством в рамках установленной законодательством
+                процедуры;
+                <br><br>
+                3.2.4. Такая передача происходит в рамках продажи или иной передачи бизнеса (полностью или в части), при
+                этом к приобретателю переходят все обязательства по соблюдению условий настоящей Политики применительно к
+                полученной им персональной информации;
+                <br><br>
+                3.2.5. В целях обеспечения возможности защиты прав и законных интересов ООО " Samarkand Touristic Centre"
+                или третьих лиц в случаях, когда пользователь нарушает Условия публичной оферты ООО "Samarkand Touristic
+                Centre".
+                <br><br>
+
+            </p>
+
+            <h4>4. Изменение пользователем персональной информации</h4>
+            <p>
+                4.1. Пользователь может в любой момент изменить (обновить, дополнить предоставленную им персональную
+                информацию или ее часть, а также параметры ее конфиденциальности, воспользовавшись функцией редактирования
+                персональных данных в разделе «Личный кабинет». Пользователь вправе требовать от ООО "Samarkand Touristic
+                Centre" уточнения, блокирования или уничтожения (удаления) предоставленной им персональной информации или ее
+                части в случае, если персональные данные являются неполными, устаревшими, неточными или не являются
+                необходимыми для заявленной цели обработки, а также принимать предусмотренные законом меры по защите своих
+                прав.
+                <br><br>
+            </p>
+
+            <h4>5. Меры, применяемые для защиты персональной информации пользователей:</h4>
+            <p>
+                5.1. ООО "Samarkand Touristic Centre" принимает необходимые и достаточные организационные и технические меры
+                для защиты персональной информации пользователя от неправомерного или случайного доступа, уничтожения,
+                изменения, блокирования, копирования, распространения, а также от иных неправомерных действий с ней третьих
+                лиц.
+                <br><br>
+            </p>
+
+            <h4>6. Изменение Политики конфиденциальности. Применимое законодательство</h4>
+            <p>
+                6.1. ООО "Samarkand Touristic Centre" имеет право вносить изменения в настоящую Политику конфиденциальности.
+                При внесении изменений в актуальной редакции указывается дата последнего обновления. Новая редакция Политики
+                вступает в силу с момента ее опубликования на сайте , если иное не предусмотрено новой редакцией Политики.
+                Действующая редакция всегда находится и доступна на странице .
+                <br><br>
+                6.2. К настоящей Политике и отношениям между пользователем и ООО "Samarkand Touristic Centre", возникающим в
+                связи с применением Политики конфиденциальности, подлежит применение право Республики Узбекистан.
+                <br><br>
+                6.3. При обработке персональных данных пользователей ООО "Samarkand Touristic Centre" подлежит применению
+                закон Республики Узбекистан «О персональных данных»
+                <br><br>
+            </p>
+
+            <h4>7. Обратная связь. Вопросы и предложения</h4>
+            <p>
+                7.1. Все предложения или вопросы по поводу настоящей Политики следует сообщать по адресу электронной почты ,
+                либо по адресу Республика Узбекистан, Самаркандская область, Самаркандский район, Куштамгали ССГ, массив
+                Конигил.
+                <br>
+            </p>',
+        'en' => '
+    <p>
+    This Privacy Policy (hereinafter referred to as the "Policy") applies to all information that LLC "Samarkand Touristic Centre" and/or its affiliated entities, including all entities within the same group as LLC "Samarkand Touristic Centre," may collect about the user during their use of any of the websites, services, programs, and products of LLC "Samarkand Touristic Centre" (hereinafter referred to as the "Services"), as well as during the execution of any agreements and contracts concluded between LLC "Samarkand Touristic Centre" and its affiliated entities with the user in connection with the use of the Services.
+    <br><br>
+    User Consent to Provide Personal Data (Personal Information), given by the user in accordance with this Policy within the scope of their relationship with one of the entities within the group of LLC "Samarkand Touristic Centre," applies to all entities within this group of entities.
+    <br><br>
+    The use of the Services signifies the unconditional consent of the user to this Policy and the terms therein regarding the processing of their personal information, specifically, to carry out actions as stipulated by the Republic of Uzbekistan Law No. ЗРУ -547 dated July 2, 2019, "On Personal Data," both with and without the use of automation means. By providing this consent, the user confirms that they are acting freely, voluntarily, and in their own interest. In the event of disagreement with these terms, the user must refrain from using the Services.
+    <br><br>    
+</p>
+<p>
+<h4>
+1. Personal information of users collected and processed by LLC "Samarkand Touristic Centre."
+</h4>
+1.1. Within the scope of this Policy, "personal information of the user" is understood to mean:
+<br><br>
+1.1.1. Personal information that the user provides about themselves voluntarily during registration (account creation) or while using the Services, including the user\'s personal data. Information that is mandatory for the provision of Services (rendering of services) is marked accordingly. Other information is provided by the user at their discretion.
+<br><br>
+Data that is automatically transmitted by the Service during its use through the software installed on the user\'s device, including the IP address, information from cookies, information about the user\'s browser (or other program used to access the Services), access time, and the address of the requested page.
+<br><br>
+1.1.3. Other information about the user if its collection and/or provision is specified in the regulatory documents of individual Services.
+<br><br>
+1.2. This Policy is applicable only to the Services of LLC "Samarkand Touristic Centre." LLC "Samarkand Touristic Centre" does not control and is not responsible for third-party websites that a user may access through links available within the Services of LLC "Samarkand Touristic Centre." On such websites, different personal information may be collected or requested from the user, and other actions may occur.
+<br><br>
+1.3. In general, LLC "Samarkand Touristic Centre" does not verify the accuracy of personal information provided by users and does not exercise control over their legal capacity. However, LLC "Samarkand Touristic Centre" assumes that the user provides accurate and sufficient personal information in response to the questions presented in the registration form. The user also acknowledges that the personal data provided during registration belongs to them personally and is responsible for keeping this information up to date. The user assumes the risk of providing inaccurate information.
+<br><br>
+1.4. The user\'s consent to the processing of personal data is effective indefinitely from the moment of user registration on the website and/or Services and does not require periodic reconfirmation. LLC "Samarkand Touristic Centre" will retain personal information for as long as necessary to achieve the purpose for which it was collected or to comply with legal requirements and regulations.
+<br><br>
+<h4>
+2. Purposes of collecting and processing personal information of users
+</h4>
+2.1. LLC "Samarkand Touristic Centre" collects, processes, and stores only the personal data that is necessary for the provision of Services and the fulfillment of agreements and contracts with the user, in strict accordance with applicable legislation.
+<br><br>
+2.2. LLC "Samarkand Touristic Centre" may use the user\'s personal information for the following purposes:
+<br><br>
+2.2.1. To identify the party within the scope of agreements and contracts with LLC "Samarkand Touristic Centre";
+<br><br>
+2.2.2. Processing is necessary to fulfill contractual obligations of LLC "Samarkand Touristic Centre" to the user;
+<br><br>
+2.2.3. To communicate with the user, including sending notifications, requests, and information related to the use of Services, provision of services, as well as processing user inquiries and applications;
+<br><br>
+2.2.4. To improve the quality of Services, enhance their usability, and develop new Services and offerings;
+<br><br>
+2.2.5. For targeted advertising purposes;
+<br><br>
+2.2.6. To conduct statistical and other research based on anonymized data.
+<br><br>
+<h4>
+3. Conditions for the Processing of User\'s Personal Information and its Disclosure to Third Parties
+</h4>
+3.1. User\'s personal information is treated as confidential, except in cases where the user voluntarily provides information about themselves for public access to an unlimited number of individuals.
+<br><br>
+3.2. LLC "Samarkand Touristic Centre" is entitled to transfer the user\'s personal information to third parties in the following cases:
+<br><br>
+3.2.1. The user has given their consent to such actions;
+<br><br>
+3.2.2. The transfer is necessary for the user\'s use of a specific Service or for the provision of a service to the user;
+<br><br>
+3.2.3. The transfer is required by applicable legislation within the framework of the procedure established by law;
+<br><br>
+3.2.4. Such transfer occurs within the framework of a sale or other transfer of the business (in whole or in part), with all obligations related to compliance with the terms of this Policy regarding the received personal information passing to the acquirer;
+<br><br>
+3.2.5. To ensure the ability to protect the rights and legitimate interests of LLC "Samarkand Touristic Centre" or third parties in cases where the user violates the Terms of Service of LLC "Samarkand Touristic Centre."
+<br><br>
+<h4>
+4. Modifying User\'s Personal Information
+</h4>
+4.1. The user can at any time modify (update, supplement the provided personal information, or its parts, as well as adjust its privacy settings) by using the data editing function in the "Personal Account" section. The user has the right to request LLC "Samarkand Touristic Centre" to clarify, block, or delete (remove) the personal information provided by them or its parts if the personal data is incomplete, outdated, inaccurate, or unnecessary for the stated processing purposes. The user may also take measures provided by law to protect their rights.
+<br><br>
+<h4>
+5. Measures Applied to Protect User\'s Personal Information:
+</h4>
+5.1. LLC "Samarkand Touristic Centre" takes necessary and sufficient organizational and technical measures to protect the user\'s personal information from unauthorized or accidental access, destruction, alteration, blocking, copying, distribution, as well as from other unlawful actions by third parties.
+<br><br>
+<h4>
+6. Changes to the Privacy Policy. Applicable Legislation
+</h4>
+6.1. LLC "Samarkand Touristic Centre" has the right to make changes to this Privacy Policy. When changes are made, the date of the last update is indicated in the current version. The new version of the Policy becomes effective upon its publication on the website, unless otherwise specified in the new version of the Policy. The current version is always available and can be accessed on the page.
+<br><br>
+6.2. This Privacy Policy and the relationships between the user and LLC "Samarkand Touristic Centre" arising in connection with the application of the Privacy Policy are governed by the laws of the Republic of Uzbekistan.
+<br><br>
+6.3. When processing personal data of users, LLC "Samarkand Touristic Centre" is subject to the provisions of the Law of the Republic of Uzbekistan "On Personal Data."
+<br><br>
+<h4>
+7. Feedback. Questions and suggestions
+</h4>
+7.1. All suggestions or questions regarding this Policy should be reported to the email address or to the following physical address: Republic of Uzbekistan, Samarkand Region, Samarkand District, Kushtamgali SSC, Konigil Residential Area.
+<br>
+</p>
+
+        ',
+        'uz' => '
+        <h4>Maxfiylik siyosati</h4>
+        
+Ushbu Shaxsiy ma\'lumotlarni qayta ishlash va shaxsiy ma\'lumotlarning maxfiyligi siyosati (keyingi o\'rinlarda - Siyosat) "Samarkand Touristic Centre" MChJ va/yoki uning hamkor tashkilotlari, jumladan "Samarkand Touristic Centre" MChJ bilan bir guruhga kiruvchi barcha shaxslar, foydalanuvchi tomonidan "Samarkand Touristic Centre" MChJning har qanday saytlaridan, xizmatlaridan, xizmat ko\'rsatish tizimlaridan, dasturlaridan va mahsulotlaridan (keyingi o\'rinlarda - Xizmatlar) foydalanish jarayonida foydalanuvchi haqida olishi mumkin bo\'lgan barcha ma\'lumotlar doirasida amal qiladi, shuningdek "Samarkand Touristic Centre" MChJ va uning hamkor tashkilotlari tomonidan Xizmatlardan foydalanish munosabati bilan foydalanuvchi bilan tuzilgan har qanday kelishuv va shartnomalar bajarilishi jarayonida ham amal qiladi.
+
+Foydalanuvchining "Samarkand Touristic Centre" MChJ guruhiga kiruvchi shaxslardan biri bilan munosabatlarda ushbu Siyosatga muvofiq berilgan shaxsiy ma\'lumotlar (shaxsiy ma\'lumotlar) taqdim etishga roziligi ushbu guruhga kiruvchi barcha shaxslarga taalluqlidir.
+
+Xizmatlardan foydalanish foydalanuvchining ushbu Siyosatga va unda ko\'rsatilgan shaxsiy ma\'lumotlarini qayta ishlash shartlariga shartsiz rozilik bildirishini anglatadi, ya\'ni O\'zbekiston Respublikasi Qonuni 02.07.2019 yil № ZRU-547 "Shaxsiy ma\'lumotlar to\'g\'risida" qonunda ko\'zda tutilgan harakatlarni amalga oshirishni, avtomatlashtirish vositalaridan foydalangan holda ham, foydalanmagan holda ham, va bunday rozilik berish orqali o\'z ixtiyori, xohishi va manfaati bilan harakat qilayotganini tasdiqlaydi; agar foydalanuvchi bu shartlarga rozi bo\'lmasa, Xizmatlardan foydalanishdan tiyilishi kerak.
+
+<h4>1. Foydalanuvchilarning shaxsiy ma\'lumotlari, "Samarkand Touristic Centre" MChJ tomonidan qabul qilinadi va qayta ishlanadi.</h4>
+1.1. Ushbu Siyosat doirasida \'foydalanuvchining shaxsiy ma\'lumoti\' quyidagilar tushuniladi:
+<br><br>
+1.1.1. Foydalanuvchi o\'zi haqida ro\'yxatdan o\'tish (hisob yaratish) vaqtida yoki Xizmatlardan foydalanish jarayonida o\'z ixtiyori bilan taqdim etadigan shaxsiy ma\'lumotlar, foydalanuvchining shaxsiy ma\'lumotlari. Xizmatlarni taqdim etish (xizmat ko\'rsatish) uchun zarur bo\'lgan ma\'lumotlar maxsus belgilangan. Boshqa ma\'lumotlarni foydalanuvchi o\'z ixtiyori bilan taqdim etadi.
+<br><br>
+1.1.2. Foydalanuvchi qurilmasiga o\'rnatilgan dasturiy ta\'minot yordamida Xizmatlaridan foydalanish jarayonida Xizmat tomonidan avtomatik ravishda uzatiladigan ma\'lumotlar, jumladan IP-manzil, cookie ma\'lumotlari, foydalanuvchi brauzeri haqida ma\'lumotlar (yoki Xizmatlarga kirish uchun ishlatiladigan boshqa dastur), kirish vaqti, so\'ralgan sahifaning manzili.
+<br><br>
+1.1.3. Foydalanuvchi haqida boshqa ma\'lumotlar, agar ularni to\'plash va/yoki taqdim etish alohida Xizmatlarning tartibga soluvchi hujjatlarida belgilangan bo\'lsa.
+<br><br>
+1.2. Ushbu Siyosat faqat "Samarkand Touristic Centre" MChJ Xizmatlariga tatbiq etiladi. "Samarkand Touristic Centre" MChJ uchinchi shaxslar saytlarini nazorat qilmaydi va "Samarkand Touristic Centre" MChJ Xizmatlarida mavjud bo\'lgan havolalar orqali foydalanuvchi o\'tishi mumkin bo\'lgan ushbu saytlar uchun javobgar emas. Ana shunday saytlarda foydalanuvchidan boshqa shaxsiy ma\'lumotlar to\'planishi yoki so\'ralishi mumkin, shuningdek boshqa harakatlar amalga oshirilishi mumkin.
+<br><br>
+1.3. "Samarkand Touristic Centre" MChJ umuman olganda, foydalanuvchilar tomonidan taqdim etilgan shaxsiy ma\'lumotlarning haqiqiyligini tekshirmaydi va ularning qonuniy harakat qobiliyatini nazorat qilmaydi. Biroq, "Samarkand Touristic Centre" MChJ foydalanuvchi ro\'yxatdan o\'tish formasida taklif qilinadigan masalalar bo\'yicha ishonchli va etarli shaxsiy ma\'lumotlarni taqdim etayotganini, ro\'yxatdan o\'tish vaqtida ko\'rsatilgan shaxsiy ma\'lumotlar o\'ziga tegishli ekanligini va ushbu ma\'lumotlarni dolzarb holatda saqlab turishini taxmin qiladi. Noto\'g\'ri ma\'lumot taqdim etish xavfi ma\'lumotni taqdim etgan foydalanuvchiga tegishli.
+<br><br>
+1.4. Foydalanuvchining shaxsiy ma\'lumotlarni qayta ishlashga roziligi veb-saytda va/yoki Xizmatlarda ro\'yxatdan o\'tish jarayoni boshlangan paytdan boshlab muddatsiz amal qiladi va muntazam tasdiqlashni talab qilmaydi. "Samarkand Touristic Centre" MChJ shaxsiy ma\'lumotlarni ular yig\'ilgan maqsadga erishish uchun zarur bo\'lgan muddat davomida yoki qonunchilik talablariga va me\'yoriy hujjatlarga rioya qilish uchun zarur bo\'lgan vaqt davomida saqlaydi.
+<br><br>
+
+<h4>2. Foydalanuvchilarning shaxsiy ma\'lumotlarini yig\'ish va qayta ishlash maqsadlari</h4>
+2.1. "Samarkand Touristic Centre" MChJ faqat Xizmatlarni taqdim etish va xizmat ko\'rsatish (foydalanuvchi bilan kelishuv va shartnomalarni bajarish) uchun zarur bo\'lgan shaxsiy ma\'lumotlarni to\'playdi, qayta ishlaydi va saqlaydi, amaldagi qonunchilikka qat\'iy rioya qilgan holda.
+<br><br>
+2.2. "Samarkand Touristic Centre" MChJ foydalanuvchining shaxsiy ma\'lumotlarini quyidagi maqsadlarda foydalanishi mumkin:
+<br><br>
+2.2.1. "Samarkand Touristic Centre" MChJ bilan tuzilgan kelishuv va shartnomalar doirasida tomonlarni aniqlash;
+<br><br>
+2.2.2. Foydalanuvchi oldidagi "Samarkand Touristic Centre" MChJning shartnomaviy majburiyatlarini bajarish uchun qayta ishlash zarur;
+<br><br>
+2.2.3. Foydalanuvchi bilan aloqa, jumladan xizmatlardan foydalanish, xizmat ko\'rsatish bilan bog\'liq xabarnomalar, so\'rovlar va ma\'lumotlarni yuborish, shuningdek foydalanuvchidan kelgan so\'rov va arizalarni qayta ishlash;
+<br><br>
+2.2.4. Xizmatlarning sifatini yaxshilash, ulardan foydalanish qulayligini oshirish, yangi Xizmatlar va xizmatlarni ishlab chiqish;
+<br><br>
+2.2.5. Reklama materiallarini maqsadli joylashtirish;
+<br><br>
+2.2.6. Anonimlashtirilgan ma\'lumotlar asosida statistik va boshqa tadqiqotlarni olib borish.
+<br><br>
+<h4>3. Foydalanuvchining shaxsiy ma\'lumotlarini qayta ishlash va uchinchi shaxslarga uzatish shartlari</h4>
+3.1. Foydalanuvchining shaxsiy ma\'lumotlari maxfiy saqlanadi, faqat foydalanuvchi o\'z ma\'lumotlarini cheklanmagan odamlar doirasiga umumiy foydalanish uchun ixtiyoriy ravishda taqdim etgan hollarda bunday emas.
+<br><br>
+3.2. "Samarkand Touristic Centre" MChJ foydalanuvchining shaxsiy ma\'lumotlarini quyidagi hollarda uchinchi shaxslarga uzatishga haqlidir:
+<br><br>
+3.2.1. Foydalanuvchi bunday harakatlarga rozilik bildirgan bo\'lsa;
+<br><br>
+3.2.2. Foydalanuvchi tomonidan muayyan Xizmatdan foydalanish yoki foydalanuvchiga xizmat ko\'rsatish doirasida uzatish zarur bo\'lganda;
+<br><br>
+3.2.3. Amaldagi qonunchilik tomonidan belgilangan tartibda qonunchilik tomonidan uzatish nazarda tutilgan bo\'lsa;
+<br><br>
+3.2.4. Bunday uzatish biznesni (to\'liq yoki qismida) sotish yoki boshqa tarzda uzatish doirasida sodir bo\'ladi, bunda xaridor ushbu Siyosat shartlariga muvofiq o\'ziga o\'tgan shaxsiy ma\'lumotlarni saqlash bo\'yicha barcha majburiyatlarni o\'z zimmasiga oladi;
+<br><br>
+3.2.5. Foydalanuvchi "Samarkand Touristic Centre" MChJning Jamoat taklifnomasining shartlarini buzganda, "Samarkand Touristic Centre" MChJ yoki uchinchi shaxslarning huquqlari va qonuniy manfaatlarini himoya qilish imkoniyatini ta\'minlash maqsadida;
+<br><br>
+<h4>4. Foydalanuvchining shaxsiy ma\'lumotlarini o\'zgartirishi</h4>
+4.1. Foydalanuvchi istalgan vaqtda o\'z shaxsiy ma\'lumotlarini (yangilash, to\'ldirish yoki uning bir qismini, shuningdek uning maxfiyligini sozlash imkoniyatidan, shaxsiy ma\'lumotlarni tahrirlash funksiyasidan "Shaxsiy kabinet" bo\'limida foydalanib o\'zgartirishi mumkin. Foydalanuvchi "Samarkand Touristic Centre" MChJdan o\'z taqdim etgan shaxsiy ma\'lumotlarini yoki uning qismini aniqlashtirishni, bloklashni yoki yo\'q qilishni (o\'chirishni) talab qilish huquqiga ega, agar shaxsiy ma\'lumotlar to\'liq emas, eskirgan, noaniq yoki qayta ishlash uchun e\'lon qilingan maqsad uchun zarur bo\'lmasa, shuningdek qonunda ko\'zda tutilgan huquqlarini himoya qilish choralari ko\'rish huquqiga ega.
+<br><br>
+<h4>
+5. Foydalanuvchilarning shaxsiy ma\'lumotlarini himoya qilish uchun qo\'llaniladigan choralari:
+</h4>
+5.1. "Samarkand Touristic Centre" MChJ foydalanuvchining shaxsiy ma\'lumotlarini noqonuniy yoki tasodifiy kirishdan, yo\'q qilishdan, o\'zgartirishdan, bloklashdan, nusxalashdan, tarqatishdan, shuningdek uchinchi shaxslar tomonidan boshqa noqonuniy harakatlardan himoya qilish uchun zarur va yetarli tashkiliy va texnik choralarni qo\'llaydi.
+<br><br>
+<h4>
+6. Maxfiylik Siyosatini o\'zgartirish. Qo\'llaniladigan qonunchilik
+</h4>
+6.1. "Samarkand Touristic Centre" MChJ ushbu Maxfiylik Siyosatida o\'zgartirishlar kiritish huquqiga ega. O\'zgartirishlar kiritilganda joriy tahrirda oxirgi yangilanish sanasi ko\'rsatiladi. Siyosatning yangi tahriri uni veb-saytda e\'lon qilingan paytdan boshlab kuchga kiradi, agar yangi tahrirda boshqacha ko\'zda tutilmagan bo\'lsa. Amaldagi tahrir doim sahifada topiladi va mavjud bo\'ladi.
+<br><br>
+6.2. Ushbu Siyosatga va foydalanuvchi bilan "Samarkand Touristic Centre" MChJ o\'rtasida Maxfiylik Siyosatini qo\'llash munosabati bilan yuzaga keladigan munosabatlarga O\'zbekiston Respublikasi qonunlari qo\'llaniladi.
+<br><br>
+6.3. Foydalanuvchilarning shaxsiy ma\'lumotlarini qayta ishlashda "Samarkand Touristic Centre" MChJga O\'zbekiston Respublikasi "Shaxsiy ma\'lumotlar to\'g\'risida"gi Qonun qo\'llaniladi.
+<br><br>
+<h4>7. Qayta aloqa. Savollar va takliflar</h4>
+7.1. Ushbu Siyosat bo\'yicha barcha takliflar yoki savollar elektron pochta manzili orqali yoki O\'zbekiston Respublikasi, Samarqand viloyati, Samarqand tumanidagi, Qo\'shtamg\'ali SSG, Konigil massivida joylashgan manzil orqali bildirilishi kerak.
+        ',
     ],
     '' => [
         'ru' => '',

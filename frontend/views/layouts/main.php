@@ -19,6 +19,7 @@ AppAsset::register($this);
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shotcut icon" href="<?= $baseUrl . '/img/favicon.svg' ?>">
         <?php $this->registerCsrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
@@ -94,72 +95,71 @@ AppAsset::register($this);
             <div class="row mt-5 justify-content-between">
                 <div class="col-md-3 col-sm-12 my-xs-5 ">
                     <div class="footer-logo">
-                        <a href="<?=Yii::$app->homeUrl?>">
-                            <img src="<?=$baseUrl.'/img/footer-logo.png'?>" alt="footer-logo">
+                        <a href="<?= Yii::$app->homeUrl ?>">
+                            <img src="<?= $baseUrl . '/img/footer-logo.png' ?>" alt="footer-logo">
                         </a>
                     </div>
                     <div class="social-icons">
                         <ul>
                             <li>
                                 <a href="https://t.me/silkroad_samarkand" target="_blank">
-                                    <i class="bi bi-telegram"></i> Наш Telegram канал                                 </a>
+                                    <i class="bi bi-telegram"></i><?=Yii::$app->params['Telegram'][$lang]?></a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/silkroadsamarkand/" target="_blank">
-                                    <i class="bi bi-instagram"></i> Наша страничка в Instagram                                </a>
+                                    <i class="bi bi-instagram"></i><?=Yii::$app->params['Instagram'][$lang]?></a>
                             </li>
                             <li>
                                 <a href="https://www.facebook.com/silkroadresort/" target="_blank">
-                                    <i class="bi bi-facebook"></i> Наша страничка на Facebook                                </a>
+                                    <i class="bi bi-facebook"></i><?=Yii::$app->params['Facebook'][$lang]?></a>
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/@silkroadsamarkand" target="_blank">
-                                    <i class="bi bi-youtube"></i> Наш Youtube канал                                </a>
+                                    <i class="bi bi-youtube"></i><?=Yii::$app->params['Youtube'][$lang]?></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-12 my-xs-5 ">
                     <div class="footer-title">
-                        <h2>Наши контакты</h2>
+                        <h2><?=Yii::$app->params['Our Contact'][$lang]?></h2>
                     </div>
                     <div class="footer-info">
                         <ul>
                             <li>
-                                <span>Адрес</span>: <br> Гребной канал, Самарканд, Узбекистан                            </li>
+                                <?=Yii::$app->params['address'][$lang]?>
+                            </li>
                             <li>
 
-                                <span>Номер бронирования:</span> <br>
-                                <a href="tel:+998946700101">+998 (94) 670-01-01</a>                            </li>
+                                <span><?=Yii::$app->params['Booking Number'][$lang]?>:</span> <br>
+                                <a href="tel:+998946700101">+998 (94) 670-01-01</a></li>
                             <li>
-
-                                <span>Email</span>:<br> <a style="display: block; width: 102%;" href="mailto:svyatoslav.kipin@silkroad-samarkand.com">svyatoslav.kipin@silkroad-samarkand.com</a>                            </li>
+                                <span><?=Yii::$app->params['placeholder_email'][$lang]?></span>:<br> <a style="display: block; width: 102%;"
+                                                           href="mailto:svyatoslav.kipin@silkroad-samarkand.com">svyatoslav.kipin@silkroad-samarkand.com</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-12 my-xs-5 ">
                     <div class="footer-title">
-                        <h2>Навигация</h2>
+                        <h2><?=Yii::$app->params['Navigation'][$lang]?></h2>
                     </div>
                     <div class="footer-info">
                         <ul>
                             <li>
-                                <a href="/">Главная</a>
+                                <a href="<?=Yii::$app->homeUrl?>"><?=Yii::$app->params['Home'][$lang]?></a>
                             </li>
                             <li>
-                                <a href="/about">О нас</a>
+                                <a href="<?=Url::to(['site/about'])?>"><?=Yii::$app->params['About'][$lang]?></a>
                             </li>
                             <li>
-                                <a href="#contacts">Контакты</a>
+                                <a href="<?=Url::to(['site/contact'])?>"><?=Yii::$app->params['Contact'][$lang]?></a>
                             </li>
                             <li>
-                                <a href="#category">Категории</a>
+                                <a href="<?=Url::to(['cars/index'])?>"><?=Yii::$app->params['Categories'][$lang]?></a>
                             </li>
                             <li>
-                                <a href="/site/rules">Правила поведения на борту</a>
-                            </li>
-                            <li>
-                                <a href="/site/politics">Политика конфиденциальности</a>
+                                <a href="<?=Url::to(['site/politics'])?>"><?=Yii::$app->params['Politics'][$lang]?></a>
                             </li>
                         </ul>
                     </div>

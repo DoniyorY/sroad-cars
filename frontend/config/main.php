@@ -49,6 +49,14 @@ return [
             'languages' => ['ru','en','uz'], // List all supported languages here
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'rules'=>[
+                ''=>'site/index',
+                'about'=>'site/about',
+                'contact'=>'site/contact',
+                'politics'=>'site/politics',
+                'cars'=>'cars/index',
+                'cars/<id>'=>'cars/view'
+            ]
         ],
 
     ],

@@ -75,7 +75,7 @@ AppAsset::register($this);
                             'addCurrentLang' => true, // add current lang
                             'calling_controller' => $this->context,
                             'image_type' => 'rounded', // classic or rounded
-                            'link_home' => true, // true or false
+                            'link_home' => false, // true or false
                             'widget_type' => 'classic', // classic or selector
                             'width' => '28'
                         ]); ?>

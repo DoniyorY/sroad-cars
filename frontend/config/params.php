@@ -95,7 +95,7 @@ return [
     'Забронируйте трансфер от точки до точки' => [
         'ru' => 'Забронируйте трансфер от точки до точки',
         'en' => 'Book a point-to-point transfer',
-        'uz' => '',
+        'uz' => 'Nuqtadan nuqtaga transferni bron qiling',
     ],
     'Наши преимущества' => [
         'ru' => 'Наши преимущества',
@@ -198,7 +198,22 @@ return [
                     <strong>Kia Carnival Minivans:</strong> For family trips and small groups, we offer 5-seater Kia Carnival minivans. They feature spacious interiors and modern amenities. <br><br>
                     <strong>Электромобили Honqgi:</strong>Мы гордимся тем, что мы также предлагаем экологически чистый транспорт. Наши 2 электромобиля Honqgi EHS 9 и 18 электромобилей Honqgi E QMS 5 обеспечивают не только комфорт, но и
                     вкладывают в будущее планеты.',
-        'uz' => '',
+        'uz' => "Ipak yo'li Samarkand parki bilan qulaylik va xavfsizlik dunyosiga xush kelibsiz! <br>
+                    Biz transferlar va qiziqarli sayohatlarni tashkil qilish uchun sizning ishonchli hamkoringizmiz
+                    O'zbekistonga. <br> <br>
+                    Bizning parkimiz zamonaviy va ishonchli transport vositalaridan iborat bo'lib, bizni ta'minlashga mo'ljallangan
+                    mijozlarga sayohat paytida maksimal qulaylik va zavq. <br> <br>
+                    <strong>Higer avtobuslari: </strong> bizning 17 ta 40 o'rinli Higer avtobuslarimiz keng va qulay sayohatni ta'minlaydi
+                    katta guruhlar. Xavfsizlik va qulaylikning yuqori standarti ularni tashkilot uchun ideal tanlovga aylantiradi
+                    ekskursiyalar va ekskursiyalar. <br> <br>
+                    <strong>Mercedes-Benz Sprinter mikroavtobuslari</strong>: bizda 6 o'rinli va 16 o'rinli Mercedes-Benz mavjud
+                    Sprinter sizning ehtiyojlaringizga mos keladi. Ular sizning kompaniyangiz uchun qulaylik va qulaylikni ta'minlaydi.
+                    <br><br>
+                    <strong>Kia Carnival Minivenlari: </strong> oilaviy sayohatlar va kichik guruhlar uchun biz 5 o'rinli Kia minivenlarini taklif qilamiz
+                    Carnival. Ular keng ichki makon va zamonaviy qulayliklar bilan ajralib turadi. <br> <br>
+                    <strong>Honqgi elektromobillari: </strong> biz ekologik toza transportni ham taklif qilayotganimizdan faxrlanamiz. Bizning 2
+                    honqgi EHS 9 va 18 eV honqgi E QMS 5 nafaqat qulaylikni, balki qulaylikni ham ta'minlaydi
+                    ular sayyoramizning kelajagiga sarmoya kiritadilar.",
     ],
     'Связаться с нами' => [
         'ru' => 'Связаться с нами',

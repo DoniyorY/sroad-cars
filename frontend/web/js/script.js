@@ -4,17 +4,17 @@ const Lang = {
     from_id: {
         ru: 'Выберите адрес отправления...',
         en: 'Select departure address...',
-        uz: '',
+        uz: 'Jo\'nab ketish manzilini tanlang…',
     },
     to_id: {
         ru: 'Выберите адрес назначения…',
         en: 'Select destination address...',
-        uz: '',
+        uz: 'Kelish manzilini tanlang tanlang…',
     },
     choose_car: {
         ru: 'Выберите машину',
         en: 'Choose a Car',
-        uz: '',
+        uz: 'Mashinani tanlang',
     }
 }
 if (about_owl) {

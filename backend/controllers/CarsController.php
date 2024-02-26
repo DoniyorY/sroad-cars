@@ -219,7 +219,12 @@ class CarsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
+        if ($this->request->isPost && $model->load($this->request->post())) {
+            $post=$_POST['Cars'];
+            $model->short_en=$post['short_en'];
+            $model->short_uz=$post['short_uz'];
+            $model->short_ru=$post['short_uz'];
+            $model->update();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

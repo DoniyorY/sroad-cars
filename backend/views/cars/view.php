@@ -69,7 +69,7 @@ $this->title = $model->name_ru;
         ?>
     </div>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-7">
             <?= DetailView::widget([
                 'model' => $model,
                 'attributes' => [
@@ -118,7 +118,7 @@ $this->title = $model->name_ru;
                 ],
             ]) ?>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-5">
             <ul class="nav nav-tabs nav-justified nav-border-top" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#cars-photo"

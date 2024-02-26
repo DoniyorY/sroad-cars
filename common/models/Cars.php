@@ -22,6 +22,9 @@ use Yii;
  * @property int $price
  * @property int $capacity
  * @property int $baggage
+ * @property string $short_ru
+ * @property string $short_en
+ * @property string $short_uz
  */
 class Cars extends \yii\db\ActiveRecord
 {
@@ -67,6 +70,9 @@ class Cars extends \yii\db\ActiveRecord
             'price' => 'Цена',
             'capacity' => 'Вмещаемость',
             'baggage' => 'Багаж',
+            'short_ru'=>'короткое описание на русском',
+            'short_en'=>'Короткое описание на английском',
+            'short_uz'=>'Короткое описание на узбекском'
         ];
     }
 

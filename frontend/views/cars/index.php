@@ -116,7 +116,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
                                 <div class="baggage"><strong><?=Yii::$app->params['Багаж'][$lang]?>:</strong> <?= $item->car->baggage ?></div>
                             </div>
                             <p style="margin-top: 10px;">
-                                <?= mb_substr($item->car->{"content_$lang"}, 0, 175) . '...'; ?>
+                                <?= mb_substr($item->car->{"short_$lang"}, 0, 175) . '...'; ?>
                             </p>
                             <!-- <img src="<?php /*= $secondary */
                             ?>" alt="">-->

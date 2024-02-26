@@ -190,7 +190,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                                                 :</strong> <?= $item->baggage ?></div>
                                     </div>
                                     <p style="margin-top: 10px;">
-                                        <?= mb_substr($item->{"content_$lang"}, 0, 175) . '...'; ?>
+                                        <?= mb_substr($item->{"short_$lang"}, 0, 175) . '...'; ?>
                                     </p>
                                     <!-- <img src="<?php /*= $secondary */
                                     ?>" alt="">-->

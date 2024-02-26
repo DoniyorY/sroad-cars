@@ -31,6 +31,15 @@ use yii\widgets\ActiveForm;
         <div class="col-md-4 mt-2">
             <?= $form->field($model, 'name_uz')->textInput(['maxlength' => true]) ?>
         </div>
+        <div class="col-md-4 mt-2">
+            <?= $form->field($model, 'short_ru')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-4 mt-2">
+            <?= $form->field($model, 'short_en')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-4 mt-2">
+            <?= $form->field($model, 'short_uz')->textInput(['maxlength' => true]) ?>
+        </div>
         <div class="col-md-12">
             <?= $form->field($model, 'content_ru')->widget(TinyMce::className(), [
                 'options' => ['rows' => 6],

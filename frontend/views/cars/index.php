@@ -125,7 +125,7 @@ $this->title = Yii::$app->params['Categories'][$lang]
                             <div class="card_price">
                                 <?= $price ?>
                             </div>
-                            <a class="btn btn-sroad" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">
+                            <a class="btn btn-sroad" href="<?= Url::to(['cars/view', 'id' => $item->car_id]) ?>">
                                 <?=yii::$app->params['Узнать подробнее'][$lang]?>
                             </a>
                         </div>

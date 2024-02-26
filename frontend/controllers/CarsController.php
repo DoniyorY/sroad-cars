@@ -5,7 +5,6 @@ namespace frontend\controllers;
 use common\models\Booking;
 use common\models\CarGallery;
 use common\models\Cars;
-use common\models\CarsOwl;
 use common\models\search\ConnectorSearch;
 use yii\web\Controller;
 
@@ -28,7 +27,7 @@ class CarsController extends Controller
             $model->booking_date = strtotime($model->booking_date);
             $model->booking_time = strtotime($model->booking_time);
             $model->created = time();
-            $model->price=$_POST['Booking']['price'];
+            $model->price = $_POST['Booking']['price'];
             $model->save(false);
             \Yii::$app->session->setFlash('success', \Yii::$app->params['success_alert'][\Yii::$app->language]);
             return $this->redirect(\Yii::$app->request->referrer);
@@ -48,7 +47,7 @@ class CarsController extends Controller
         return $this->render('view', [
             'model' => $model,
             'photo' => $photo,
-           // 'owl'=>$owl
+            // 'owl'=>$owl
         ]);
     }
 

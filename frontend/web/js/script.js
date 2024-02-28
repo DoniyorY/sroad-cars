@@ -83,7 +83,8 @@ let baseUrl = window.location.origin
 
 let select2_url = baseUrl + '/' + lang + "/v1/api/ajax?search_type=";
 $(document).ready(function () {
-    $('.js-from-select2').select2({
+    // SELECT 2 FROM INPUT
+    let select_from = $('.js-from-select2').select2({
         language: "ru",
         ajax: {
             url: select2_url + '0',
@@ -106,7 +107,8 @@ $(document).ready(function () {
         status: 1,
         placeholder: Lang.from_id[lang],
     });
-    $('.js-to-select2').select2({
+    // SELECT 2 TO INPUT DEFAULT
+    let select_to = $('.js-to-select2').select2({
         language: "ru",
         ajax: {
             url: select2_url + '1',
@@ -129,6 +131,38 @@ $(document).ready(function () {
         status: 1,
         placeholder: Lang.to_id[lang]
     });
+
+    //ON SELECT FROM INPUT
+    select_from.on('select2:select', function (e) {
+        let get_data = e.params.data.id
+        //DESTROYING OLD SELECT 2
+        select_to.select2('destroy');
+        // MAKING NEW SELECT 2 WITH AJAX REQUEST
+        $('.js-to-select2').select2({
+            language: "ru",
+            ajax: {
+                url: select2_url + '1&address_id=' + get_data,
+                dataType: 'json',
+                //delay: 250,
+                type: 'get',
+
+                data: function (params) {
+                    return {
+                        req: params.term
+                    }
+                },
+                processResults: function (data) {
+                    return {
+                        results: data // Make sure the data structure matches what Select2 expects
+                    };
+                },
+                cache: true,
+            },
+            status: 1,
+            placeholder: Lang.to_id[lang]
+        });
+    })
+
     $('.js-title-select2').select2({
         language: "ru",
         ajax: {
@@ -152,6 +186,7 @@ $(document).ready(function () {
         status: 1,
         placeholder: Lang.choose_car[lang],
     });
+
     let select2FromId = $('#from_id').select2({
         language: "ru",
         dropdownParent: $('#bookingModal'),
@@ -176,30 +211,34 @@ $(document).ready(function () {
         status: 1,
         placeholder: Lang.from_id[lang],
     });
-    let select2ToId = $('#to_id').select2({
-        language: "ru",
-        dropdownParent: $('#bookingModal'),
-        ajax: {
-            url: select2_url + '1',
-            dataType: 'json',
-            //delay: 250,
-            type: 'get',
+    select2FromId.on('select2:select',function (e){
+        let select2ToId = $('#to_id').select2({
+            language: "ru",
+            dropdownParent: $('#bookingModal'),
+            ajax: {
+                url: select2_url + '1&address_id=' + get_data,
+                dataType: 'json',
+                //delay: 250,
+                type: 'get',
 
-            data: function (params) {
-                return {
-                    req: params.term
-                }
+                data: function (params) {
+                    return {
+                        req: params.term
+                    }
+                },
+                processResults: function (data) {
+                    return {
+                        results: data // Make sure the data structure matches what Select2 expects
+                    };
+                },
+                cache: true,
             },
-            processResults: function (data) {
-                return {
-                    results: data // Make sure the data structure matches what Select2 expects
-                };
-            },
-            cache: true,
-        },
-        status: 1,
-        placeholder: Lang.to_id[lang],
-    });
+            status: 1,
+            placeholder: Lang.to_id[lang],
+        });
+    })
+
+
     select2FromId.on('select2:select', function (e) {
         let data = e.params.data;
         if (data.id === 4) {

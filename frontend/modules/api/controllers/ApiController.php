@@ -20,7 +20,7 @@ class ApiController extends ActiveController
      * Renders the index view for the module
      * @return array|string
      */
-    public function actionAjax($search_type, $req = false)
+    public function actionAjax($search_type, $req = false, $address_id = null)
     {
         $this->response->format = Response::FORMAT_JSON;
         $query = Address::find();
@@ -36,8 +36,15 @@ class ApiController extends ActiveController
 
         if ($search_type == 0) {
             $query->andFilterWhere(['category_id' => 0]);
-        } else {
+        }
+        if ($search_type == 1) {
             $query->andFilterWhere(['category_id' => 1]);
+            if ($address_id == 4 or $address_id == 1) {
+                $query->andFilterWhere(['like', 'name_ru', 'Отель']);
+            } else {
+                $query->andFilterWhere(['between','id',5,10]);
+            }
+
         }
 
         return $model->getModels();

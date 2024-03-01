@@ -224,7 +224,7 @@ class CarsController extends Controller
             $model->short_en=$post['short_en'];
             $model->short_uz=$post['short_uz'];
             $model->short_ru=$post['short_uz'];
-            $model->update();
+            $model->update(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

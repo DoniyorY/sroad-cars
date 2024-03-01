@@ -231,7 +231,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
                     </div>
                     <div class="card-body">
-                        <p style="margin-top: 10px;">
+                        <p style="margin-top: 10px; height: 285px;">
                             <?= Yii::$app->params['city_desc1'][$lang] ?>
                         </p>
                         <div class="city_card_link">

@@ -42,9 +42,8 @@ class ApiController extends ActiveController
             if ($address_id == 4 or $address_id == 1) {
                 $query->andFilterWhere(['like', 'name_ru', 'Отель']);
             } else {
-                $query->andFilterWhere(['between','id',5,10]);
+                $query->andFilterWhere(['between', 'id', 5, 10]);
             }
-
         }
 
         return $model->getModels();

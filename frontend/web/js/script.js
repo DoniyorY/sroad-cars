@@ -186,7 +186,7 @@ $(document).ready(function () {
         status: 1,
         placeholder: Lang.choose_car[lang],
     });
-
+    let select2ToId = $('#to_id').select2().prop('disabled',true)
     let select2FromId = $('#from_id').select2({
         language: "ru",
         dropdownParent: $('#bookingModal'),
@@ -212,7 +212,9 @@ $(document).ready(function () {
         placeholder: Lang.from_id[lang],
     });
     select2FromId.on('select2:select',function (e){
-        let select2ToId = $('#to_id').select2({
+        let get_data=e.params.data.id
+        select2ToId.select2().prop('disabled',false)
+        select2ToId.select2({
             language: "ru",
             dropdownParent: $('#bookingModal'),
             ajax: {

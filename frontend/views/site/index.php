@@ -22,9 +22,11 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <?= Yii::$app->params['Добро пожаловать в мир комфорта и безопасности с автопарком'][$lang] ?>
                     </p>
                 </div>
+                <?php if ($lang != 'uz'):?>
                 <div class="banner_title">
                     <h1>Silk Road Samarkand!</h1>
                 </div>
+                <?php endif;?>
             </div>
             <div class="col-md-4">
                 <div class="banner_search_main">
@@ -165,7 +167,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                                 break;
                             case 'uz':
                                 $capacity = "$item->capacity Joy";
-                                $price = Yii::$app->formatter->asDecimal($conn->price, 0) . ' <strong> So`mdan</strong>';
+                                $price = Yii::$app->formatter->asDecimal($conn->price, 0) . ' <strong> UZS</strong>';
                                 break;
                         }
                         ?>
@@ -231,7 +233,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
                     </div>
                     <div class="card-body">
-                        <p style="margin-top: 10px; height: 285px;">
+                        <p style="margin-top: 10px; height: 215px;">
                             <?= Yii::$app->params['city_desc1'][$lang] ?>
                         </p>
                         <div class="city_card_link">
@@ -315,7 +317,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
                     </div>
                     <div class="card-body">
-                        <p style="margin-top: 10px;">
+                        <p style="margin-top: 10px; height: 285px;">
                             <?= Yii::$app->params['city_desc6'][$lang] ?>
                         </p>
                         <div class="city_card_link">
@@ -336,7 +338,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
                     </div>
                     <div class="card-body">
-                        <p style="margin-top: 10px;">
+                        <p style="margin-top: 10px; h285">
                             <?= Yii::$app->params['city_desc5'][$lang] ?>
                         </p>
                         <div class="city_card_link">

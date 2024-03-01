@@ -90,9 +90,9 @@ $this->title = Yii::$app->params['Categories'][$lang]
                     case 'uz':
                         $capacity = $item->car->capacity . ' Joy';
                         if ($conn) {
-                            $price = Yii::$app->formatter->asDecimal($conn->price, 0) . ' <strong> So`mdan</strong>';
+                            $price = Yii::$app->formatter->asDecimal($conn->price, 0) . ' <strong> UZS</strong>';
                         } else {
-                            $price = 0 . ' <strong> So`mdan</strong>';
+                            $price = 0 . ' <strong> UZS</strong>';
                         }
                         break;
                 }

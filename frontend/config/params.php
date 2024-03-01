@@ -22,9 +22,9 @@ return [
         'uz' => 'Yo\'nalishlar',
     ],
     'Categories' => [
-        'ru' => 'Транспорты',
-        'en' => 'Cars',
-        'uz' => 'Transport',
+        'ru' => 'Автопарк',
+        'en' => 'Fleet',
+        'uz' => 'Avtomobil parki',
     ],
     'our_cars' => [
         'ru' => 'НАШИ МАШИНЫ',
@@ -400,12 +400,12 @@ return [
     'Our Contact' => [
         'ru' => 'Наши контакты',
         'en' => 'Our Contacts',
-        'uz' => 'Bizning aloqalarimiz',
+        'uz' => 'Bizning kontaktlarimiz',
     ],
     'Booking Number' => [
         'ru' => 'Номер бронирования',
         'en' => 'Booking Number',
-        'uz' => 'Bron raqami',
+        'uz' => 'Telefon raqami',
     ],
     'Telegram' => [
         'ru' => 'Наш Telegram канал',

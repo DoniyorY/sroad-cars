@@ -35,7 +35,7 @@ class ApiController extends ActiveController
         }
 
         if ($search_type == 0) {
-            $query->andFilterWhere(['category_id' => 0]);
+            $query->andFilterWhere(['category_id' => 0])->andFilterWhere(['like','name_ru','Отель']);
         }
         if ($search_type == 1) {
             $query->andFilterWhere(['category_id' => 1]);

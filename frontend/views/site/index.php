@@ -198,7 +198,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                                     ?>" alt="">-->
                                 </div>
                                 <div class="card_footer">
-                                    <div class="card_price">
+                                    <div class="card_price" <?=($lang == 'ru')?'style="padding-left:25px"':''?>>
                                         <?= $price ?>
                                     </div>
                                     <a class="btn btn-sroad" href="<?= Url::to(['cars/view', 'id' => $item->id]) ?>">

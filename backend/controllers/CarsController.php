@@ -37,6 +37,8 @@ class CarsController extends Controller
                         'delete-photo' => ['post'],
                         'create-owl' => ['post'],
                         'delete-owl' => ['post'],
+                        'update-address' => ['post'],
+                        'create-address' => ['post'],
                     ],
                 ],
                 'access' => [
@@ -55,6 +57,7 @@ class CarsController extends Controller
                                 'status',
                                 'create',
                                 'create-address',
+                                'update-address',
                                 'add-photo',
                                 'delete-address',
                                 'delete-photo',
@@ -124,6 +127,15 @@ class CarsController extends Controller
             'show_conn' => $show_conn,
             'owl' => $owl
         ]);
+    }
+
+    public function actionUpdateAddress($id)
+    {
+        $model=Connector::findOne(['id'=>$id]);
+        if ($model->load(\Yii::$app->request->post()) and $model->update(false)){
+            return $this->redirect(\Yii::$app->request->referrer);
+        }
+        return $this->redirect(\Yii::$app->request->referrer);
     }
 
     public function actionCreateAddress()
@@ -220,10 +232,10 @@ class CarsController extends Controller
         $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post())) {
-            $post=$_POST['Cars'];
-            $model->short_en=$post['short_en'];
-            $model->short_uz=$post['short_uz'];
-            $model->short_ru=$post['short_ru'];
+            $post = $_POST['Cars'];
+            $model->short_en = $post['short_en'];
+            $model->short_uz = $post['short_uz'];
+            $model->short_ru = $post['short_ru'];
             $model->update(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }

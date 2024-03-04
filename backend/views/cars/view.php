@@ -208,6 +208,7 @@ $this->title = $model->name_ru;
                                     <th>Маршрут</th>
                                     <th>Цена</th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -217,6 +218,12 @@ $this->title = $model->name_ru;
                                         <td><?= $i ?></td>
                                         <td><?= $item->address->name_ru ?></td>
                                         <td><?= Yii::$app->formatter->asDecimal($item->price, 0) ?></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#updateAddress<?= $item->id ?>">
+                                                <i class="ri-pencil-fill"></i>
+                                            </button>
+                                        </td>
                                         <td>
                                             <a href="<?= Url::to(['delete-address', 'id' => $item->id]) ?>"
                                                class="btn btn-danger btn-sm" data-method="post">
@@ -260,18 +267,19 @@ $this->title = $model->name_ru;
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php $i=1; foreach ($owl as $item):?>
+                                <?php $i = 1;
+                                foreach ($owl as $item): ?>
                                     <tr>
-                                        <td><?=$i?></td>
+                                        <td><?= $i ?></td>
                                         <td>
-                                            <?=$item->title_ru?>
+                                            <?= $item->title_ru ?>
                                         </td>
-                                        <td><?=$item->image?></td>
+                                        <td><?= $item->image ?></td>
                                         <td>
-                                            <?=Html::a('<i class="ri-delete-bin-line"></i>',['delete-owl','id'=>$item->id],['class'=>'btn btn-danger btn-sm'])?>
+                                            <?= Html::a('<i class="ri-delete-bin-line"></i>', ['delete-owl', 'id' => $item->id], ['class' => 'btn btn-danger btn-sm']) ?>
                                         </td>
                                     </tr>
-                                <?php endforeach;?>
+                                <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
@@ -281,3 +289,30 @@ $this->title = $model->name_ru;
         </div>
     </div>
 </div>
+
+<?php foreach ($show_conn as $item): ?>
+    <div id="updateAddress<?= $item->id ?>" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
+         aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel"><?= $item->address->name_ru ?></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <?php $form = ActiveForm::begin(['action' => Url::to(['update-address','id'=>$item->id]), 'method' => 'post']) ?>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <?= $form->field($item, 'price')->textInput() ?>
+                        </div>
+                        <div class="col-md-4 mt-4">
+                            <?= Html::submitButton('Сохранить', ['class' => 'btn w-100 btn-success']) ?>
+                        </div>
+                    </div>
+                    <?php ActiveForm::end(); ?>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+<?php endforeach; ?>

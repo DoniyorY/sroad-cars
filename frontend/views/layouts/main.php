@@ -103,19 +103,19 @@ AppAsset::register($this);
                         <ul>
                             <li>
                                 <a href="https://t.me/silkroad_samarkand" target="_blank">
-                                    <i class="bi bi-telegram mr-2"></i><?=Yii::$app->params['Telegram'][$lang]?></a>
+                                    <i class="bi bi-telegram" style="margin-right: 5px;"></i><?=Yii::$app->params['Telegram'][$lang]?></a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/silkroadsamarkand/" target="_blank">
-                                    <i class="bi bi-instagram mr-2"></i><?=Yii::$app->params['Instagram'][$lang]?></a>
+                                    <i class="bi bi-instagram" style="margin-right: 5px;"></i><?=Yii::$app->params['Instagram'][$lang]?></a>
                             </li>
                             <li>
                                 <a href="https://www.facebook.com/silkroadresort/" target="_blank">
-                                    <i class="bi bi-facebook mr-2"></i><?=Yii::$app->params['Facebook'][$lang]?></a>
+                                    <i class="bi bi-facebook" style="margin-right: 5px;"></i><?=Yii::$app->params['Facebook'][$lang]?></a>
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/@silkroadsamarkand" target="_blank">
-                                    <i class="bi bi-youtube mr-2"></i><?=Yii::$app->params['Youtube'][$lang]?></a>
+                                    <i class="bi bi-youtube" style="margin-right: 5px;"></i><?=Yii::$app->params['Youtube'][$lang]?></a>
                             </li>
                         </ul>
                     </div>

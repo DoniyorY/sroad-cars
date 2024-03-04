@@ -13,7 +13,7 @@ return [
     ],
     'Contact' => [
         'ru' => 'Контакты',
-        'en' => 'Contact',
+        'en' => 'Contacts',
         'uz' => 'Kontaklar',
     ],
     'Destinations' => [

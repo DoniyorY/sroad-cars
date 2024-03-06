@@ -181,7 +181,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                                     <img src="<?= $main ?>" alt="" style="width: 100%;">
                                 </div>
                                 <div class="card_middle">
-                                    <p><?= $item->{"name_$lang"} ?></p>
+                                    <p><?= $item->car->manufacture->{"name_$lang"}. ' '. $item->car->{"name_$lang"} ?></p>
                                     <img src="<?= $baseUrl . '/img/card_middle.svg' ?>" alt="">
                                 </div>
                                 <div class="card_image2">

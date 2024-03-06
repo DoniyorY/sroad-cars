@@ -228,7 +228,7 @@ return [
                                 aloqa ma\'lumotlari. Maslahat uchun siz bilan bog\'lanamiz.',
     ],
     'Название машины' => [
-        'ru' => 'Название машины',
+        'ru' => 'Марка автомобиля',
         'en' => 'Car`s Name',
         'uz' => 'Mashina nomi',
     ],
@@ -757,10 +757,10 @@ Xizmatlardan foydalanish foydalanuvchining ushbu Siyosatga va unda ko\'rsatilgan
 7.1. Ushbu Siyosat bo\'yicha barcha takliflar yoki savollar elektron pochta manzili orqali yoki O\'zbekiston Respublikasi, Samarqand viloyati, Samarqand tumanidagi, Qo\'shtamg\'ali SSG, Konigil massivida joylashgan manzil orqali bildirilishi kerak.
         ',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
-        'uz' => '',
+    'Введите количество пассажиров' => [
+        'ru' => 'Введите количество пассажиров',
+        'en' => 'Enter the number of passengers',
+        'uz' => 'Yo\'lovchilar sonini kiriting',
     ],
     '' => [
         'ru' => '',

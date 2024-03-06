@@ -11,7 +11,7 @@ class ConnectorSearch extends Connector
     public function rules()
     {
         return [
-            [['to_id','car_id','people_count'], 'integer'],
+            [['to_id', 'car_id', 'people_count',], 'integer'],
             ['title', 'string', 'max' => 255],
         ];
     }
@@ -34,18 +34,15 @@ class ConnectorSearch extends Connector
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+        //$get = $params['CarsSearch'];
         $this->load($params);
-
         // grid filtering conditions
         $query->andFilterWhere([
             'address_id' => $this->to_id,
             'car_id' => $this->car_id,
-            'cars.capacity' => $this->people_count,
         ]);
-        $query->orFilterWhere(['like', 'name_ru', $this->title])
-            ->orFilterWhere(['like', 'name_en', $this->title])
-            ->orFilterWhere(['like', 'name_uz', $this->title]);
 
+        $query->andFilterWhere(['>=', 'cars.capacity', $this->people_count]);
         return $dataProvider;
     }
 }

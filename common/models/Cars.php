@@ -81,7 +81,7 @@ class Cars extends \yii\db\ActiveRecord
         return [
             'id',
             'text' => function ($data) {
-                return $data->{'name_' . Yii::$app->language};
+                return $data->category->{'name_'.Yii::$app->language} . ' ' .$data->{'name_' . Yii::$app->language};
             }
         ];
     }

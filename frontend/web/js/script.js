@@ -12,7 +12,7 @@ const Lang = {
         uz: 'Kelish manzilini tanlang tanlang…',
     },
     choose_car: {
-        ru: 'Выберите машину',
+        ru: 'Выберите марку',
         en: 'Choose a Car',
         uz: 'Mashinani tanlang',
     }

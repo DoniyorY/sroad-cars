@@ -38,26 +38,26 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <div class="vector_line">
                             <img src="<?= $baseUrl . '/img/banner_form_vector_line.png' ?>" alt="">
                         </div>
-                        <form action="<?= Url::to(['cars/index']) ?>">
+                        <form action="<?= Url::to(['cars/index']) ?>" method="get">
                             <div class="form-group mt-4">
                                 <label for="from_address"><?= Yii::$app->params['Откуда'][$lang] ?></label>
-                                <select name="CarsSearch[from_id]" class="js-from-select2 form-control"></select>
+                                <select name="ConnectorSearch[from_id]" class="js-from-select2 form-control"></select>
                             </div>
                             <div class="form-group mt-4">
                                 <label for="from_address"><?= Yii::$app->params['Куда'][$lang] ?></label>
-                                <select name="CarsSearch[to_id]" class="js-to-select2 form-control"></select>
+                                <select name="ConnectorSearch[to_id]" class="js-to-select2 form-control"></select>
                             </div>
                             <div class="row mt-4">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="from_address"><?= Yii::$app->params['booking_date'][$lang] ?></label>
-                                        <input name="CarsSearch[begin]" type="date" class="form-control">
+                                        <label for="from_address"><?= Yii::$app->params['Количество пассажиров'][$lang] ?></label>
+                                        <input name="ConnectorSearch[people_count]" type="number" class="form-control" placeholder="<?= Yii::$app->params['Введите количество пассажиров'][$lang] ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 d-none">
                                     <div class="form-group">
                                         <label for="from_address"><?= Yii::$app->params['booking_time'][$lang] ?></label>
-                                        <input name="CarsSearch[end]" type="time" class="form-control">
+                                        <input name="ConnectorSearch[end]" type="time" class="form-control" >
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@ $baseUrl = Yii::$app->request->baseUrl;
     </div>
 </section>
 
-<section class="section_cities">
+<section class="section_cities" id="section_cities">
     <div class="container">
         <div class="row w-100">
             <div class="col-md-12 text-center mb-5">
@@ -338,7 +338,7 @@ $baseUrl = Yii::$app->request->baseUrl;
                         <img src="<?= $baseUrl . '/img/card_cities.svg' ?>" alt="">
                     </div>
                     <div class="card-body">
-                        <p style="margin-top: 10px; h285">
+                        <p style="margin-top: 10px; height: 285px;">
                             <?= Yii::$app->params['city_desc5'][$lang] ?>
                         </p>
                         <div class="city_card_link">

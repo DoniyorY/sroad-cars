@@ -65,7 +65,7 @@ AppAsset::register($this);
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active"
-                               href="<?= Yii::$app->homeUrl ?>"><?= Yii::$app->params['Destinations'][$lang] ?></a>
+                               href="#section_cities"><?= Yii::$app->params['Destinations'][$lang] ?></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"

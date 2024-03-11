@@ -20,12 +20,12 @@ $this->title = Yii::$app->params['Categories'][$lang]
     <div class="cars_title container mb-3">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-5">
+            <!--<div class="col-md-5">
                 <div class="first_title">
-                    <h1><?= Yii::$app->params['our_cars'][$lang] ?></h1>
+                    <h1><?php /*= Yii::$app->params['our_cars'][$lang] */?></h1>
                 </div>
-            </div>
-            <div class="col-md-5">
+            </div>-->
+            <div class="col-md-10">
                 <div class="second_title">
                     <p><?= Yii::$app->params['our_cars_content'][$lang] ?></p>
                 </div>

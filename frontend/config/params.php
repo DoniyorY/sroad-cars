@@ -8,7 +8,7 @@ return [
     ],
     'About' => [
         'ru' => 'О нас',
-        'en' => 'About',
+        'en' => 'About Us',
         'uz' => 'Biz haqimizda',
     ],
     'Contact' => [
@@ -253,9 +253,9 @@ return [
         'uz' => 'Filtr',
     ],
     'our_cars_content' => [
-        'ru' => 'Ознакомьтесь с нашим каталогом машин для незабываемой поездки',
-        'en' => 'Check out our catalog of cars for an unforgettable trip',
-        'uz' => '',
+        'ru' => 'Лучшие авто на любой вкус: Откройте мир возможностей с нашим каталогом автотранспорта.',
+        'en' => 'Premium Vehicles for Every Preference: Explore a Universe of Choices with Our Vehicle Catalog.',
+        'uz' => 'Har bir afzallik uchun eng yaxshi transport vositalari: Bizning transport vositalari katalogi bilan imkoniyatlar olamini kashf eting.',
     ],
     'baggage' => [
         'ru' => 'Багаж',
@@ -762,15 +762,15 @@ Xizmatlardan foydalanish foydalanuvchining ushbu Siyosatga va unda ko\'rsatilgan
         'en' => 'Enter the number of passengers',
         'uz' => 'Yo\'lovchilar sonini kiriting',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
-        'uz' => '',
+    'owl_title' => [
+        'ru' => 'Безупречные трансферы и незабываемые экскурсии: Откройте для себя сокровища Узбекистана вместе с нами.',
+        'en' => 'Experience Seamless Transfers and Unforgettable Tours: Discover Uzbekistan\'s Treasures with Us.',
+        'uz' => 'Mukammal transferlar va unutilmas ekskursiyalar: biz bilan birga O\'zbekistonning xazinalarini kashf eting.',
     ],
-    '' => [
-        'ru' => '',
-        'en' => '',
-        'uz' => '',
+    'owl_content' => [
+        'ru' => 'Раскройте для себя красоту и гостеприимство узбекских городов благодаря нам. Мы обещаем вам безупречное обслуживание трансферов, а также незабываемые впечатления от обзорных экскурсий по историческим и культурным сокровищам Узбекистана.',
+        'en' => 'Discover the beauty and hospitality of Uzbek cities with us. We promise you impeccable transfer services, as well as unforgettable impressions from sightseeing tours of Uzbekistan\'s historical and cultural treasures.',
+        'uz' => "O'zbekiston shaharlarining go'zalligi va mehmondo'stligini biz bilan kashf eting. Sizga transfer xizmatlaridan kamolot darajasida xizmat ko'rsatishimizni va mamlakatning tarixiy hamda madaniy xazinalari bo'ylab o'tkaziladigan ko'rib chiqish ekskursiyalaridan unutilmas taassurotlar va'da qilamiz.",
     ],
     '' => [
         'ru' => '',

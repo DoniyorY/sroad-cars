@@ -41,13 +41,12 @@ $this->title = "{$model->category->{"name_$lang"}} {$model->{"name_$lang"}}";
         <div class="container">
             <div class="cars_detail_title">
                 <h1>
-                    Экскурсии по городам на автобусах Higer
+                    <?=Yii::$app->params['owl_title'][$lang]?>
                 </h1>
             </div>
             <div class="cars_detail_content">
                 <p>
-                    Этот автобус идеально подходит для организации трансферов и захватывающих поездок по Самарканду, Бухаре,
-                    Хиве, Нурате и Ташкенту, чтобы вы могли насладиться всей красотой и богатством Узбекистана.
+                   <?=Yii::$app->params['owl_content'][$lang]?>
                 </p>
                 <p>
                     Независимо от вашей цели, наши автобусы Higer обеспечат стиль, комфорт и надежность в каждой поездке.
